@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <Header />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,6 +9,16 @@
     <router-view />
   </div>
 </template>
+
+<script>
+import Header from "@/components/partials/Header.vue";
+
+export default {
+  components: {
+    Header
+  }
+};
+</script>
 
 <style>
 #app {

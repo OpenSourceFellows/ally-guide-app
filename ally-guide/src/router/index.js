@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Elevate from "../views/Elevate.vue";
+import Educate from "../views/Educate.vue;
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: "/elevate",
     name: "Elevate",
     component: Elevate
+  },
+  {
+    path: "/educate", 
+    name: "Educate", 
+    component: Educate
   },
   {
     path: "/about",
@@ -34,6 +40,7 @@ const routes = [
   //   component: () =>
   //     import(/* webpackChunkName: "about" */ "../views/Elevate.vue")
   // },
+  
 ];
 
 const router = new VueRouter({

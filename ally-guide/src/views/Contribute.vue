@@ -1,4 +1,4 @@
-<html>
+<template>
 <div> 
   Say their names. 
   <div class = "container">
@@ -47,7 +47,7 @@
   <p>Lorem ipsum...</p>
 </div>
 
-</html>
+</template>
 
 <style>
 .container {  

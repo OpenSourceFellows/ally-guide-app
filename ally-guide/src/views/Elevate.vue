@@ -125,22 +125,22 @@ export default {
         } ,       
     },
     created() {        
-
-            // this.root.$http.get(
-            //     'https://www.googleapis.com/civicinfo/v2/representatives', 
-            //     {
-            //     params: {
-            //         'key': '',
-            //         'address': "2912 fulton st. san francisco, ca 94118"
-            //     },
-            // }).then(response => {
-            //     // get body data
-            //     console.log(response.data)
+            console.log(this);
+            this.$http.get(
+                'https://www.googleapis.com/civicinfo/v2/representatives', 
+                {
+                params: {
+                    'key': '',
+                    'address': "2912 fulton st. san francisco, ca 94118"
+                },
+            }).then(response => {
+                // get body data
+                console.log(response.data)
 
           
-            // }, response => {
-            //     // error callback
-            // });
+            }, response => {
+                // error callback
+            });
 
 
 // {

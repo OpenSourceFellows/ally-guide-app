@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Elevate from "../views/Elevate.vue";
-import Educate from "../views/Educate.vue;
+import Educate from "../views/Educate.vue";
 
 Vue.use(VueRouter);
 

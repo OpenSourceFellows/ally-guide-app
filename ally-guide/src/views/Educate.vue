@@ -145,6 +145,7 @@ What is Juneeteenth?     <i class="fa fa-plus"></i>
     </div>
   </div>
 </div>
+</div>
 <div class = "library-container">
   <a img src = "" href = ""> Protester Toolkit </a>
   <a img src = "" href = ""> Say their names </a>

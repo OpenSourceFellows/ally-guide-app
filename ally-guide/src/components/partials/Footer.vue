@@ -41,7 +41,7 @@
         
       </div>
       <div>
-          Collaborate
+          <a href "../views/Contribute.vue"> Collaborate </a>
           <button class = "textbtn"> Submit a resource </button>
           <button class = "textbtn"> Global Events </button>
           <button class = "textbtn"> Offer Services </button>

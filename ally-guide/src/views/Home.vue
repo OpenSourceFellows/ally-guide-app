@@ -11,8 +11,8 @@
 </div>
 <div style = "background-color:#892819" class = "border-bottom border-white">
 <div class="container text-center">
-  <div class="box box1" >Educate <a class = "toggle"></a></div>
-  <div class="box box2"> <a href = "/donate"> Donate </a> </div>
+  <div class="box box1" ><a href = "/educate" class = "toggle">Educate </a></div>
+  <div class="box box2"> <a href = "/contribute"> Donate </a> </div>
   <div class="box box3"> <a href = "/elevate">Elevate  </a></div>
   <div class = "box box4"> <a href = "/collaborate">Collaborate </a></div>
 </div>

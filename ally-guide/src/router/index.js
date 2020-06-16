@@ -23,6 +23,16 @@ const routes = [
     component: Educate
   },
   {
+    path: "/contribute", 
+    name: "Contribute", 
+    component: Contribute
+  },
+  {
+    path: "/collaborate", 
+    name: "Collaborate", 
+    component: Collaborate
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting

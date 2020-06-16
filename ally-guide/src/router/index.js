@@ -21,19 +21,19 @@ const routes = [
     path: "/educate", 
     name: "Educate", 
     component: () =>
-      import(/* webpackChunkName: "educate" */ "../views/Educate.vue")  },
+      import(/* webpackChunkName: "educate" */ "../views/Educate.vue")  
   },
   {
     path: "/contribute", 
     name: "Contribute", 
     component: () =>
-      import(/* webpackChunkName: "contribute" */ "../views/Contribute.vue")  },
+      import(/* webpackChunkName: "contribute" */ "../views/Contribute.vue")  
   },
   {
     path: "/collaborate", 
     name: "Collaborate", 
     component: () =>
-      import(/* webpackChunkName: "collaborate" */ "../views/Collaborate.vue")  },
+      import(/* webpackChunkName: "collaborate" */ "../views/Collaborate.vue")  
   {
     path: "/about",
     name: "About",

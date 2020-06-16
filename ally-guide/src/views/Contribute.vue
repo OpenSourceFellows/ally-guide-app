@@ -32,20 +32,6 @@
   </div>
 </div>
 
-<button class="accordion">Protestor Services </button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
-
-<button class="accordion">Bail Funds </button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
-
-<button class="accordion">Organizations</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
 
 </template>
 

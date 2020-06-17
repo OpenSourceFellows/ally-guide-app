@@ -1,27 +1,19 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gray-dark text-white">
-  <div class="container">
-    <a class="text-white link-reset text-inherit pr-3" href="/"> Ally.Guide </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/templates/donate/index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Donate
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/templates/donate/index.html">
-              Donate
-            </a>
-          </div>
-        </li>
-      </ul>
+<header>
+    <div class="header-banner">
     </div>
-  </div>
-</nav>
+    <div class="clear"></div>
+    <nav>
+        <div class="site-title">Ally Guide</div>
+        <ul>
+            <li><a href="/archive">Contribute</a></li>
+            <li><a href="/events">Elevate</a></li>
+            <li><a href="/contact">Educate</a></li>
+          <li><a href="/contact">Collaborate</a></li>
+            <li><a href="/contact">Home</a></li>
+        <ul>
+    </nav>
+</header>
 </template>
 
 <script>
@@ -34,5 +26,103 @@ export default {
 </script>
 
 <style>
+/* main */
+header {
+    height: 360px;
+    z-index: 10;
+}
+.header-banner {
+    background-color: #333;
+    background-image: url('https://37.media.tumblr.com/8b4969985e84b2aa1ac8d3449475f1af/tumblr_n3iftvUesn1snvqtdo1_1280.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+header h1 {
+    background-color: rgba(18,72,120, 0.8);
+    color: #fff;
+    padding: 0 1rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background: #000000;
+    postion: fixed;
+    z-index: 10;
+}
+
+nav div {
+    color: white;
+    font-size: 2rem;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    visibility: hidden;
+}
+.visible-title {
+    visibility: visible;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 2% auto 0;
+    padding-left: 0;
+    text-align: center;
+    max-width: 100%;
+    float: right;
+}
+nav ul{
+    display: inline-block;
+    line-height: 50px;
+}
+nav ul li a {
+    text-decoration: none;
+  color: white;
+
+}
+
+li {
+   text-decoration: none;
+  padding: 0 0 0 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: red;
+  background-color: #000000;
+  float: right;
+  position: relative;
+  overflow: hidden;
+  margin: ;
+}
+
+
+li::after {
+  background-color:  #b81a00;
+  content: "";
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.35s ease 0s;
+  position: absolute;
+}
+
+li:hover::after {
+  width: 100%;
+}
 
 </style>

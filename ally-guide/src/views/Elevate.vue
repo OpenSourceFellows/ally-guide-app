@@ -16,10 +16,10 @@
 
             <div id="government-contact-info" v-show="hasContent">         
                 <div v-for="member in congressMembers" :key="member.name" style="width: 30%; display: inline-block;">             
-                    <div> 
+                    <div style="border-style: dashed;"> 
                         <p>Name: {{member.name}}</p>
-                        <!-- <p>Position: {{member.repInfo.name}}</p> -->
-                        <!-- <p>Location: {{member.rep.address(0).city}}, {{member.rep.address(0).state}}</p> -->
+                        <p>Position: {{member.title}}</p>
+                        <p>Location: {{member.city}}, {{member.state}}</p>
                         <!-- <p>Email Address: {{member.email}}</p>
                         <p>Contact Page: {{member.contactPage}}</p> -->
                         <div>
@@ -124,7 +124,8 @@ export default {
                     'key': '',
                     'address': "2912 fulton st. san francisco, ca 94118"
                 },
-            }).then(response => {    
+            }).then(response => {   
+                console.log(response.data); 
                 this.reps = response.data.officials;
                 response.data.offices.forEach(repInfo => {              
                     repInfo.officialIndices.forEach(position => {
@@ -148,10 +149,20 @@ export default {
                             else{
                                 officeInfo.name = rep.name;
                             }
-                            
-
+                            if (repInfo.name == undefined || rep.name == ''){
+                                
+                            }
+                            else{
+                                officeInfo.title = repInfo.name;
+                            }
+                            if (rep.address == undefined || rep.address == ''){
+                                
+                            }
+                            else{
+                                officeInfo.city = rep.address[0].city;
+                                officeInfo.state = rep.address[0].state;
+                            }                                                                                                              
                             this.congressMembers.push(officeInfo);
-                        
                         }
                     });
                 });

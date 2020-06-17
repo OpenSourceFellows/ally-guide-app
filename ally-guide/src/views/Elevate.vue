@@ -1,13 +1,13 @@
 <template>
     <div>
         <div>
-            <div><h4>Changes start by doing. amplify by contacting congress, signing petitions, or contacting your local reps from the dropdown</h4></div>
+            <div><h4>Changes start by doing. amplify by contacting congress, signing petitions, or contacting your local reps</h4></div>
         </div>
     
         <div id="search-ui" >
                 
             <div>
-                <input type="text" v-model="search" placeholder="Enter a State" v-on:keyup="CheckInputContent" style="width:30%">
+                <input type="text" v-model="search" placeholder="Enter a Zipcode" v-on:keyup="CheckInputContent" style="width:30%">
                 <button type="button" v-on:click='CreateRepList()'>Search</button>
                 <!-- <select for="government-branch">
                     <option name="government-branch" v-for="level in branchOfGovernment" :key="level.branch" :value="level.branch">{{level.branch}}</option>
@@ -19,7 +19,7 @@
                     <div style="border-style: dashed;"> 
                         <p>Name: {{member.name}}</p>
                         <p>Position: {{member.title}}</p>
-                        <p>Location: {{member.city}}, {{member.state}}</p>
+                        <p>Location: {{member.city}} {{member.state}}</p>
                         <!-- <p>Email Address: {{member.email}}</p>
                         <p>Contact Page: {{member.contactPage}}</p> -->
                         <div>
@@ -122,7 +122,7 @@ export default {
                 {
                 params: {
                     'key': '',
-                    'address': "2912 fulton st. san francisco, ca 94118"
+                    'address': this.search,
                 },
             }).then(response => {   
                 console.log(response.data); 

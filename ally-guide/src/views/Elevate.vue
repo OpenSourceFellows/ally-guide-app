@@ -9,9 +9,6 @@
             <div>
                 <input type="text" v-model="search" placeholder="Enter a Zipcode" v-on:keyup="CheckInputContent" style="width:30%">
                 <button type="button" v-on:click='CreateRepList()'>Search</button>
-                <!-- <select for="government-branch">
-                    <option name="government-branch" v-for="level in branchOfGovernment" :key="level.branch" :value="level.branch">{{level.branch}}</option>
-                </select>        -->
             </div>
 
             <div id="government-contact-info" v-show="hasContent">         
@@ -85,8 +82,6 @@
 </template>
 
 <script>
-
-
 
 export default {
   data () {
@@ -167,34 +162,7 @@ export default {
                     });
                 });
             this.hasContent = true;
-            console.log(this.congressMembers);
-                
-            //    if(position > 1){
-            //             var rep = this.reps[position];
-                        
-                        
-                        
-            //             if(rep.name != null){
-            //                 var repInfo = {
-            //                 'name': rep.name,
-            //                 'title': repInfo.name,
-            //                 'city': reps.address(0).city,
-            //                 'state':reps.address(0).city,
-            //                 'email':"none",
-            //                 'twitter':"none",
-            //                 'facebook':"none",
-            //                 'contactPage': "none"
-                            
-            //             }
-            //             this.congressMembers.push(repInfo)
-            //             }
-              
-                        
-
-                        
-            //             }
-             
-          
+            console.log(this.congressMembers);   
             }, response => {
                 // error callback
             });
@@ -213,15 +181,6 @@ export default {
     created() {        
 
 
-
-// {
-//  "kind": "civicinfo#representativeInfoResponse",
-//  "normalizedInput": {
-//   "line1": "2912 Fulton Street",
-//   "city": "San Francisco",
-//   "state": "CA",
-//   "zip": "94118"
-//  },
 
 //         this.congressMembers = [
 // {name: "Gavin Newsom", title:"Governor", county: "", city: "", state: "California", email:'', contactPage: "https://govapps.gov.ca.gov/gov40mail/"},

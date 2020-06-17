@@ -103,7 +103,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style >
 body{
   background-color: #924235;
   padding: 0 10px;

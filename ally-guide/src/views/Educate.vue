@@ -1,81 +1,5 @@
-<style>
-body{
-  background-color: #924235;
-  padding: 0 10px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.history{
-  
-}
-.edu-nav{
-  text-align: center;
-  background-color:#c49d79;
-  width: 100%;
-  padding: 40px;
-}
-
-.edu-nav a {
-  margin-right: 100px;
-  color: #000000;
-}
-.accordion-container{
-  position: relative;
-  max-width: 500px;
-  height: auto;
-  margin: 10px auto;
-}
-.accordion-container > h2{
-  text-align: center;
-  color: #fff;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ddd;
-}
-.set{
-  position: relative;
-  width: 100%;
-  height: auto;
-  background-color: #f5f5f5;
-}
-.set > a{
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #555;
-  font-weight: 600;
-  border-bottom: 1px solid #ddd;
-  -webkit-transition:all 0.2s linear;
-  -moz-transition:all 0.2s linear;
-  transition:all 0.2s linear;
-}
-.set > a i{
-  float: right;
-  margin-top: 2px;
-}
-.set > a.active{
-  background-color:#3399cc;
-  color: #fff;
-}
-.content{
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  display:none;
-}
-.content p{
-  padding: 10px 15px;
-  margin: 0;
-  color: #333;
-}
-.library-container {  
-    display: grid;  
-    grid-template-columns: 1fr 1fr 1fr;  
-}
-</style>
-
 <template>
-<body>
+<div>
 <div>
   
 </div>
@@ -151,7 +75,109 @@ What is Juneeteenth?     <i class="fa fa-plus"></i>
   <a img src = "" href = ""> Say their names </a>
   <a img src = "" href = ""> Black Healing </a>
 </div>
-</body>
+</div>
 
 </template>
+
+<script>
+export default {
+  data () {
+    return{
+        congressMembers: [],
+        selectedMember: {},
+        showmessageUI : false,
+        search:'',
+        }
+    },
+    methods: {
+      ToggleMessageUI: function (member) {
+
+      },
+    },
+    computed: {
+
+    },
+    created() {
+
+    }
+}
+</script>
+
+<style >
+body{
+  background-color: #924235;
+  padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.history{
+  
+}
+.edu-nav{
+  text-align: center;
+  background-color:#c49d79;
+  width: 100%;
+  padding: 40px;
+}
+
+.edu-nav a {
+  margin-right: 100px;
+  color: #000000;
+}
+.accordion-container{
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  margin: 10px auto;
+}
+.accordion-container > h2{
+  text-align: center;
+  color: #fff;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.set{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+}
+.set > a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+}
+.set > a i{
+  float: right;
+  margin-top: 2px;
+}
+.set > a.active{
+  background-color:#3399cc;
+  color: #fff;
+}
+.content{
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display:none;
+}
+.content p{
+  padding: 10px 15px;
+  margin: 0;
+  color: #333;
+}
+.library-container {  
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;  
+}
+</style>
+
+
 

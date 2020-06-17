@@ -18,22 +18,22 @@ const routes = [
     component: Elevate
   },
   {
-    path: "/educate", 
-    name: "Educate", 
+    path: "/educate",
+    name: "Educate",
     component: () =>
-      import(/* webpackChunkName: "educate" */ "../views/Educate.vue")  
+      import(/* webpackChunkName: "educate" */ "../views/Educate.vue")
   },
   {
-    path: "/contribute", 
-    name: "Contribute", 
+    path: "/contribute",
+    name: "Contribute",
     component: () =>
-      import(/* webpackChunkName: "contribute" */ "../views/Contribute.vue")  
+      import(/* webpackChunkName: "contribute" */ "../views/Contribute.vue")
   },
   {
-    path: "/collaborate", 
-    name: "Collaborate", 
+    path: "/collaborate",
+    name: "Collaborate",
     component: () =>
-      import(/* webpackChunkName: "collaborate" */ "../views/Collaborate.vue")  
+      import(/* webpackChunkName: "collaborate" */ "../views/Collaborate.vue")
   },
   {
     path: "/about",
@@ -53,7 +53,7 @@ const routes = [
   //   component: () =>
   //     import(/* webpackChunkName: "about" */ "../views/Elevate.vue")
   // },
-  
+
 ];
 
 const router = new VueRouter({

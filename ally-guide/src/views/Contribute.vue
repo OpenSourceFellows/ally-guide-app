@@ -1,44 +1,17 @@
 <template>
-<div> 
-  Say their names. 
-  <div class = "container">
-    <div> 
-      <a class = "blm" href = https://www.gofundme.com/f/i-run-with-maud> 
-        <img src="img_girl.jpg" alt="I run with Maud gofundme" width="100">
-      </a>
-    </div>
-       <div> 
-      <a class = "blm" href = https://www.gofundme.com/f/georgefloyd> 
-        <img src="img_girl.jpg" alt="George Floyd's Memorial fund" width="100">
-      </a>
-    </div>
-    <div>
-      <a class = "blm" href = https://www.gofundme.com/f/9v4q2-justice-for-breonna-taylor> 
-        <img src="img_girl.jpg" alt="Breonna Taylor Memorial fund" width="100">
-      </a>
-    </div>
-    <div>
-       <a class = "blm" href = https://www.gofundme.com/f/justicefordavidmcatee> 
-        <img src="img_girl.jpg" alt="David McAtee Memorial fund" width="100"> </a>
-    </div>
-    <div>
-       <a class = "blm" href = https://www.gofundme.com/f/for-james-scurlocks-family> 
-        <img src="img_girl.jpg" alt="Jammes Scurlock's Family" width="100"> </a>
-    </div>
-    <div>
-       <a class = "blm" href = https://www.gofundme.com/f/rke75-funeral-arrangements> 
-        <img src="img_girl.jpg" alt="Funeral arrangements for Alajunaye Davis" width="100"> </a>
-    </div>
-  </div>
+<div>
+<div id="app">
+  {{ info }}
+</div>
 </div>
 
 
 </template>
 
 <style>
-.container {  
-    display: grid;  
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;  
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 button.accordion {
@@ -98,13 +71,18 @@ a.blm:hover {
 </style>
 
 <script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
+var test = new Vue({
+  el: '#app',
+  data () {
+    return {
+      info: null
     }
-}
+  },
+  mounted () {
+    axios
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response))
+  }
+})
+
 </script>

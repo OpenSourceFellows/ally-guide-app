@@ -1,4 +1,5 @@
 <template>
+<div>
 <header>
     <div class="header-banner">
     </div>
@@ -6,14 +7,15 @@
     <nav>
         <div class="site-title">Ally Guide</div>
         <ul>
-            <li><a href="/archive">Contribute</a></li>
-            <li><a href="/events">Elevate</a></li>
-            <li><a href="/contact">Educate</a></li>
-          <li><a href="/contact">Collaborate</a></li>
-            <li><a href="/contact">Home</a></li>
-        <ul>
+            <li><a href="/Home">Home</a></li>
+            <li><a href="/Collaborate">Collaborate</a></li>
+            <li><a href="/Contribute">Contribute</a></li>
+            <li><a href="/Elevate">Elevate</a></li>
+            <li><a href="/Educate">Educate</a></li>
+        </ul>
     </nav>
 </header>
+</div>
 </template>
 
 <script>
@@ -33,8 +35,8 @@ header {
 }
 .header-banner {
     background-color: #333;
-    background-image: url('https://37.media.tumblr.com/8b4969985e84b2aa1ac8d3449475f1af/tumblr_n3iftvUesn1snvqtdo1_1280.jpg');
-    background-position: center;
+    background-image: url('https://www.pewresearch.org/wp-content/uploads/2020/06/FT_20.06.09_BlackLivesMatter_feature.png');
+    background-position: top- 50;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -46,7 +48,7 @@ header h1 {
     color: #fff;
     padding: 0 1rem;
     position: absolute;
-    top: 2rem;
+    top: 0rem;
     left: 2rem;
 }
 
@@ -112,6 +114,7 @@ li {
 
 li::after {
   background-color:  #b81a00;
+  color: white;
   content: "";
   width: 0;
   height: 3px;

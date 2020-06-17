@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <div><h4>Changes start by doing. amplify by contacting congress, signing petitions, or contacting your local reps</h4></div>
+            <h4>Changes start by doing. amplify by contacting congress, signing petitions, or contacting your local reps</h4>
         </div>
     
         <div id="search-ui" >
@@ -17,10 +17,10 @@
                         <p>Name: {{member.name}}</p>
                         <p>Position: {{member.title}}</p>
                         <p>Location: {{member.city}} {{member.state}}</p>
-                        <!-- <p>Email Address: {{member.email}}</p>
-                        <p>Contact Page: {{member.contactPage}}</p> -->
+                        <p>Email Address: {{member.email}}</p>
+                        <!-- <p>Contact Page: {{member.contactPage}}</p> -->
                         <div>
-                        <!-- <button type="button" v-on:click="ToggleMessageUI(member)">Send A Message</button> -->
+                        <button type="button" v-on:click="ToggleMessageUI(member)">Send A Message</button>
                         </div>
                     </div>                             
                 </div>
@@ -29,54 +29,36 @@
             <div id="message-ui" v-show="showmessageUI" >
                 <div id="selected-member">
                     <div>
-                    <h4 style="display: inline-block;">{{selectedMember.title}}</h4>
-                    <h4 style="display: inline-block;">{{selectedMember.name}}</h4>
-                    <a style="display: inline-block;">Contact Form</a>
-                    <a style="display: inline-block;">Email</a>
+                    <h5 class="p-2" style="display: inline-block;">{{selectedMember.title}}</h5>
+                    <h5 class="p-2" style="display: inline-block;">{{selectedMember.name}}</h5>
+                    <a class="float-right p-4" style="display: inline-block;">Form</a>
+                    <a class="float-right p-4" style="display: inline-block;">Email</a>
                     </div>
                 </div>
 
                 <div>
                     <div>
-                    <h4>Messages:</h4>
+                        <h4>Messages:</h4>
                     </div>
 
                 <div v-for="message in messages" :key="message.mid">
-                    <div style="width: 30%;">
+                    <div>
                         <div>
-                        <h4>{{message.topic}}</h4>
+                            <p>{{message.topic}}</p>
                         </div>
-                        <div>
-                        <p>{{message.message}}</p>
-                        </div>
+   
                     </div>
-                </div>
 
+                   
+                </div>
+                     <div>
+                            <textarea class="form-contorl p-3" rows="15%" cols="90%"></textarea>
+                        </div>
                 </div>
             </div>
         </div>
 
-        <div id="say-their-names">
-            <h3>Say their names:</h3>  
-            <div style="margin: 15px; border: 3px solid; display: inline-block; width: 30%; text-align: center;">
-            <h5>Campaigns</h5>  
-            </div>
-            <div style="margin: 15px; border:3px solid; display: inline-block; width: 30%; text-align: center;">
-            <h5>Memorials</h5>  
-            </div>
-        </div>
-
-        <div id="key-issues">
-            <h3>Some Key Issues</h3>
-            <div>
-                <div style="margin: 15px; border: 3px solid; display: inline-block; width: 30%; text-align: center;">
-                    <h5>Police Brutality</h5>  
-                </div>
-                <div style="margin: 15px; border:3px solid; display: inline-block; width: 30%; text-align: center;">
-                    <h5>Bail Bonds</h5>  
-                </div>
-            </div>
-        </div>
+   
     </div>
     
 </template>
@@ -110,13 +92,16 @@ export default {
         ToggleMessageUI: function (member) {
         this.selectedMember = member;
         this.showmessageUI = true;
+        this.hasContent = false;
+        this.search = '';
+        this.congressMembers = [];
         },
         CreateRepList: function (){
             this.$http.get(
                 'https://www.googleapis.com/civicinfo/v2/representatives', 
                 {
                 params: {
-                    'key': '',
+                    'key': 'AIzaSyBDT6BuMoYXyOsVJdn0LmdIO9RD5yka2EA',
                     'address': this.search,
                 },
             }).then(response => {   
@@ -156,7 +141,13 @@ export default {
                             else{
                                 officeInfo.city = rep.address[0].city;
                                 officeInfo.state = rep.address[0].state;
-                            }                                                                                                              
+                            }
+                            if(repInfo.email == undefined) {
+                                officeInfo.email = 'Unavailable';
+                            } 
+                            else{
+                                officeInfo.email = rep.email;
+                            }                                                                                                            
                             this.congressMembers.push(officeInfo);
                         }
                     });

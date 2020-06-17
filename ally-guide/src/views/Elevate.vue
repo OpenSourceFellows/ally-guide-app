@@ -1,25 +1,22 @@
 <template>
     <div>
         <div>
-            <div><h4>Changes start by doing. amplify by contacting congress, signing petitions, or contacting your local reps from the dropdown</h4></div>
+            <div><h4>Changes start by doing. amplify by contacting congress, signing petitions, or contacting your local reps</h4></div>
         </div>
     
         <div id="search-ui" >
                 
             <div>
-                <input type="text" v-model="search" placeholder="Enter a State" v-on:keyup="CheckInputContent" style="width:30%">
+                <input type="text" v-model="search" placeholder="Enter a Zipcode" v-on:keyup="CheckInputContent" style="width:30%">
                 <button type="button" v-on:click='CreateRepList()'>Search</button>
-                <!-- <select for="government-branch">
-                    <option name="government-branch" v-for="level in branchOfGovernment" :key="level.branch" :value="level.branch">{{level.branch}}</option>
-                </select>        -->
             </div>
 
             <div id="government-contact-info" v-show="hasContent">         
                 <div v-for="member in congressMembers" :key="member.name" style="width: 30%; display: inline-block;">             
-                    <div> 
+                    <div style="border-style: dashed;"> 
                         <p>Name: {{member.name}}</p>
-                        <!-- <p>Position: {{member.repInfo.name}}</p> -->
-                        <!-- <p>Location: {{member.rep.address(0).city}}, {{member.rep.address(0).state}}</p> -->
+                        <p>Position: {{member.title}}</p>
+                        <p>Location: {{member.city}} {{member.state}}</p>
                         <!-- <p>Email Address: {{member.email}}</p>
                         <p>Contact Page: {{member.contactPage}}</p> -->
                         <div>
@@ -86,8 +83,6 @@
 
 <script>
 
-
-
 export default {
   data () {
     return{
@@ -122,9 +117,10 @@ export default {
                 {
                 params: {
                     'key': '',
-                    'address': "2912 fulton st. san francisco, ca 94118"
+                    'address': this.search,
                 },
-            }).then(response => {    
+            }).then(response => {   
+                console.log(response.data); 
                 this.reps = response.data.officials;
                 response.data.offices.forEach(repInfo => {              
                     repInfo.officialIndices.forEach(position => {
@@ -148,42 +144,25 @@ export default {
                             else{
                                 officeInfo.name = rep.name;
                             }
-                            
-
+                            if (repInfo.name == undefined || rep.name == ''){
+                                
+                            }
+                            else{
+                                officeInfo.title = repInfo.name;
+                            }
+                            if (rep.address == undefined || rep.address == ''){
+                                
+                            }
+                            else{
+                                officeInfo.city = rep.address[0].city;
+                                officeInfo.state = rep.address[0].state;
+                            }                                                                                                              
                             this.congressMembers.push(officeInfo);
-                        
                         }
                     });
                 });
             this.hasContent = true;
-            console.log(this.congressMembers);
-                
-            //    if(position > 1){
-            //             var rep = this.reps[position];
-                        
-                        
-                        
-            //             if(rep.name != null){
-            //                 var repInfo = {
-            //                 'name': rep.name,
-            //                 'title': repInfo.name,
-            //                 'city': reps.address(0).city,
-            //                 'state':reps.address(0).city,
-            //                 'email':"none",
-            //                 'twitter':"none",
-            //                 'facebook':"none",
-            //                 'contactPage': "none"
-                            
-            //             }
-            //             this.congressMembers.push(repInfo)
-            //             }
-              
-                        
-
-                        
-            //             }
-             
-          
+            console.log(this.congressMembers);   
             }, response => {
                 // error callback
             });
@@ -202,15 +181,6 @@ export default {
     created() {        
 
 
-
-// {
-//  "kind": "civicinfo#representativeInfoResponse",
-//  "normalizedInput": {
-//   "line1": "2912 Fulton Street",
-//   "city": "San Francisco",
-//   "state": "CA",
-//   "zip": "94118"
-//  },
 
 //         this.congressMembers = [
 // {name: "Gavin Newsom", title:"Governor", county: "", city: "", state: "California", email:'', contactPage: "https://govapps.gov.ca.gov/gov40mail/"},

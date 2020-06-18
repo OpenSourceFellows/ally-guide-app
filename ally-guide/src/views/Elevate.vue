@@ -101,7 +101,7 @@ export default {
                 'https://www.googleapis.com/civicinfo/v2/representatives', 
                 {
                 params: {
-                    'key': 'AIzaSyBDT6BuMoYXyOsVJdn0LmdIO9RD5yka2EA',
+                    'key': '',
                     'address': this.search,
                 },
             }).then(response => {   

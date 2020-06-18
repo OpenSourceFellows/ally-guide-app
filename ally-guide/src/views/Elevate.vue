@@ -40,25 +40,15 @@
                     <div>
                         <h4>Messages:</h4>
                     </div>
-
-                <div v-for="message in messages" :key="message.mid">
-                    <div>
-                        <div>
-                            <p>{{message.topic}}</p>
-                        </div>
-   
+                    <div class="m-5 d-inline" v-for="message in messages" :key="message.mid"> 
+                        <button v-on:click="showTextArea = !showTextArea" class="btn-primary btn m-4">{{message}}</button>
                     </div>
-
-                   
-                </div>
-                     <div>
-                            <textarea class="form-contorl p-3" rows="15%" cols="90%"></textarea>
-                        </div>
+                    <div v-if="showTextArea">
+                        <textarea class="form-contorl p-3" rows="15%" cols="90%"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
-
-   
     </div>
     
 </template>
@@ -69,12 +59,19 @@ export default {
   data () {
     return{
         messages: [
-            {topic: "End Money Bail + Police Reform", message: "<p>To whom it may concern:</p><p>I am writing to you from my home of {{city}}, {{state}} to ask that you use your platform to bring reform to the policies and practices that inherently progress racial imbalance in our country. </p><p>As we’ve seen time and time again, cash bail does not promote safety and unfairly penalizes low-income defendants while those who can afford bail go free. <br>We ask that you join us (along with Color of Change) in the fight to abolish money bail and help bring about long overdue equality within our justice system for black Americans.</p><p>I am also writing to demand justice for George Floyd, Breonna Taylor, Trayvon Martin, and every other Black American whose life ended too soon at the hands of the police force. While the officer who choked (murdered) George Floyd has been arrested and charged with murder, we need to ensure indefinitely that other officers who commit similar offenses out of racist agendas are not going to be protected by our biased criminal justice system anymore. </p><p>Please, in addition to helping bring about the end of money bail, join us in signing this petition to demand police reform in the United States and bring us one step closer to equality and justice for black people.</p><p>Best,</p><p>{{sender.first_name}}</p>" },
+            'End Money Bail + Police Reform',
+            'End Money Bail',
+            'End $ Bail (Created by Color Of Change)',
+            'Address police brutality + defund ',
+            'Protester Health + COVID-19',
+            'Withdraw National Guard and Army Reserve, cease use of M54 inhumane',
         ],
         congressMembers: [],
         reps: [],
         selectedMember: {},
         showmessageUI : false,
+        showTextArea: false,
+        selectionMade: false,
         showCongressInfo: true,
         hasContent: false,
         search:'',
@@ -96,12 +93,15 @@ export default {
         this.search = '';
         this.congressMembers = [];
         },
+        ToggleTextArea:function(){
+            this.showTextArea = true;
+        },
         CreateRepList: function (){
             this.$http.get(
                 'https://www.googleapis.com/civicinfo/v2/representatives', 
                 {
                 params: {
-                    'key': '',
+                    'key': 'AIzaSyBDT6BuMoYXyOsVJdn0LmdIO9RD5yka2EA',
                     'address': this.search,
                 },
             }).then(response => {   

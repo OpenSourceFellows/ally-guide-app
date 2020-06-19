@@ -5,6 +5,14 @@
 npm install
 ```
 
+### Configuration
+
+```
+cp .env.local.template .env.local
+```
+
+Edit `.env.local` and assign values to `VUE_APP_AIRTABLE_API_KEY` and `VUE_APP_AIRTABLE_BASE`
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve

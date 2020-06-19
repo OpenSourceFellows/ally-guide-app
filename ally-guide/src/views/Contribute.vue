@@ -1,7 +1,26 @@
 <template>
 <div>
-<div id="app">
-  {{ info }}
+
+<div>
+    <input type="text" v-model="search" placeholder="Search by name or state" v-on:keyup="CheckInputContent" style="width:30%">
+    <button type="button" v-on:click='FetchSearchResults()'>Search</button>
+</div>
+
+<div id="government-contact-info" v-show="searchCompleted">
+    <div v-for="result in searchResults" :key="result.Name" style="width: 30%; display: inline-block;">
+        <div style="border-style: dashed;">
+            <p>Name: {{result.Name}}</p>
+            <p>Causes: {{result.Cause}}</p>
+        </div>
+    </div>
+</div>
+
+<div v-show="error" style="color: red; font-weight: bolder;">
+  {{ error }}
+</div>
+
+<div v-show="searchCompleted && searchResults.length == 0 && !error" style="font-weight: bolder;">
+  <h1>Sorry, no results found.</h1>
 </div>
 </div>
 
@@ -71,18 +90,62 @@ a.blm:hover {
 </style>
 
 <script>
-var test = new Vue({
-  el: '#app',
+const Airtable = require('airtable');
+const base = new Airtable({ apiKey: process.env.VUE_APP_AIRTABLE_API_KEY }).base(process.env.VUE_APP_AIRTABLE_BASE);
+
+export default {
   data () {
-    return {
-      info: null
+    return{
+      search:'',
+      searchCompleted: false,
+      searchResults: [],
+      error: '',
     }
   },
-  mounted () {
-    axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))
+  methods: {
+    CheckInputContent: function () {
+
+    },
+    ToggleMessageUI: function (result) {
+
+    },
+    FetchSearchResults: function (result) {
+      this.searchCompleted = false;
+      this.searchResults = [];
+      this.error = '';
+
+      function page(records, fetchNextPage) {
+        for (const record of records) {
+            console.log('Retrieved', record.get('Name'));
+            console.log('Retrieved', record.fields);
+            this.searchResults.push(record.fields);
+        }
+
+        fetchNextPage();
+      }
+
+      function done(err) {
+        this.searchCompleted = true;
+
+        if (err) {
+          console.error(err);
+          this.error = `Search error: ${err.message ?? err}`;
+        }
+      }
+
+      // search the Distribute table by Name and State fields, case-insensitively.
+      base('Distribute').select({
+        view: "Grid view",
+        filterByFormula: `OR(FIND(LOWER("${this.search}"), LOWER({Name})), FIND(LOWER("${this.search}"), LOWER({State})))`,
+      }).eachPage(page.bind(this), done.bind(this));
+    }
+  },
+  computed: {
+
+  },
+  created() {
+
   }
-})
+}
 
 </script>

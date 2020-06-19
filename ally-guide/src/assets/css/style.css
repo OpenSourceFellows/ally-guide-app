@@ -103,6 +103,18 @@
    background-color: #ffc544;
   }
   /* Educate */
+.carousel-outer{
+  margin: 50px 50px -30px 50px;
+  position: relative;
+  height: 50vh;
+  border-radius: 20px;
+  background-color: #ffc544b5;
+}
+
+.carousel-inn{
+position:absolute;
+}
+
   
   /* Donate 
   On the Ground

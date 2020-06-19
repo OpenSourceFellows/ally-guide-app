@@ -18,6 +18,8 @@
                         <p>Position: {{member.title}}</p>
                         <p>Location: {{member.city}} {{member.state}}</p>
                         <p>Email Address: {{member.email}}</p>
+                        <p>Facebook: {{member.facebook}}</p>
+                        <p>Twitter: {{member.twitter}}</p>                        
                         <!-- <p>Contact Page: {{member.contactPage}}</p> -->
                         <div>
                         <button type="button" v-on:click="ToggleMessageUI(member)">Send A Message</button>
@@ -96,7 +98,19 @@ export default {
         ToggleTextArea:function(){
             this.showTextArea = true;
         },
+        FlattenChannels: function(rep, flattenRepInfo){
+            rep.channels.forEach(channel => {
+                if(channel.type == "Facebook"){
+                    flattenRepInfo.facebook = channel.id;
+                };
+                if(channel.type == "Twitter"){
+                    flattenRepInfo.twitter = channel.id;
+                };
+            });
+            return flattenRepInfo;
+        },
         CreateRepList: function (){
+            this.congressMembers = [];
             this.$http.get(
                 'https://www.googleapis.com/civicinfo/v2/representatives', 
                 {
@@ -147,7 +161,8 @@ export default {
                             } 
                             else{
                                 officeInfo.email = rep.email;
-                            }                                                                                                            
+                            } 
+                            officeInfo = this.FlattenChannels(rep, officeInfo);                                                                                                           
                             this.congressMembers.push(officeInfo);
                         }
                     });

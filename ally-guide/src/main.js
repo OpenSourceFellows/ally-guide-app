@@ -5,9 +5,15 @@ import router from "./router";
 import store from "./store";
 import colors from "./assets/css/colors.css";
 import styles from "./assets/css/style.css"
+import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);
+
+Vue.use(BootstrapVue);
 
 new Vue({
   router,

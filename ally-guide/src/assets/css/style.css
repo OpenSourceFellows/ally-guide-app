@@ -106,13 +106,29 @@
 .carousel-outer{
   margin: 50px 50px -30px 50px;
   position: relative;
-  height: 50vh;
+  height: 55vh;
   border-radius: 20px;
-  background-color: #ffc544b5;
+  background-color: #a87653;
+  padding:20px;
 }
 
 .carousel-inn{
-position:absolute;
+position: absolute;
+}
+
+.carousel-outer .carousel-inner{
+  overflow: visible;
+}
+.carousel-outer .carousel-caption{
+  position: absolute;
+  width: 100%;
+  left: 45vw;
+  color:black;
+  text-shadow:none;
+  text-align: center;
+  top: 45%;
+  padding:0px;
+  height:min-content
 }
 
   

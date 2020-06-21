@@ -8,24 +8,31 @@
 					:interval="0"
 					controls
 					indicators
-					no-animation
+					no-animation 
 					background="#ababab"
-					img-width="400"
+					img-width="500"
 					img-height="400"
 					style="text-shadow: 1px 1px 2px #333;"
 					@sliding-start="onSlideStart"
 					@sliding-end="onSlideEnd"
 				>
+        <!-- no-animation and interval 0 turns off automatic slide-->
 					<!-- Text slides with image -->
 					<b-carousel-slide
 						caption="First slide"
+						class="caption"
 						text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-						img-src="https://via.placeholder.com/400"
+						img-src="https://dummyimage.com/500x400/cc37cc/000000&text=Image+here"
 					></b-carousel-slide>
 					<b-carousel-slide
 						caption="Second slide"
 						text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-						img-src="https://via.placeholder.com/400"
+						img-src="https://dummyimage.com/500x400/37cc90/000000&text=Image+here"
+					></b-carousel-slide>
+					<b-carousel-slide
+						caption="Third slide"
+						text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+						img-src="https://dummyimage.com/500x400/373ccc/000000&text=Image+here"
 					></b-carousel-slide>
 				</b-carousel>
 			</div>

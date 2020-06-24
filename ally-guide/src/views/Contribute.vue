@@ -133,10 +133,16 @@ export default {
         }
       }
 
+      // Remove backslashes and double quotes from the user input to avoid injection. These characters aren't treated
+      // as literals by airtable. See https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference#text
+      // I don't see a way in Airtable's API to have a prepared statement ("formula") and bind parameters to it.
+      // So we'll have to make due with sanitizing our inputs.
+      const searchText = this.search.replace(/[\\"]/g, '');
+
       // search the Distribute table by Name and State fields, case-insensitively.
       base('Distribute').select({
         view: "Grid view",
-        filterByFormula: `OR(FIND(LOWER("${this.search}"), LOWER({Name})), FIND(LOWER("${this.search}"), LOWER({State})))`,
+        filterByFormula: `OR(FIND(LOWER("${searchText}"), LOWER({Name})), FIND(LOWER("${searchText}"), LOWER({State})))`,
       }).eachPage(page.bind(this), done.bind(this));
     }
   },

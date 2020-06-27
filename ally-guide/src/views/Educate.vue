@@ -11,7 +11,7 @@
 					indicators
 					no-animation
 					background="#ababab"
-					img-width="50%"
+					img-width="200"
 					img-height="400"
 					style="text-shadow: 1px 1px 2px #333;"
 					@sliding-start="onSlideStart"
@@ -38,8 +38,8 @@
 		</div>
 
 		<div class="edu-nav">
-			<a href>Take a learning path</a>
-			<a href>Traing your team</a>
+			<a href="https://airtable.com/shrPlbsh5wMvA99rq">Take a learning path</a>
+			<a href="https://airtable.com/shrRo99oHE0aGMKOW">Train your team</a>
 			<a href>Library</a>
 		</div>
 
@@ -110,8 +110,8 @@
 			</div>
 		</div>
 		<div class="library-container">
-			<a img src href>Protester Toolkit</a>
-			<a img src href>Say their names</a>
+		  <a class="protesterbutton" href="">Protester Toolkit</a></img>
+			<a img src ="">Say their names</a>
 			<a img src href>Black Healing</a>
 		</div>
 	</div>
@@ -216,5 +216,10 @@
 	.library-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.protesterbutton{
+		background-image:url('https://i.imgur.com/ETnOnsp.jpg');
+		height: 1300px;
+		width: 700px;
 	}
 </style>

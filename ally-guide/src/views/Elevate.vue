@@ -100,17 +100,12 @@ export default {
         },
         CreateRepList: function (){
             this.congressMembers = [];
+
             this.$http.get(
-                'http://localhost:5000/api/elevate', 
-                {
-                // params: {
-                //     'zipCode': this.search,
-                // },
-            }).then(response => {   
-                console.log(response.data); 
+                'http://localhost:5000/api/elevate/'+ this.search
+            ).then(response => {   
                 this.congressMembers = response.data;
                 this.hasContent = true;
-                console.log(this.congressMembers);   
             }, response => {
                 // error callback
             });

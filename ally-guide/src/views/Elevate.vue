@@ -71,11 +71,11 @@ export default {
         congressMembers: [],
         reps: [],
         selectedMember: {},
-        showmessageUI : false,
-        showTextArea: false,
-        selectionMade: false,
+        showmessageUI : false, //switch to True to see elements
+        showTextArea: false,//switch to True to see elements
+        selectionMade: false, //switch to True to see elements
         showCongressInfo: true,
-        hasContent: false,
+        hasContent: false, //switch to True to see elements
         search:'',
         }
     },
@@ -98,83 +98,17 @@ export default {
         ToggleTextArea:function(){
             this.showTextArea = true;
         },
-        FlattenChannels: function(rep, flattenRepInfo){
-            rep.channels.forEach(channel => {
-                if(channel.type == "Facebook"){
-                    flattenRepInfo.facebook = channel.id;
-                };
-                if(channel.type == "Twitter"){
-                    flattenRepInfo.twitter = channel.id;
-                };
-            });
-            return flattenRepInfo;
-        },
         CreateRepList: function (){
             this.congressMembers = [];
-            this.$http.get(
-                'https://www.googleapis.com/civicinfo/v2/representatives', 
-                {
-                params: {
-                    'key': '',
-                    'address': this.search,
-                },
-            }).then(response => {   
-                console.log(response.data); 
-                this.reps = response.data.officials;
-                response.data.offices.forEach(repInfo => {              
-                    repInfo.officialIndices.forEach(position => {
-                        if(position > 1){
-                        var rep = this.reps[position];           
-                        
-                            var officeInfo = {
-                                'name': '',
-                                'title': '',
-                                'city': '',
-                                'state':'',
-                                'email':'',
-                                'twitter':'',
-                                'facebook':'',
-                                'contactPage': ''
-                            }
 
-                            if (rep.name == undefined || rep.name == ''){
-                                
-                            }
-                            else{
-                                officeInfo.name = rep.name;
-                            }
-                            if (repInfo.name == undefined || rep.name == ''){
-                                
-                            }
-                            else{
-                                officeInfo.title = repInfo.name;
-                            }
-                            if (rep.address == undefined || rep.address == ''){
-                                
-                            }
-                            else{
-                                officeInfo.city = rep.address[0].city;
-                                officeInfo.state = rep.address[0].state;
-                            }
-                            if(repInfo.email == undefined) {
-                                officeInfo.email = 'Unavailable';
-                            } 
-                            else{
-                                officeInfo.email = rep.email;
-                            } 
-                            officeInfo = this.FlattenChannels(rep, officeInfo);                                                                                                           
-                            this.congressMembers.push(officeInfo);
-                        }
-                    });
-                });
-            this.hasContent = true;
-            console.log(this.congressMembers);   
+            this.$http.get(
+                'http://localhost:5000/api/elevate/'+ this.search
+            ).then(response => {   
+                this.congressMembers = response.data;
+                this.hasContent = true;
             }, response => {
                 // error callback
             });
-
-
-
         }
     },
     computed: {

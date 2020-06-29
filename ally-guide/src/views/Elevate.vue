@@ -98,83 +98,22 @@ export default {
         ToggleTextArea:function(){
             this.showTextArea = true;
         },
-        FlattenChannels: function(rep, flattenRepInfo){
-            rep.channels.forEach(channel => {
-                if(channel.type == "Facebook"){
-                    flattenRepInfo.facebook = channel.id;
-                };
-                if(channel.type == "Twitter"){
-                    flattenRepInfo.twitter = channel.id;
-                };
-            });
-            return flattenRepInfo;
-        },
         CreateRepList: function (){
             this.congressMembers = [];
             this.$http.get(
-                'https://www.googleapis.com/civicinfo/v2/representatives', 
+                'http://localhost:5000/api/elevate', 
                 {
-                params: {
-                    'key': '',
-                    'address': this.search,
-                },
+                // params: {
+                //     'zipCode': this.search,
+                // },
             }).then(response => {   
                 console.log(response.data); 
-                this.reps = response.data.officials;
-                response.data.offices.forEach(repInfo => {              
-                    repInfo.officialIndices.forEach(position => {
-                        if(position > 1){
-                        var rep = this.reps[position];           
-                        
-                            var officeInfo = {
-                                'name': '',
-                                'title': '',
-                                'city': '',
-                                'state':'',
-                                'email':'',
-                                'twitter':'',
-                                'facebook':'',
-                                'contactPage': ''
-                            }
-
-                            if (rep.name == undefined || rep.name == ''){
-                                
-                            }
-                            else{
-                                officeInfo.name = rep.name;
-                            }
-                            if (repInfo.name == undefined || rep.name == ''){
-                                
-                            }
-                            else{
-                                officeInfo.title = repInfo.name;
-                            }
-                            if (rep.address == undefined || rep.address == ''){
-                                
-                            }
-                            else{
-                                officeInfo.city = rep.address[0].city;
-                                officeInfo.state = rep.address[0].state;
-                            }
-                            if(repInfo.email == undefined) {
-                                officeInfo.email = 'Unavailable';
-                            } 
-                            else{
-                                officeInfo.email = rep.email;
-                            } 
-                            officeInfo = this.FlattenChannels(rep, officeInfo);                                                                                                           
-                            this.congressMembers.push(officeInfo);
-                        }
-                    });
-                });
-            this.hasContent = true;
-            console.log(this.congressMembers);   
+                this.congressMembers = response.data;
+                this.hasContent = true;
+                console.log(this.congressMembers);   
             }, response => {
                 // error callback
             });
-
-
-
         }
     },
     computed: {

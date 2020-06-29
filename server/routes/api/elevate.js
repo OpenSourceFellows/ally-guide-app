@@ -18,8 +18,7 @@ router.get('/:zipCode', (req, res) => {
     .then(function(response){
         console.log('the start of the test'); 
         reps = response.data.officials;
-console.log(response.data.offices);
-console.log(reps)
+
         response.data.offices.forEach(repInfo => {              
             repInfo.officialIndices.forEach(position => {
                 if(position > 1){

@@ -9,8 +9,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const elevate = require('./routes/api/elevate');
+const contribute = require('./routes/api/contribute');
 
 app.use('/api/elevate', elevate);
+app.use('/api/contribute', contribute);
 
 const port = process.env.PORT || 5000;
 

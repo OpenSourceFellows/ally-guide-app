@@ -91,7 +91,7 @@ a.blm:hover {
 
 <script>
 const Airtable = require('airtable');
-const base = new Airtable({ apiKey: process.env.VUE_APP_AIRTABLE_API_KEY }).base(process.env.VUE_APP_AIRTABLE_BASE);
+//const base = new Airtable({ apiKey: process.env.VUE_APP_AIRTABLE_API_KEY }).base(process.env.VUE_APP_AIRTABLE_BASE);
 
 export default {
   data () {
@@ -129,22 +129,27 @@ export default {
 
         if (err) {
           console.error(err);
-          this.error = `Search error: ${err.message ?? err}`;
+          this.error = 'Search error: ${err.message ?? err}';
         }
       }
 
-      // search the Distribute table by Name and State fields, case-insensitively.
-      base('Distribute').select({
-        view: "Grid view",
-        filterByFormula: `OR(FIND(LOWER("${this.search}"), LOWER({Name})), FIND(LOWER("${this.search}"), LOWER({State})))`,
-      }).eachPage(page.bind(this), done.bind(this));
-    }
+
+    },
   },
   computed: {
 
   },
   created() {
+      this.congressMembers = [];
 
+      this.$http.get(
+          'http://localhost:5000/api/contribute/'
+      ).then(response => {   
+        this.searchResults = response;
+        console.log(this.searchresults)
+      }, response => {
+          // error callback
+      });
   }
 }
 

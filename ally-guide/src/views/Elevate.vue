@@ -71,11 +71,11 @@ export default {
         congressMembers: [],
         reps: [],
         selectedMember: {},
-        showmessageUI : false, //switch to True to see elements
-        showTextArea: false,//switch to True to see elements
-        selectionMade: false, //switch to True to see elements
+        showmessageUI : true, //switch to True to see elements
+        showTextArea: true,//switch to True to see elements
+        selectionMade: true, //switch to True to see elements
         showCongressInfo: true,
-        hasContent: false, //switch to True to see elements
+        hasContent: true, //switch to True to see elements
         search:'',
         }
     },

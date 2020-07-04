@@ -43,7 +43,7 @@
 	}
 	.header-banner {
 		background-color: #333;
-		background-image: url("https://www.pewresearch.org/wp-content/uploads/2020/06/FT_20.06.09_BlackLivesMatter_feature.png");
+		background-image: url("https://globalnewsbulletin.com/wp-content/uploads/2020/06/128d821dbb374ee8a51b8f29d407f830_18.jpg");
 		background-position: top- 50;
 		background-repeat: no-repeat;
 		background-size: 100% 180%;

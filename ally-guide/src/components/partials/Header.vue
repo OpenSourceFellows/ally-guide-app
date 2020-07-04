@@ -38,7 +38,7 @@
 <style>
 	/* main */
 	header {
-		height: 360px;
+		height: 350px;
 		z-index: 10;
 	}
 	.header-banner {

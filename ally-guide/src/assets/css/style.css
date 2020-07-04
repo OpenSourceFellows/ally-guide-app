@@ -102,6 +102,8 @@
   .textbtn:hover{
    background-color: #ffc544;
   }
+
+
   /* Educate */
 .carousel-outer{
   margin: 50px 50px -30px 50px;
@@ -129,6 +131,29 @@ position: absolute;
   top: 45%;
   padding:0px;
   height:min-content
+}
+
+
+/*ELEVATE*/
+.searchbanner{
+color:white;
+  font-weight: 900;
+  padding: 60px;
+  background-color: #9d1904;
+}
+
+.searchtext{
+  font-weight:900;
+  padding-bottom:15px;
+}
+.searchbanner .searchform{
+  display:inline;
+  margin-right:5px;
+}
+
+
+.svg-inline--fa{
+  vertical-align: top;
 }
 
 

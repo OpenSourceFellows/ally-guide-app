@@ -62,6 +62,87 @@
 				</b-card>
 			</div>
 		</div>
+                <div>
+                    <div>
+                        <h4>Messages:</h4>
+                    </div>
+                    <div class="m-5 d-inline" v-for="message in messages" :key="message.mid"> 
+                        <button v-on:click="showTextArea = !showTextArea" class="btn-primary btn m-4">{{message}}</button>
+                    </div>
+                    <div v-if="showTextArea">
+                        <textarea class="form-contorl p-3" rows="15%" cols="90%"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</template>
+
+<script>
+
+export default {
+  data () {
+    return{
+        messages: [
+            'End Money Bail + Police Reform',
+            'End Money Bail',
+            'End $ Bail (Created by Color Of Change)',
+            'Address police brutality + defund ',
+            'Protester Health + COVID-19',
+            'Withdraw National Guard and Army Reserve, cease use of M54 inhumane',
+        ],
+        congressMembers: [],
+        reps: [],
+        selectedMember: {},
+        showmessageUI : true, //switch to True to see elements
+        showTextArea: true,//switch to True to see elements
+        selectionMade: true, //switch to True to see elements
+        showCongressInfo: true,
+        hasContent: true, //switch to True to see elements
+        search:'',
+        }
+    },
+    methods: {
+        CheckInputContent: function () {
+            if (this.search != '') {
+            this.hasContent = true;
+            }
+            else {
+                this.hasContent = false;
+            }
+        },
+        ToggleMessageUI: function (member) {
+        this.selectedMember = member;
+        this.showmessageUI = true;
+        this.hasContent = false;
+        this.search = '';
+        this.congressMembers = [];
+        },
+        ToggleTextArea:function(){
+            this.showTextArea = true;
+        },
+        CreateRepList: function (){
+            this.congressMembers = [];
+
+            this.$http.get(
+                'http://localhost:5000/api/elevate/'+ this.search
+            ).then(response => {   
+                this.congressMembers = response.data;
+                this.hasContent = true;
+            }, response => {
+                // error callback
+            });
+        }
+    },
+    computed: {
+        // filteredCongressMembers: function(){
+        //     return this.congressMembers.filter((member) => {
+        //       return member.state.toLowerCase().match(this.search.toLowerCase());
+        //     });
+        // } ,       
+    },
+    created() {        
 
 		<div id="message-ui" v-show="showmessageUI">
 			<div id="selected-member">

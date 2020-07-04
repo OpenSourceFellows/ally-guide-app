@@ -8,7 +8,7 @@ router.get('/:zipCode', (req, res) => {
     var congressMembers = [];
     var reps = [];
     var zipCode = req.params.zipCode;
-    console.log(req.params)
+
     axios.get('https://www.googleapis.com/civicinfo/v2/representatives',{
         params:{
             key: '',//add key here

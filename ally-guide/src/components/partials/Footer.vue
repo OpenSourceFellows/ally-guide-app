@@ -1,19 +1,19 @@
 <template>
-  <div>
+  <div >
     <div>
     How can we help?
-    <a href="https://forms.gle/xYmhA16RrbwzHCDU8">  
+    <a href="https://forms.gle/xYmhA16RrbwzHCDU8">
       <div class = "button">
-        Add Resources here 
+        Add Resources here
       </div>
-    </a> 
-    <a href="https://forms.gle/KgK5f6hXrQz1Ciea9"> 
-      <div class="button"> 
+    </a>
+    <a href="https://forms.gle/KgK5f6hXrQz1Ciea9">
+      <div class="button">
           Stay Updated
       </div>
     </a>
     </div>
-    <div class = "resource bg-black text-white border-yellow" >
+    <div class ="footer-container resource text-white border-yellow" >
       <div>
         Educate
         <button class = "textbtn"> About the movement </button>
@@ -32,13 +32,13 @@
 
       </div>
       <div >
-        Elevate 
+        Elevate
         <button class = "textbtn"> Say their Names </button>
         <button class = "textbtn"> Reach local representatives </button>
         <button class = "textbtn"> Email Congressmembers </button>
         <button class = "textbtn"> Text Support </button>
         <button class = "textbtn"> Sign these petitions </button>
-        
+
       </div>
       <div>
           <a href "../views/Contribute.vue"> Collaborate </a>
@@ -46,7 +46,7 @@
           <button class = "textbtn"> Global Events </button>
           <button class = "textbtn"> Offer Services </button>
           <button class = "textbtn"> Join these organizations  </button>
-          <button class = "textbtn"> Join Alley.Guide's efforts </button>  
+          <button class = "textbtn"> Join Alley.Guide's efforts </button>
       </div>
     </div>
   </div>

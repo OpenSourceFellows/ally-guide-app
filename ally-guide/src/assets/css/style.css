@@ -85,7 +85,12 @@
       margin: 0px;
       text-align: center;
   }
+.footer-container{
 
+
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: linear-gradient(90deg, brown, black);
+}
   .textbtn {
     border: none;
     background-color: inherit;

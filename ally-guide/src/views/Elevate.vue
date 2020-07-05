@@ -39,6 +39,7 @@
 				>
 					<b-card-text>
 						<!-- <p>Position: {{member.title}}</p> -->
+
 						<p>
 							<i class="fas fa-map-marker-alt" style="font-size:20px;width:1.5rem;"></i>
 							{{member.city}} {{member.state}}
@@ -63,14 +64,44 @@
 			</div>
 		</div>
 		<div>
-			<div>
-				<h4>Messages:</h4>
-			</div>
-			<div class="m-5 d-inline" v-for="message in messages" :key="message.mid">
-				<button v-on:click="showTextArea = !showTextArea" class="btn-primary btn m-4">{{message}}</button>
-			</div>
-			<div v-if="showTextArea">
-				<textarea class="form-contorl p-3" rows="15%" cols="90%"></textarea>
+			<div id="message-ui" v-show="showmessageUI">
+				<div id="selected-member">
+					<div>
+						<b-card no-body class="overflow-hidden" style="max-width: 100%;">
+							<b-row no-gutters>
+								<b-col md="2">
+									<b-card-img
+										src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
+										alt="Image"
+										class="rounded-0"
+									></b-card-img>
+								</b-col>
+								<b-col md="10 d-flex align-items-center">
+									<b-card-body>
+										<b-card-text>
+											<h1 class="p-2" style="display: block;">{{selectedMember.name}}</h1>
+											<h4 class="p-2" style="display: block;">{{selectedMember.title}}</h4>
+										</b-card-text>
+									</b-card-body>
+								</b-col>
+							</b-row>
+						</b-card>
+					</div>
+				</div>
+
+				<div>
+					<div>
+						<br />
+						<h2>What would you like to do?</h2>
+						<br />
+					</div>
+					<div class="m-2 d-inline" v-for="message in messages" :key="message.mid">
+						<button v-on:click="showTextArea = !showTextArea" class="btn-primary btn m-2">{{message}}</button>
+					</div>
+					<div v-if="showTextArea">
+						<textarea class="form-contorl p-3" rows="15%" cols="90%"></textarea>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

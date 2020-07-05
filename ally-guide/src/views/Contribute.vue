@@ -90,8 +90,6 @@ a.blm:hover {
 </style>
 
 <script>
-const Airtable = require('airtable');
-//const base = new Airtable({ apiKey: process.env.VUE_APP_AIRTABLE_API_KEY }).base(process.env.VUE_APP_AIRTABLE_BASE);
 
 export default {
   data () {
@@ -109,32 +107,6 @@ export default {
     ToggleMessageUI: function (result) {
 
     },
-    FetchSearchResults: function (result) {
-      this.searchCompleted = false;
-      this.searchResults = [];
-      this.error = '';
-
-      function page(records, fetchNextPage) {
-        for (const record of records) {
-            console.log('Retrieved', record.get('Name'));
-            console.log('Retrieved', record.fields);
-            this.searchResults.push(record.fields);
-        }
-
-        fetchNextPage();
-      }
-
-      function done(err) {
-        this.searchCompleted = true;
-
-        if (err) {
-          console.error(err);
-          this.error = 'Search error: ${err.message ?? err}';
-        }
-      }
-
-
-    },
   },
   computed: {
 
@@ -146,7 +118,7 @@ export default {
           'http://localhost:5000/api/contribute/'
       ).then(response => {   
         this.searchResults = response;
-        console.log(this.searchresults)
+        console.log(this.searchResults)
       }, response => {
           // error callback
       });

@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "cd ally-guide && vue-cli-service serve",
-    "start": "cd ally-guide && vue-cli-service serve",
+    "start": "node server/index.js",
     "heroku-prebuild": "cd ally-guide && npm install",
     "build": "cd ally-guide && vue-cli-service build",
     "lint": "vue-cli-service lint"

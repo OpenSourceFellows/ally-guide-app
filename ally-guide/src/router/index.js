@@ -23,6 +23,12 @@ const routes = [
     component: Elevate
   },
   {
+    path: "/Library",
+    name: "Library",
+    component: () =>
+      import(/* webpackChunkName: "educate" */ "../views/Library.vue")
+  },
+  {
     path: "/educate",
     name: "Educate",
     component: () =>

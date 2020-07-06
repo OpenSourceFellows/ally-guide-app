@@ -40,11 +40,11 @@
 		<div class="edu-nav">
 			<a href="https://airtable.com/shrPlbsh5wMvA99rq">Take a learning path</a>
 			<a href="https://airtable.com/shrRo99oHE0aGMKOW">Train your team</a>
-			<a href>Library</a>
+			<a href = "/Library.vue">Library</a>
 		</div>
 
 		<div class="accordion-container">
-			<h2>Are you aware?</h2>
+			<h2 style = "color: #000000" >Are you aware?</h2>
 			<div class="set">
 				<a href="#">
 					Why are the protests happening now?
@@ -108,11 +108,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="library-container">
-		  <a class="protesterbutton" href="">Protester Toolkit</a></img>
-			<a img src ="">Say their names</a>
-			<a img src href>Black Healing</a>
 		</div>
 	</div>
 </template>

@@ -74,7 +74,7 @@
 		top: 8rem;
 		right:8rem;
 		font-size: 3em;
-		opacity: 60%;
+		opacity: 70%;
 	}
 
 

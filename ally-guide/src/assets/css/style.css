@@ -12,8 +12,11 @@ body{
   padding:0px;
   width: 100%;
 }
+.buffer{
+  height: 250px;
+}
 .nav-link:hover {
-    color: inherit;
+    color: white;
     text-decoration: none;
     opacity: .75;
   }
@@ -23,10 +26,7 @@ body{
     text-decoration: none;
   }
 
-  .octicon {
-    display: inline-block;
-    vertical-align: text-bottom;
-  }
+
 
   .container{
     flex-wrap: wrap;
@@ -48,7 +48,6 @@ body{
     padding-left:200px;
     padding-right:300px;
     padding-bottom: 200px;
-    position: relative;
 
   }
 
@@ -65,7 +64,6 @@ body{
     padding-left:260px;
     padding-right:280px;
     padding-bottom: 200px;
-
     }
 
 .educate{

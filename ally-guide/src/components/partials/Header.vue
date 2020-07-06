@@ -2,9 +2,14 @@
 	<div>
 		<header>
 			<div class="header-banner"></div>
+			  <div class="message-title">
+				Our Allyship can be our responsibility.
+				</div>
 			<div class="clear"></div>
 			<nav>
-				<div class="site-title">Ally Guide</div>
+				<div class="site-title">
+					<img src="https://i.ibb.co/MD1hSXZ/Screen-Shot-2020-07-06-at-2-33-40-AM.png">
+				</div>
 				<ul>
 					<li>
 						<a href="/Home">Home</a>
@@ -38,38 +43,51 @@
 <style>
 	/* main */
 	header {
+		position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 		z-index: 10;
 	}
+
+
+
 	.header-banner {
-			background-color: #333;
-			background-image: url("https://www.pewresearch.org/wp-content/uploads/2020/06/FT_20.06.09_BlackLivesMatter_feature.png");
-		  background-position: top- 50;
-			background-repeat: no-repeat;
-			background-size: 100% 180%;
+		background-color: #333;
+		background-image: url('https://i.ibb.co/b12NHqL/Screen-Shot-2020-07-06-at-1-44-28-AM.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		align: bottom;
+		height: 180px;
+		padding: 100px;
 
 	}
-	
-	header h1 {
-		background-color: rgba(18, 72, 120, 0.8);
+
+	.message-title {
+	  visibility: visible;
+		background-color:#6d2114;
 		color: #fff;
 		padding: 0 1rem;
 		position: absolute;
-		top: 0rem;
-		left: 2rem;
+		top: 8rem;
+		right:8rem;
+		font-size: 3em;
+		opacity: 60%;
 	}
 
-	.fixed-header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
 
-	nav {
+
+	nav{
 		width: 100%;
-		height: 50px;
+		font-size: 1.1em;
+		height: 60px;
 		background: #000000;
 		z-index: 10;
+		position:relative;
+		top: 0;
+
 	}
 
 	nav div {
@@ -77,6 +95,7 @@
 		font-size: 2rem;
 		line-height: 60px;
 		position: absolute;
+		postion: fixed;
 		top: 0;
 		left: 2%;
 		visibility: hidden;

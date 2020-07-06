@@ -22,12 +22,19 @@
 <div v-show="searchCompleted && searchResults.length == 0 && !error" style="font-weight: bolder;">
   <h1>Sorry, no results found.</h1>
 </div>
+
+<div>
+<a id = "rebuild-btn" href = "https://www.rebuildblackbusiness.com/"> Rebuild Black Owned Businesses </a>
+</div>
 </div>
 
 
 </template>
 
 <style>
+#rebuild-btn{
+    
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -116,7 +123,7 @@ export default {
 
       this.$http.get(
           'http://localhost:5000/api/contribute/'
-      ).then(response => {   
+      ).then(response => {
         this.searchResults = response;
         console.log(this.searchResults)
       }, response => {

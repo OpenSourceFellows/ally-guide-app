@@ -38,9 +38,9 @@
 		</div>
 
 		<div class="edu-nav">
-			<a href="https://airtable.com/shrPlbsh5wMvA99rq">Take a learning path</a>
-			<a href="https://airtable.com/shrRo99oHE0aGMKOW">Train your team</a>
-			<a href = "/Library.vue">Library</a>
+			<a class="btn-2" href="https://airtable.com/shrPlbsh5wMvA99rq">Take a learning path</a>
+			<a class="btn-2" href="https://airtable.com/shrRo99oHE0aGMKOW">Train your team</a>
+			<a class="btn-2" href = "/Library">Library</a>
 		</div>
 
 		<div class="accordion-container">
@@ -217,4 +217,47 @@
 		height: 1300px;
 		width: 700px;
 	}
+
+.btn-2 {
+    letter-spacing: 0;
+		color: #fff;
+
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 2px;
+	text-decoration: none;
+  color: #ffffff;
+	border: 1px solid rgba(#ffffff, 0);
+
+	transition: all 280ms ease-in-out;
+}
+
+.btn-2:after,
+.btn-2:before {
+color: #ffffff;
+cursor: pointer;
+font-size:16px;
+font-weight: 400;
+line-height: 45px;
+margin: 0 0 2em;
+max-width: 160px;
+position: relative;
+text-decoration: none;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+  backface-visibility: hidden;
+  border-color: #ffffff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btn-2:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
 </style>

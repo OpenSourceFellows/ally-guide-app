@@ -38,19 +38,17 @@
 <style>
 	/* main */
 	header {
-		height: 350px;
 		z-index: 10;
 	}
 	.header-banner {
-		background-color: #333;
-		background-image: url("https://globalnewsbulletin.com/wp-content/uploads/2020/06/128d821dbb374ee8a51b8f29d407f830_18.jpg");
-		background-position: top- 50;
-		background-repeat: no-repeat;
-		background-size: 100% 180%;
-		/* width: 100%; */
-		height: 300px;
-	}
+			background-color: #333;
+			background-image: url("https://www.pewresearch.org/wp-content/uploads/2020/06/FT_20.06.09_BlackLivesMatter_feature.png");
+		  background-position: top- 50;
+			background-repeat: no-repeat;
+			background-size: 100% 180%;
 
+	}
+	
 	header h1 {
 		background-color: rgba(18, 72, 120, 0.8);
 		color: #fff;

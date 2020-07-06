@@ -1,7 +1,17 @@
 /* Custom stylesheet */
 
 /* Global */
+@media screen and (max-width: 1024px){
+			#image_div img {
+				left: 50%;
+				margin-left: -512px; }
+}
 
+body{
+  margin: 0px;
+  padding:0px;
+  width: 100%;
+}
 .nav-link:hover {
     color: inherit;
     text-decoration: none;
@@ -19,31 +29,81 @@
   }
 
   .container{
-    display: flex;
     flex-wrap: wrap;
-    width: 100%;
     vertical-align:bottom;
   }
 
-  .box{
-    flex: 1 0 calc(25% - 20px);
-    margin: 5px;
-    background: #E9D2FF;
-    opacity: 0.75;
-    transition: 0.3s;
-    background-color: #9d1904;
+
+
+  .distribute {
+    background-image:url('https://i.ibb.co/Bs2qLdx/contrbanner.png');
+    background-repeat:no-repeat;
+    font-size:2em;
+    color:white;
+    width:100%;
+    text-align:center;
+    font-family:Helvetica, Arial, sans-serif;
+    font-weight:bold;
+    cursor: pointer;
+    padding-left:200px;
+    padding-right:300px;
+    padding-bottom: 200px;
+    position: relative;
+
   }
 
-  .box:after{
-    content: '';
-    display: block;
-    padding-bottom: 100%;
+.elevate{
+    background-image: url('https://i.ibb.co/TKZ732D/elevbanner.png');
+    background-repeat:no-repeat;
+    font-size:2em;
+    color:white;
+    width:100%;
+    text-align:center;
+    font-family:Helvetica, Arial, sans-serif;
+    font-weight:bold;
+    cursor: pointer;
+    padding-left:260px;
+    padding-right:280px;
+    padding-bottom: 200px;
+
+    }
+
+.educate{
+      background-image: url('https://i.ibb.co/NNHVbr3/edubanner.png');
+      background-repeat:no-repeat;
+      font-size:2em;
+      color:white;
+      width:100%;
+      text-align:center;
+      font-family:Helvetica, Arial, sans-serif;
+      font-weight:bold;
+      cursor: pointer;
+      padding-left:240px;
+      padding-right:280px;
+      padding-bottom: 200px;
+
   }
+
+.collaborate{
+  background-image: url('https://i.ibb.co/9pwW4vR/collabanner.png');
+  background-repeat:no-repeat;
+  background-size: contain;
+  font-size:2em;
+  color:white;
+  width:100%;
+  text-align:center;
+  font-family:Helvetica, Arial, sans-serif;
+  font-weight:bold;
+  cursor: pointer;
+  padding-left:200px;
+  padding-right:270px;
+  padding-bottom: 205px;
+}
+
 
   .button {
-    background-color: #4CAF50; /* Green */
-    border-radius: 56px;
-    border: none;
+    background-color: #5e9977; /* Green */
+    border: 2px #537260;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -87,9 +147,8 @@
   }
 .footer-container{
 
-
+  opacity: 70%;
   background-color: black; /* For browsers that do not support gradients */
-  background-image: linear-gradient(90deg, brown, black);
 }
   .textbtn {
     border: none;

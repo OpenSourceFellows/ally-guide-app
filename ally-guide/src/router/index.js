@@ -35,8 +35,8 @@ const routes = [
       import(/* webpackChunkName: "educate" */ "../views/Educate.vue")
   },
   {
-    path: "/contribute",
-    name: "Contribute",
+    path: "/distribute",
+    name: "Distribute",
     component: () =>
       import(/* webpackChunkName: "contribute" */ "../views/Contribute.vue")
   },

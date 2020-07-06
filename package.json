@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "cd ally-guide && vue-cli-service serve",
+    "start": "cd ally-guide && vue-cli-service serve",
     "build": "cd ally-guide && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

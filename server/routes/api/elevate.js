@@ -1,7 +1,8 @@
 const express = require("express");
 const axios = require("axios");
-
 const router = express.Router();
+require('dotenv').config()
+
 
 // Get Post
 router.get('/:zipCode', (req, res) => {
@@ -11,19 +12,19 @@ router.get('/:zipCode', (req, res) => {
 
     axios.get('https://www.googleapis.com/civicinfo/v2/representatives',{
         params:{
-            key: '',//add key here
+            key: process.env.CivicAPI,//add key here
             address: zipCode
         }
     })
     .then(function(response){
-        console.log('the start of the test'); 
+        console.log('the start of the test');
         reps = response.data.officials;
 
-        response.data.offices.forEach(repInfo => {              
+        response.data.offices.forEach(repInfo => {
             repInfo.officialIndices.forEach(position => {
                 if(position > 1){
-                var rep = reps[position];           
-                
+                var rep = reps[position];
+
                     var officeInfo = {
                         'name': '',
                         'title': '',
@@ -36,19 +37,19 @@ router.get('/:zipCode', (req, res) => {
                     }
 
                     if (rep.name == undefined || rep.name == ''){
-                        
+
                     }
                     else{
                         officeInfo.name = rep.name;
                     }
                     if (repInfo.name == undefined || rep.name == ''){
-                        
+
                     }
                     else{
                         officeInfo.title = repInfo.name;
                     }
                     if (rep.address == undefined || rep.address == ''){
-                        
+
                     }
                     else{
                         officeInfo.city = rep.address[0].city;
@@ -56,14 +57,14 @@ router.get('/:zipCode', (req, res) => {
                     }
                     if(repInfo.email == undefined) {
                         officeInfo.email = 'Unavailable';
-                    } 
+                    }
                     else{
                         officeInfo.email = rep.email;
-                    } 
+                    }
                     officeInfo = FlattenChannels(rep, officeInfo);
                     if(officeInfo !== undefined){
                         congressMembers.push(officeInfo);
-                    }                                                                                                           
+                    }
                 }
             })
         })
@@ -72,10 +73,10 @@ router.get('/:zipCode', (req, res) => {
     })
     .catch(function(error){
         console.log(error);
-    })    
+    })
 });
 
-function FlattenChannels(rep, flattenRepInfo){  
+function FlattenChannels(rep, flattenRepInfo){
     if (rep.channels == undefined){
         flattenRepInfo.facebook = 'Not Made Public';
         flattenRepInfo.twitter = 'Not Made Public';

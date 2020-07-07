@@ -6,10 +6,9 @@
 				<b-carousel
 					id="carousel-1"
 					v-model="slide"
-					:interval="0"
+					:interval="6000"
 					controls
 					indicators
-					no-animation
 					background="#ababab"
 					img-width="200"
 					img-height="400"

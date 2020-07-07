@@ -6,6 +6,7 @@
 				Our Allyship can be our responsibility.
 				</div>
 			<div class="clear"></div>
+			
 			<nav>
 				<div class="site-title">
 					<img src="https://i.ibb.co/MD1hSXZ/Screen-Shot-2020-07-06-at-2-33-40-AM.png">
@@ -71,7 +72,7 @@
 		color: #fff;
 		padding: 0 1rem;
 		position: absolute;
-		top: 8rem;
+		bottom: 3.7rem;
 		right:8rem;
 		font-size: 3em;
 		opacity: 70%;
@@ -123,7 +124,7 @@
 
 	li {
 		text-decoration: none;
-		padding: 0 0 0 20px;
+		margin:0px 10px;
 		font-family: "Poppins", sans-serif;
 		font-weight: bold;
 		color: red;

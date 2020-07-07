@@ -4,7 +4,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import colors from "./assets/css/colors.css";
-import styles from "./assets/css/style.css"
+import styles from "./assets/css/style.less"
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
 
 import 'bootstrap/dist/css/bootstrap.css';

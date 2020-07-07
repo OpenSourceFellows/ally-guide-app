@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<h1> Show up as a student. </h1>
+	<div style = "margin-top: 200px;">
+		<h1 style="color=brown;"> Show up as a student. </h1>
 		<div class="carousel-outer">
 			<div class="carousel-inn">
 				<b-carousel
@@ -163,6 +163,7 @@
 		max-width: 500px;
 		height: auto;
 		margin: 10px auto;
+		padding: 20px;
 	}
 	.accordion-container > h2 {
 		text-align: center;

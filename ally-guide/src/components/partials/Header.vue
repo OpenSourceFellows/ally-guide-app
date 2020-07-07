@@ -6,14 +6,11 @@
 				Our Allyship can be our responsibility.
 				</div>
 			<div class="clear"></div>
-			
+
 			<nav>
-				<div class="site-title">
-					<img src="https://i.ibb.co/MD1hSXZ/Screen-Shot-2020-07-06-at-2-33-40-AM.png">
-				</div>
 				<ul>
 					<li>
-						<a href="/Home">Home</a>
+						<a href=""> Stay Updated </a>
 					</li>
 					<li>
 						<a href="/Collaborate">Collaborate</a>
@@ -24,8 +21,13 @@
 					<li>
 						<a href="/Elevate">Elevate</a>
 					</li>
+				  <li>
+						<a href="/Home">Home</a>
+					</li>
 					<li>
-						<a href="/Educate">Educate</a>
+						<img src="https://i.ibb.co/T2DZ6vc/Screen-Shot-2020-07-06-at-2-33-40-AM.png" alt="Screen-Shot-2020-07-06-at-2-33-40-AM" border="0" />
+					</li>
+					<li>
 					</li>
 				</ul>
 			</nav>
@@ -51,7 +53,7 @@
 		z-index: 10;
 	}
 
-
+	.site-title img{float:left;}
 
 	.header-banner {
 		background-color: #333;
@@ -88,7 +90,6 @@
 		z-index: 10;
 		position:relative;
 		top: 0;
-
 	}
 
 	nav div {
@@ -146,8 +147,18 @@
 		transition: width 0.35s ease 0s;
 		position: absolute;
 	}
-
+	li img{
+		width:160px;
+		postion: fixed;
+		top: 0;
+		left: 2%;
+	}
 	li:hover::after {
 		width: 100%;
 	}
+  li a:hover{
+		text-decoration:none;
+	}
+
+
 </style>

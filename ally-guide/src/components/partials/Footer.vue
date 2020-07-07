@@ -13,7 +13,7 @@
       </div>
     </a>
     </div>
-    <div class ="footer-container resource text-white border-yellow" >
+    <div class ="footer-container resource text-white border-yellow" style="background-image: linear-gradient(90deg, rgb(137, 40, 25), black);" >
       <div>
         Educate
         <button class = "textbtn"> FAQ: Current Events</button>

@@ -1,10 +1,13 @@
 <template>
-	<div>
-		<div class="searchbanner">
+	<div style="padding-top: 260px">
+		<div >
+			 <h4 class="elevatetext">Changes start by doing. </h4>
+		 </div>
+		<div class="searchbanner" >
+
 			<div>
-				<h4 class="searchtext">
-					Changes start by doing.
-					<br />Amplify by contacting congress, signing petitions, or contacting your local reps.
+				<h4>
+					<br />Search and contact Congress and local representatives to echo demands.
 				</h4>
 			</div>
 
@@ -104,6 +107,14 @@
 				</div>
 			</div>
 		</div>
+		<div>
+			<h4> Say their names </h4>
+			<p> Demand investigation and accountability of these hate crimes and justice for them and their families</p>
+		</div>
+		<div class="defundbanner">
+			<a href= "https://defund12.org/"> #Defund12: Reach out to your county to defund police </a>
+		</div>
+
 	</div>
 </template>
 
@@ -122,11 +133,11 @@
 				congressMembers: [],
 				reps: [],
 				selectedMember: {},
-				showmessageUI: true, //switch to True to see elements
-				showTextArea: true, //switch to True to see elements
-				selectionMade: true, //switch to True to see elements
+				showmessageUI: false, //switch to True to see elements
+				showTextArea: false, //switch to True to see elements
+				selectionMade: false, //switch to True to see elements
 				showCongressInfo: true,
-				hasContent: true, //switch to True to see elements
+				hasContent: false, //switch to True to see elements
 				search: ""
 			};
 		},
@@ -759,6 +770,3 @@
 		}
 	};
 </script>
-
-<style lang="scss">
-</style>

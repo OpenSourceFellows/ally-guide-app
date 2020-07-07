@@ -6,7 +6,7 @@
     <button type="button" v-on:click='FetchSearchResults()'>Search</button>
 </div>
 
-<div id="government-contact-info" v-show="searchCompleted">
+<div id="government-contact-info" v-show="hasContent">
     <div v-for="result in searchResults" :key="result.Name" style="width: 30%; display: inline-block;">
         <div style="border-style: dashed;">
             <p>Name: {{result.Name}}</p>
@@ -101,30 +101,38 @@ a.blm:hover {
 export default {
   data () {
     return{
+      hasContent: false,
       search:'',
-      searchCompleted: false,
+      searchCompleted: true,
       searchResults: [],
       error: '',
     }
   },
   methods: {
     CheckInputContent: function () {
-
+    if (this.search != '') {
+        this.hasContent = true;
+    }
+    else {
+        this.hasContent = false;
+    }
     },
     ToggleMessageUI: function (result) {
 
     },
   },
   computed: {
-
+    filteredCauses: function(){
+        return this.searchResults.filter((cause) => {
+          return cause.name.toLowerCase().match(this.search.toLowerCase());
+        });
+    },      
   },
   created() {
-      this.congressMembers = [];
-
       this.$http.get(
           'http://localhost:5000/api/contribute/'
-      ).then(response => {
-        this.searchResults = response;
+      ).then(response => {   
+        this.searchResults = response.body;
         console.log(this.searchResults)
       }, response => {
           // error callback

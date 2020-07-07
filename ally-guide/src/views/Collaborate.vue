@@ -7,6 +7,9 @@
 <div class = "buyBlackOwned">
 <a href = ""></a>
 </div>
+<div class = "BlackArtists">
+<a href = ""></a>
+</div>
 </div>
 
 </template>

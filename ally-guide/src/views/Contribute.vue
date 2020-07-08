@@ -1,15 +1,15 @@
 <template>
 <div>
 
-<div>
+<div style="padding-top: 300px">
     <input type="text" v-model="search" placeholder="Search by name or state" v-on:keyup="CheckInputContent" style="width:30%">
-    <button type="button" v-on:click='FetchSearchResults()'>Search</button>
 </div>
 
 <div id="government-contact-info" v-show="hasContent">
     <div v-for="result in searchResults" :key="result.Name" style="width: 30%; display: inline-block;">
         <div style="border-style: dashed;">
             <p>Name: {{result.Name}}</p>
+            <p>Description: {{result.Description}}</p>
             <p>Causes: {{result.Cause}}</p>
         </div>
     </div>
@@ -130,7 +130,7 @@ export default {
   },
   created() {
       this.$http.get(
-          'http://localhost:5000/api/contribute/'
+          'https://murmuring-headland-63935.herokuapp.com/api/contribute'
       ).then(response => {   
         this.searchResults = response.body;
         console.log(this.searchResults)

@@ -15,10 +15,10 @@ Ally.guide is a web app hoping to support and strengthen racial justice movement
 - Families affected
 - Helping black owned businesses
 
-### Activate:
+### Elevate:
 - Query representatives, Email templates that can be sent directly (referencing petitions)
-- Call tracks
-- Petitions to sign and follow
+- Send Mail
+- Defund12
 
 ### Collaborate:
 - Public Demos
@@ -33,16 +33,16 @@ This project requires the following tools:
 
 - Node.js - The JavaScript environment for server-side code.
 - NPM - A Node.js package manager used to install dependencies.
-- PostgreSQL - A relational database system.
 
 To get started, install NPM and Postgres on your local computer if you don't have them already. A simple way for Mac OS X users to install Postgres is using [Postgres.app](https://postgresapp.com/).
 
 ### What's Included?
 
 - [Express](https://expressjs.com/) - A minimal web framework for Node.js web applications
-- [Sequelize](http://docs.sequelizejs.com/) - A promise-based ORM for Node.js that supports PostgreSQL, MySQL, and SQLite.
+- [Node.js](https://nodejs.org/) - A promise-based ORM for Node.js that supports PostgreSQL, MySQL, and SQLite.
 - [Bootstrap 4](https://getbootstrap.com/) - An open source design system for HTML, CSS, and JS.
-- [Handlebars](https://handlebarsjs.com/) - A popular templating language for building layouts.
+- [Vuejs](https://handlebarsjs.com/) - A popular templating language for building layouts.
+
 
 ### Code of Conduct
 

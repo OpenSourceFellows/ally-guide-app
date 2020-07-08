@@ -1,7 +1,7 @@
 <template>
 <div>
 
-<div style="padding-top: 300px">
+<div class="org-search">
     <input type="text" v-model="search" placeholder="Search by name or state" v-on:keyup="CheckInputContent" style="width:30%">
 </div>
 
@@ -23,8 +23,8 @@
   <h1>Sorry, no results found.</h1>
 </div>
 
-<div>
-<a id = "rebuild-btn" href = "https://www.rebuildblackbusiness.com/"> Rebuild Black Owned Businesses </a>
+<div class = "blm">
+<a class="blm" href = "https://www.rebuildblackbusiness.com/"> Rebuild Black Owned Businesses </a>
 </div>
 </div>
 
@@ -32,12 +32,10 @@
 </template>
 
 <style>
-#rebuild-btn{
-    
-}
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+.org-search{
+ padding-top: 300px;
+ padding-bottom: 100px;
 }
 
 button.accordion {
@@ -82,16 +80,25 @@ div.panel.show {
 }
 
 .blm{
+  padding: 50px;
+  width:100%;
+  margin: 0px;
+  color: white;
+}
+.blm{
 cursor: pointer;
+  background-color: #000000;
   opacity: .75;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 
 }
 
-a.blm:hover {
+.blm:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  opacity: 1;
+  opacity: 100%;
+  text-decoration:none;
+  color: yellow;
 }
 
 </style>
@@ -126,12 +133,12 @@ export default {
         return this.searchResults.filter((cause) => {
           return cause.name.toLowerCase().match(this.search.toLowerCase());
         });
-    },      
+    },
   },
   created() {
       this.$http.get(
           'https://murmuring-headland-63935.herokuapp.com/api/contribute'
-      ).then(response => {   
+      ).then(response => {
         this.searchResults = response.body;
         console.log(this.searchResults)
       }, response => {

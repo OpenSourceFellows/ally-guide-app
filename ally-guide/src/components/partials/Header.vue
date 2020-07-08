@@ -10,7 +10,7 @@
 			<nav>
 				<ul>
 					<li>
-						<a href=""> Subscribe </a>
+						<a style="padding:5px; border-style:solid; border-color:white;" href=""> Subscribe </a>
 					</li>
 					<li>
 						<a href="/Educate">Educate </a>
@@ -153,6 +153,8 @@
 	}
   li a:hover{
 		text-decoration:none;
+		color:white;
+
 	}
 
 

@@ -10,10 +10,10 @@
 			<nav>
 				<ul>
 					<li>
-						<a href=""> Stay Updated </a>
+						<a href=""> Subscribe </a>
 					</li>
 					<li>
-						<a href="/Collaborate">Collaborate</a>
+						<a href="/Educate">Educate </a>
 					</li>
 					<li>
 						<a href="/Contribute">Contribute</a>
@@ -23,11 +23,6 @@
 					</li>
 				  <li>
 						<a href="/Home">Home</a>
-					</li>
-					<li>
-						<img src="https://i.ibb.co/T2DZ6vc/Screen-Shot-2020-07-06-at-2-33-40-AM.png" alt="Screen-Shot-2020-07-06-at-2-33-40-AM" border="0" />
-					</li>
-					<li>
 					</li>
 				</ul>
 			</nav>

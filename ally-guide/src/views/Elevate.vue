@@ -163,9 +163,10 @@
 				this.congressMembers = [];
 
 				this.$http
-					.get("https://murmuring-headland-63935.herokuapp.com/" + this.search)
+					.get("https://murmuring-headland-63935.herokuapp.com/api/elevate" + this.search)
 					.then(
 						response => {
+							console.log(response.data);
 							this.congressMembers = response.data;
 							this.hasContent = true;
 						},

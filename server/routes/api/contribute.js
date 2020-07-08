@@ -28,6 +28,7 @@ router.get('/', (req, res) => {
             console.log(queryResults.length);
         }, function done(err) {
             if (err) { console.error(err); return; }
+            res.contentType('json');
             res.send(queryResults);
         });
 });

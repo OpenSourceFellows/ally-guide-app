@@ -1,6 +1,6 @@
 <template>
-	<div style = "margin-top: 200px;">
-		<h1 style="color=brown;"> Show up as a student. </h1>
+	<div style="margin-top: 200px;">
+		<h1 style="color=brown;">Show up as a student.</h1>
 		<div class="carousel-outer">
 			<div class="carousel-inn">
 				<b-carousel
@@ -16,7 +16,7 @@
 					@sliding-start="onSlideStart"
 					@sliding-end="onSlideEnd"
 				>
-        <!-- no-animation and interval 0 turns off automatic slide-->
+					<!-- no-animation and interval 0 turns off automatic slide-->
 					<!-- Text slides with image -->
 					<b-carousel-slide
 						caption="Allyship is continual"
@@ -29,9 +29,7 @@
 						text="Checks and balances for our larger justice system protect the people. The Stanford Open Policing Project examined almost 100 million traffic stops and found officers targeted areas larger in minority populations to fulfill a quota based system."
 						img-src="https://go.tiffinohio.net/wp-content/uploads/2020/06/police-tear-gas-bw-web.jpg"
 					></b-carousel-slide>
-					<b-carousel-slide
-						img-src="https://i.imgur.com/wBJjNyu.png"
-					></b-carousel-slide>
+					<b-carousel-slide img-src="https://i.imgur.com/wBJjNyu.png"></b-carousel-slide>
 				</b-carousel>
 			</div>
 		</div>
@@ -39,72 +37,92 @@
 		<div class="edu-nav">
 			<a class="btn-2" href="https://airtable.com/shrPlbsh5wMvA99rq">Take a learning path</a>
 			<a class="btn-2" href="https://airtable.com/shrRo99oHE0aGMKOW">Train your team</a>
-			<a class="btn-2" href = "/Library">Library</a>
+			<a class="btn-2" href="/Library">Library</a>
 		</div>
 
-		<div class="accordion-container">
-			<h2 style = "color: #000000" >Are you aware?</h2>
-			<div class="set">
-				<a href="#">
-					Why are the protests happening now?
-					<i class="fa fa-plus"></i>
-				</a>
-				<div class="content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-				</div>
-			</div>
-			<div class="set">
-				<a href="#">
-					But don't all lives matter?
-					<i class="fa fa-plus"></i>
-				</a>
-				<div class="content">
-					<p>Aliquam cursus vitae nulla non rhoncus. Nunc condimentum erat nec dictum tempus. Suspendisse aliquam erat hendrerit vehicula vestibulum.</p>
-				</div>
-			</div>
-			<div class="set">
-				<a href="#">
-					Don't violent protests make things worse?
-					<i class="fa fa-plus"></i>
-				</a>
-				<div class="content">
-					<p>Pellentesque aliquam ligula libero, vitae imperdiet diam porta vitae. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-				</div>
-			</div>
-			<div class="set">
-				<a href="#">
-					Aren't some cops good?
-					<i class="fa fa-plus"></i>
-				</a>
-				<div class="content">
-					<p>Donec tincidunt consectetur orci at dignissim. Proin auctor aliquam justo, vitae luctus odio pretium scelerisque.</p>
-				</div>
-			</div>
-			<div class="set">
-				<a href="#">
-					What kind of changes are we asking for?
-					<i class="fa fa-plus"></i>
-				</a>
-				<div class="content">
-					<p>Donec tincidunt consectetur orci at dignissim. Proin auctor aliquam justo, vitae luctus odio pretium scelerisque.</p>
-				</div>
-			</div>
-			<div class="set">
-				<a href="#">
-					How can I show support on social media?
-					<i class="fa fa-plus"></i>
-				</a>
-				<div class="content">
-					<p>Donec tincidunt consectetur orci at dignissim. Proin auctor aliquam justo, vitae luctus odio pretium scelerisque.</p>
-				</div>
-				<div class="set">
-					<a href="#">
-						What is Juneeteenth?
-						<i class="fa fa-plus"></i>
-					</a>
-					<div class="content">
-						<p>Donec tincidunt consectetur orci at dignissim. Proin auctor aliquam justo, vitae luctus odio pretium scelerisque.</p>
-					</div>
+		<div class="FAQ-outer">
+			<div class="accordion-container">
+				<h2 class="title">Are you aware?</h2>
+
+				<div>
+					<b-button block v-b-toggle.accordion-1 class="mt-2">Why are the protests happening now?</b-button>
+					<b-collapse id="accordion-1" v-model="collapseStates[0]">
+						<div
+							class="acc-body"
+						>People of color (POC) have been victims of systemic oppression since the birth of our nation. People of color and their allies want to overthrow the power that oppresses POC disproportionately, and often exclusively. Our POC brothers and sisters are tired of being denied access, entitlement, and innocence on the basis of skin tone.</div>
+					</b-collapse>
+
+					<b-button block v-b-toggle.accordion-2 class="mt-2">But don't all lives matter?</b-button>
+					<b-collapse id="accordion-2" v-model="collapseStates[1]">
+						<div class="acc-body">
+							All lives should matter, but the different realities we live in show that this may not be in practice.
+							If this is the first time you're hearing this question:
+							Ashton Kutcher's breakdown:
+							If you want to read and understand the history:
+							We know all lives matter, but the worth of white lives has never been a question. We say "Black Lives Matter" to acknowledge the ways in which these lives are considered less than:
+							<br />- Redlining neighborhoods where POC live
+							<br />- Limited employment/education opportunities
+							<br />- Voter disenfranchisement
+							<br />- Racial disparities in imprisonment/sentencing for non-violent crimes
+							<br />- Largely unregulated racially biased law enforcement
+							<br />- De Facto Racism: laws that are racist in practice.
+							<br />
+						</div>
+					</b-collapse>
+
+					<b-button
+						block
+						v-b-toggle.accordion-3
+						class="mt-2"
+					>But what has ever been reached by violent protests?</b-button>
+					<b-collapse id="accordion-3" v-model="collapseStates[2]">
+						<div
+							class="acc-body"
+						>Violent protests in MLK's era has increased voter turnout to change politics.</div>
+					</b-collapse>
+
+					<b-button
+						block
+						v-b-toggle.accordion-4
+						class="mt-2"
+					>How should I post about this on social media?</b-button>
+					<b-collapse id="accordion-4" v-model="collapseStates[3]">
+						<div
+							class="acc-body"
+						>Photos and videos of police brutality towards black lives can be traumatic for anyone, and triggering for many POC. Avoid sharing this content as it increases to the dehumanization of black lives.</div>
+					</b-collapse>
+
+					<b-button
+						block
+						v-b-toggle.accordion-5
+						class="mt-2"
+					>What kind of changes are we hoping to enact?</b-button>
+					<b-collapse id="accordion-5" v-model="collapseStates[4]">
+						<div
+							class="acc-body"
+						>We hope to sustain allies' support after the attention of viral police brutality has died down. Ally.Guide hopes to help you unlearn unconscious biases, and build a new foundation of racial justice education.</div>
+					</b-collapse>
+					<b-button block v-b-toggle.accordion-6 class="mt-2">Why are all cops bad?</b-button>
+					<b-collapse id="accordion-6" v-model="collapseStates[5]">
+						<div
+							class="acc-body"
+						>Police are wrong and continue to be as long as the systems supporting their racist workforce are in place and their squads exist.</div>
+					</b-collapse>
+
+					<b-button block v-b-toggle.accordion-7 class="mt-2">How to support my friends of color?</b-button>
+					<b-collapse id="accordion-7" v-model="collapseStates[6]">
+						<div
+							class="acc-body"
+						>It should not take an act of police brutality to surface your support. By choosing to not do anything, your silence is damaging, and it's not enough to simply not be racist. We hope the education part of our platform continues to be part of your journey as an ally long after the outrage. Continue to support black media, black initiatives and charities after the headlines have died down.</div>
+					</b-collapse>
+
+					<b-button block v-b-toggle.accordion-8 class="mt-2">What was #blackouttuesday?</b-button>
+					<b-collapse id="accordion-7" v-model="collapseStates[7]">
+						<div
+							class="acc-body"
+						>As the plan spread, conceptions about the movement were skewed and people began posting black squares across their social media platforms as #BlackLivesMatter which led to the burying of important information shared about the movement, protests, petitions, etc. We want to use #blackouttuesday as a reminder to post mindfully.
+</div>
+					</b-collapse>
 				</div>
 			</div>
 		</div>
@@ -120,7 +138,8 @@
 				showmessageUI: false,
 				search: "",
 				slide: 0,
-				sliding: null
+				sliding: null,
+				collapseStates: [false, false, false]
 			};
 		},
 		methods: {
@@ -130,7 +149,13 @@
 			onSlideEnd(slide) {
 				this.sliding = false;
 			},
-			ToggleMessageUI: function(member) {}
+			ToggleMessageUI: function(member) {},
+			expandAll() {
+				this.collapseStates = this.collapseStates.map(x => true);
+			},
+			collapseAll() {
+				this.collapseStates = this.collapseStates.map(x => false);
+			}
 		},
 		computed: {},
 		created() {}
@@ -160,18 +185,14 @@
 	}
 	.accordion-container {
 		position: relative;
-		max-width: 500px;
+		max-width: 800px;
 		height: auto;
 		margin: 10px auto;
 		padding: 20px;
 	}
 	.accordion-container > h2 {
 		text-align: center;
-		color: #fff;
-		padding-bottom: 5px;
-		margin-bottom: 20px;
-		padding-bottom: 15px;
-		border-bottom: 1px solid #ddd;
+		margin: 20px 0px;
 	}
 	.set {
 		position: relative;
@@ -212,52 +233,51 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-	.protesterbutton{
-		background-image:url('https://i.imgur.com/ETnOnsp.jpg');
+	.protesterbutton {
+		background-image: url("https://i.imgur.com/ETnOnsp.jpg");
 		height: 1300px;
 		width: 700px;
 	}
 
-.btn-2 {
-    letter-spacing: 0;
+	.btn-2 {
+		letter-spacing: 0;
 		color: #fff;
+	}
 
-}
+	.btn-2:hover,
+	.btn-2:active {
+		letter-spacing: 2px;
+		text-decoration: none;
+		color: #ffffff;
+		border: 1px solid rgba(#ffffff, 0);
 
-.btn-2:hover,
-.btn-2:active {
-  letter-spacing: 2px;
-	text-decoration: none;
-  color: #ffffff;
-	border: 1px solid rgba(#ffffff, 0);
+		transition: all 280ms ease-in-out;
+	}
 
-	transition: all 280ms ease-in-out;
-}
+	.btn-2:after,
+	.btn-2:before {
+		color: #ffffff;
+		cursor: pointer;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 45px;
+		margin: 0 0 2em;
+		max-width: 160px;
+		position: relative;
+		text-decoration: none;
+	}
 
-.btn-2:after,
-.btn-2:before {
-color: #ffffff;
-cursor: pointer;
-font-size:16px;
-font-weight: 400;
-line-height: 45px;
-margin: 0 0 2em;
-max-width: 160px;
-position: relative;
-text-decoration: none;
-}
+	.btn-2:hover:after,
+	.btn-2:hover:before {
+		backface-visibility: hidden;
+		border-color: #ffffff;
+		transition: width 350ms ease-in-out;
+		width: 70%;
+	}
 
-.btn-2:hover:after,
-.btn-2:hover:before {
-  backface-visibility: hidden;
-  border-color: #ffffff;
-  transition: width 350ms ease-in-out;
-  width: 70%;
-}
-
-.btn-2:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 70%;
-}
+	.btn-2:hover:before {
+		bottom: auto;
+		top: 0;
+		width: 70%;
+	}
 </style>

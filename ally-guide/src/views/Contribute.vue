@@ -6,11 +6,12 @@
 </div>
 
 <div id="government-contact-info" v-show="hasContent">
-    <div v-for="result in searchResults" :key="result.Name" style="width: 30%; display: inline-block;">
+    <div v-for="result in filteredCauses" :key="result.Name" style="width: 30%; display: inline-block;">
         <div style="border-style: dashed;">
             <p>Name: {{result.Name}}</p>
             <p>Description: {{result.Description}}</p>
-            <p>Causes: {{result.Cause}}</p>
+            <div ></div>
+            <p>Causes:</p>
         </div>
     </div>
 </div>
@@ -124,7 +125,7 @@ export default {
   computed: {
     filteredCauses: function(){
         return this.searchResults.filter((cause) => {
-          return cause.name.toLowerCase().match(this.search.toLowerCase());
+          return cause.Name.toLowerCase().match(this.search.toLowerCase());
         });
     },      
   },
@@ -133,7 +134,6 @@ export default {
           'https://murmuring-headland-63935.herokuapp.com/api/contribute'
       ).then(response => {   
         this.searchResults = response.body;
-        console.log(this.searchResults)
       }, response => {
           // error callback
       });

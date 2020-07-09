@@ -27,6 +27,7 @@ router.get('/', (req, res) => {
         if (err) { console.error(err); return; }
         res.contentType('json');
         res.send(queryResults);
+        console.log(queryResults)
     });
 });
 

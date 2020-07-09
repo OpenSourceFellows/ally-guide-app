@@ -18,6 +18,47 @@ History
 </div>
 </template>
 
+<script>
+export default {
+  data () {
+    return{
+      hasContent: false,
+      search:'',
+      searchCompleted: true,
+      searchResults: [],
+      error: '',
+    }
+  },
+  methods: {
+    CheckInputContent: function () {
+      if (this.search != '') {
+          this.hasContent = true;
+      }
+      else {
+          this.hasContent = false;
+      }
+    },
+  },
+  computed: {
+    filteredCauses: function(){
+        return this.searchResults.filter((cause) => {
+          return cause.Name.toLowerCase().match(this.search.toLowerCase());
+        });
+    },      
+  },
+  created() {
+    this.$http.get(
+        'https://murmuring-headland-63935.herokuapp.com/api/library'
+    ).then(response => {   
+      this.searchResults = response.body;
+      console.log(this.searchResults);
+    }, response => {
+        // error callback
+    });
+  }
+}
+</script>
+
 <style>
 *, *:before, *:after{
   margin: 0;

@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     var queryResults = [];
 
     // search the Distribute table by Name and State fields, case-insensitively.
-    base('Distribute').select({
+    base('Education: Library').select({
         // Selecting the first 3 records in Grid view:
         view: "Grid view"
     }).eachPage(function page(records, fetchNextPage) {

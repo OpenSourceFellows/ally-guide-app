@@ -130,13 +130,13 @@ export default {
     },      
   },
   created() {
-      this.$http.get(
-          'https://murmuring-headland-63935.herokuapp.com/api/contribute'
-      ).then(response => {   
-        this.searchResults = response.body;
-      }, response => {
-          // error callback
-      });
+    this.$http.get(
+        'https://murmuring-headland-63935.herokuapp.com/api/contribute'
+    ).then(response => {   
+      this.searchResults = response.body;
+    }, response => {
+        // error callback
+    });
   }
 }
 

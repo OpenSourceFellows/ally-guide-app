@@ -2,17 +2,22 @@
 <div>
 
 <div class="org-search">
-    <input type="text" v-model="search" placeholder="Search by name or state" v-on:keyup="CheckInputContent" style="width:30%">
+    <input class="org-bar" type="text" v-model="search" placeholder="Search by name or state" v-on:keyup="CheckInputContent" style="width:30%">
 </div>
 
-<div id="government-contact-info" v-show="hasContent">
-    <div v-for="result in searchResults" :key="result.Name" style="width: 30%; display: inline-block;">
-        <div style="border-style: dashed;">
-            <p>Name: {{result.Name}}</p>
-            <p>Description: {{result.Description}}</p>
-            <p>Causes: {{result.Cause}}</p>
-        </div>
+<div class="images-wrapper"id="government-contact-info" v-show="hasContent">
+    <transition-group name="image-wrapper" tag="div" class="images-inner">
+    <div v-for="result in searchResults" :key="result.Name">
+          <div class="image-img" :style="{ background: 'url(' + result.LogoPicture + ')' }"></div>
+          <a href="">
+            <div class="image-details">
+                  <h3 class="image-title">{{result.Name}}, {{result.State}}</p></h3>
+                  <p class="image-description"><span></span>{{ result.Description| truncateText }}<span></span></p>
+                  <p class="image-category">Cause: {{ result.Cause }}</p>
+            </div>
+          </a>
     </div>
+    </transition-group>
 </div>
 
 <div v-show="error" style="color: red; font-weight: bolder;">
@@ -36,24 +41,143 @@
 .org-search{
  padding-top: 300px;
  padding-bottom: 100px;
+
+}
+.org-bar{
+ display: block;
+appearance: none;
+margin: 8px auto 16px;
+padding: 8px;
+padding-left: 2px;
+vertical-align: middle;
+border: 1px solid transparent;
+border-bottom: 1px solid #537260;
+color: black;
+background: transparent;
+font-size: 16px;
+width: 90%;
+width: calc(100% - 16px);
+max-width: 400px;
+outline: 0;
+border-width:4px;
 }
 
-button.accordion {
-    background-color: #000000;
-    color: #eee;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+
+a {
+  text-decoration: none;
 }
 
-button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
-    color: #000000;
+.images-wrapper {
+  margin: 0 auto;
+  max-width: $max-width;
 }
+
+.images-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.image-wrapper {
+      position: relative;
+      display: flex;
+      width: calc(100% - 1em);
+      height: 300px;
+      margin: 16px 16px 8px;
+      cursor: pointer;
+      transition: all 0.25s;
+      box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
+      overflow: hidden;
+
+      &-move { transition: all 600ms ease-in-out 50ms }
+      &-enter-active { transition: all 300ms ease-out }
+
+      &-leave-active {
+        transition: all 200ms ease-in;
+        position: absolute;
+        z-index: 0;
+      }
+
+      &-enter,
+      &-leave-to { opacity: 0 }
+      &-enter { transform: scale(0.9) }
+}
+  .image-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-size: cover !important;
+        background-position: center !important;
+        transition: transform 200ms ease-out, blur 200ms ease-out;
+        animation: fadeIn 200ms;
+  }
+
+  .image-details {
+        align-self: flex-end;
+        background: white;
+        width: 100%;
+        padding: 16px;
+}
+        .image-title {
+          transition: color 250ms;
+        }
+
+        .image-description {
+          display: none;
+          opacity: 0;
+          max-height: 0px;
+          overflow: hidden;
+          transition: max-height 125ms;
+          animation: slideUp 300ms;
+          animation-delay: 50ms;
+          animation-fill-mode: backwards;
+          }
+          //Margin hack
+          span {
+            display: block;
+
+            &:nth-of-type(1) {
+              height: 5px;
+            }
+
+            &:nth-of-type(2) {
+              height: 25px;
+            }
+          }
+
+
+        .image-category {
+          font-weight: bold;
+          margin-top: 2px;
+          color: #b0b0b0;
+        }
+
+
+
+
+          .image-img:hover {
+            transform: scale(1.3);
+            filter: blur(5px);
+          }
+
+          .image-title {
+            transition: color 250ms;
+            color: #ea0000;
+          }
+
+          .image-description {
+            display: block;
+            opacity: 1;
+            max-height: 500px;
+            transition: max-height 250ms ease-in;
+          }
+
+
+
+
+
 
 div.panel {
     padding: 0 18px;

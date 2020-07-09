@@ -174,14 +174,9 @@
 							// error callback
 						}
 					);
-			}
-		},
+				}
+			},
 		computed: {
-		//	filteredCongressMembers: function() {
-		//		return this.congressMembers.filter(member => {
-		//			return member.state.toLowerCase().match(this.search.toLowerCase());
-	 //			});
-	 //		}
 		},
 		created() {
 

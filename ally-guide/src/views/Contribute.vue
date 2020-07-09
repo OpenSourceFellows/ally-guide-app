@@ -9,7 +9,7 @@
     <transition-group name="image-wrapper" tag="div" class="images-inner">
     <div v-for="result in searchResults" :key="result.Name">
           <div class="image-img" :style="{ background: 'url(' + result.LogoPicture + ')' }"></div>
-          <a href="">
+            <a href="">
             <div class="image-details">
                   <h3 class="image-title">{{result.Name}}, {{result.State}}</p></h3>
                   <p class="image-description"><span></span>{{ result.Description| truncateText }}<span></span></p>

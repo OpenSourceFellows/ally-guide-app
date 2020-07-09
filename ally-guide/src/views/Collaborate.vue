@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="padding-top= 200px;">
 <div class = "calendar">
   <a href = "https://www.pbs.org/newshour/nation/strike-for-black-lives-to-highlight-systemic-racism-ap-report-finds?fbclid=IwAR0tlpq1n2GphYy94t8kMOsW_RgiHSdmlY2Zlz2_ruNIT0DsavSDrT6IkxA"> <h4> Strike for Black Lives 7/20</h4>
   <p> Walk out in solidarity or only spend at Black owned businesses. Workers are calling on companies to lift pay, permit the forming of unions and advocate for greater health care that can help narrow the economic gap that hinders Black and brown communities. </p>

@@ -24,12 +24,13 @@
 						text="We're finding that the rate of police murders on a national level has remained consistent since #BlackLivesMatter first trended in 2013. Creating lasting change requires continual action, we need to continue asking for accountability."
 						img-src="https://image.freepik.com/free-photo/closeup-diverse-people-holding-hands_53876-47126.jpg"
 					></b-carousel-slide>
+					<b-carousel-slide img-src="https://i.imgur.com/wBJjNyu.png"></b-carousel-slide>
+
 					<b-carousel-slide
 						caption="Police accountability"
 						text="Checks and balances for our larger justice system protect the people. The Stanford Open Policing Project examined almost 100 million traffic stops and found officers targeted areas larger in minority populations to fulfill a quota based system."
 						img-src="https://go.tiffinohio.net/wp-content/uploads/2020/06/police-tear-gas-bw-web.jpg"
 					></b-carousel-slide>
-					<b-carousel-slide img-src="https://i.imgur.com/wBJjNyu.png"></b-carousel-slide>
 				</b-carousel>
 			</div>
 		</div>
@@ -74,11 +75,22 @@
 						block
 						v-b-toggle.accordion-3
 						class="mt-2"
-					>But what has ever been reached by violent protests?</b-button>
+					>What has ever been reached by violent protests?</b-button>
 					<b-collapse id="accordion-3" v-model="collapseStates[2]">
 						<div
 							class="acc-body"
 						>Violent protests in MLK's era has increased voter turnout to change politics.</div>
+					</b-collapse>
+
+					<b-button
+						block
+						v-b-toggle.accordion-4
+						class="mt-2"
+					>How do I join a protest? </b-button>
+					<b-collapse id="accordion-4" v-model="collapseStates[3]">
+						<div
+							class="acc-body"
+						>Photos and videos of police brutality towards black lives can be traumatic for anyone, and triggering for many POC. Avoid sharing this content as it increases to the dehumanization of black lives.</div>
 					</b-collapse>
 
 					<b-button
@@ -116,13 +128,6 @@
 						>It should not take an act of police brutality to surface your support. By choosing to not do anything, your silence is damaging, and it's not enough to simply not be racist. We hope the education part of our platform continues to be part of your journey as an ally long after the outrage. Continue to support black media, black initiatives and charities after the headlines have died down.</div>
 					</b-collapse>
 
-					<b-button block v-b-toggle.accordion-8 class="mt-2">What was #blackouttuesday?</b-button>
-					<b-collapse id="accordion-7" v-model="collapseStates[7]">
-						<div
-							class="acc-body"
-						>As the plan spread, conceptions about the movement were skewed and people began posting black squares across their social media platforms as #BlackLivesMatter which led to the burying of important information shared about the movement, protests, petitions, etc. We want to use #blackouttuesday as a reminder to post mindfully.
-</div>
-					</b-collapse>
 				</div>
 			</div>
 		</div>

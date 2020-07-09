@@ -53,7 +53,7 @@ body {
   background-repeat: no-repeat;
   height: 28vh;
   background-size: contain;
-  background-position:bottom center;
+  background-position: bottom center;
 
 
 }
@@ -103,6 +103,7 @@ body {
   &.b {
     background-color: #52725f;
   }
+
   &.c {
     background-color: #93423e;
   }
@@ -111,19 +112,20 @@ body {
     background-color: #ffbd58;
   }
 }
-.h-title{
-  font-size:30px;
-  text-transform:uppercase;
-  position:relative;
-  font-weight:800;
+
+.h-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 800;
   background-color: #0e0e0e38;
   color: #f7f7f7bd;
 }
 
 .distribute {
-  .h-img{
-  background-image: url('https://i.ibb.co/Bs2qLdx/contrbanner.png');
-  .bg-img;
+  .h-img {
+    background-image: url('https://i.ibb.co/Bs2qLdx/contrbanner.png');
+    .bg-img;
   }
 
 }
@@ -133,8 +135,9 @@ body {
     background-image: url('https://i.ibb.co/TKZ732D/elevbanner.png');
     .bg-img;
   }
-  .h-title{
-    top:10px;
+
+  .h-title {
+    top: 10px;
   }
 }
 
@@ -150,14 +153,14 @@ body {
   .h-img {
     background-image: url('https://i.ibb.co/9pwW4vR/collabanner.png');
     .bg-img;
-    height:26vh;
+    height: 26vh;
 
   }
 }
 
-.message-title{
-  @media all and (max-width: @device-width-medium){
-    font-size:2rem;
+.message-title {
+  @media all and (max-width: @device-width-medium) {
+    font-size: 2rem;
     bottom: 6rem;
     width: 100%;
     left: 0px;
@@ -203,34 +206,83 @@ body {
 
 
 /* Educate */
-.carousel-outer{
+.carousel-outer {
   margin: 50px 50px -30px 50px;
   position: relative;
   height: 55vh;
   border-radius: 20px;
   background-color: #a87653;
-  padding:20px;
+  padding: 20px;
+  z-index: 0;
 }
 
-.carousel-outer .carosel-inn{
+.carousel-outer .carosel-inn {
   background-color: #a87653;
 }
 
-.carousel-item .img-fluid{
+.carousel-item .img-fluid {
   object-fit: fill;
   height: 415px;
 }
-.carousel .carousel-indicators{
-  margin-bottom:5px;
+
+.carousel .carousel-indicators {
+  margin-bottom: 5px;
 }
-.carousel-outer .carousel-caption{
-  background: linear-gradient(0deg, rgba(0,0,0,1) 11%, rgba(5,5,5,0.562062324929972) 69%, rgba(0,0,0,0) 100%);  color:#f7d9a2;
+
+.carousel-outer .carousel-caption {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 11%, rgba(5, 5, 5, 0.562062324929972) 69%, rgba(0, 0, 0, 0) 100%);
+  color: #f7d9a2;
   width: 100%;
   left: 0;
   padding-right: 10%;
   padding-left: 10%;
   bottom: 0px;
 }
+
+.accordion-container {
+  .title{
+    color:#c49d79;
+  }
+  .btn.mt-2 {
+    background-color: white;
+    border: 0px;
+    color: #9d1904;
+    font-weight: 800;
+    border-radius: 0px;
+    border-bottom: 2px solid #a876537a;
+    padding: 20px 0px;
+    font-size: 20px;
+    text-align: left;
+    margin-top:0px !important;
+
+    &:focus{
+      box-shadow:unset;
+    }
+
+    &:after {
+      content: '\002B';
+      color: #9d1904;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    &.not-collapsed:after {
+      content: "\2212";
+    }
+  }
+
+    .acc-body{
+      padding: 20px 0px;
+      
+      text-align: left;
+    
+  }
+
+
+}
+
+
 
 
 /*ELEVATE*/
@@ -251,15 +303,16 @@ body {
   margin-right: 5px;
 }
 
-.elevatetext{
-	padding:50px;
-}
-.defundbanner{
-  background-color: black;
-	padding:50px;
+.elevatetext {
+  padding: 50px;
 }
 
-.defundbanner a{
+.defundbanner {
+  background-color: black;
+  padding: 50px;
+}
+
+.defundbanner a {
   color: white;
   padding: 100px;
   font-weight: 500;

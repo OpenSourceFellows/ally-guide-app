@@ -16,6 +16,9 @@
 						<a href="/Educate">Educate </a>
 					</li>
 					<li>
+						<a href="/Collaborate">Collaborate</a>
+					</li>
+					<li>
 						<a href="/Contribute">Contribute</a>
 					</li>
 					<li>
@@ -153,6 +156,7 @@
 	}
   li a:hover{
 		text-decoration:none;
+		color:white;
 	}
 
 

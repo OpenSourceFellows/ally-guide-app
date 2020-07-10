@@ -1,20 +1,55 @@
 <template>
-<div>
-<div>
-Say their names
-</div>
-<div class="highlights">
+<div style="padding-top:300px;">
+  <div>
+    Black lives matter: Say their names
+  </div>
 <div>
 How to show up at a protest
 </div>
 <div>
-Community healing resources
-</div>
-<div>
 History
 </div>
+<div>
+      <h4>
+        <br /> Show up as a student, in every medium
+      </h4>
 </div>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrASU8BPyXKJq9TN?backgroundColor=cyan&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+<div class="org-search">
+    <input class="org-bar" type="text" v-model="search" placeholder="Search by name or topic" v-on:keyup="CheckInputContent" style="width:30%">
+</div>
+<div id="government-contact-info" v-show="hasContent">
+			<div>
+				<b-card
+					class="mb-2 cards"
+					v-for="result in searchResults"
+					:key="result.name"
+					style="max-width: 24rem; display:inline-block; margin:10px;"
+					:title="member.name"
+					:sub-title="result.contentLink"
+					:img-src="result.imageUrls"
+					img-alt="Image"
+					img-top
+					tag="article"
+				>
+        <b-card-text>
+						<!-- <p>Position: {{result.name}}</p> -->
+
+						<p>
+							<i class="fas fa-map-marker-alt" style="font-size:20px;width:1.5rem;"></i>
+							{{result.Type}},{{result.Summary}}
+						</p>
+						<p>
+							{{result.time}}
+						</p>
+            <b-link to="/">
+              <p>{{result.contentLink}}</p>
+           </b-link>
+					</b-card-text>
+
+					<b-button type="button" variant="primary" v-on:click="ToggleMessageUI(member)">Send a Message</b-button>
+				</b-card>
+      </div>
+  </div>
 </div>
 </template>
 
@@ -44,12 +79,12 @@ export default {
         return this.searchResults.filter((cause) => {
           return cause.Name.toLowerCase().match(this.search.toLowerCase());
         });
-    },      
+    },
   },
   created() {
     this.$http.get(
         'https://murmuring-headland-63935.herokuapp.com/api/library'
-    ).then(response => {   
+    ).then(response => {
       this.searchResults = response.body;
       console.log(this.searchResults);
     }, response => {

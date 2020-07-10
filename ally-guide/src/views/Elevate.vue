@@ -35,7 +35,7 @@
 					style="max-width: 24rem; display:inline-block; margin:10px;"
 					:title="member.name"
 					:sub-title="member.title"
-					img-src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
+					:img-src="member.photoUrl"
 					img-alt="Image"
 					img-top
 					tag="article"
@@ -163,7 +163,8 @@
 				this.congressMembers = [];
 
 				this.$http
-					.get("https://murmuring-headland-63935.herokuapp.com/api/elevate/" + this.search)
+					// .get("https://murmuring-headland-63935.herokuapp.com/api/elevate/" + this.search)
+					.get("http://localhost:5000/api/elevate/" + this.search)
 					.then(
 						response => {
 							console.log(response.data);

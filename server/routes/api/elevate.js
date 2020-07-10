@@ -17,14 +17,11 @@ router.get('/:zipCode', (req, res) => {
         }
     })
     .then(function(response){
-        console.log('the start of the test');
         reps = response.data.officials;
-
         response.data.offices.forEach(repInfo => {
-            repInfo.officialIndices.forEach(position => {
+            repInfo.officialIndices.forEach(position => {           
                 if(position > 1){
                 var rep = reps[position];
-
                     var officeInfo = {
                         'name': '',
                         'title': '',
@@ -33,9 +30,9 @@ router.get('/:zipCode', (req, res) => {
                         'email':'',
                         'twitter':'',
                         'facebook':'',
-                        'contactPage': ''
+                        'contactPage': '',
+                        'photoUrl':'',
                     }
-
                     if (rep.name == undefined || rep.name == ''){
 
                     }
@@ -48,6 +45,7 @@ router.get('/:zipCode', (req, res) => {
                     else{
                         officeInfo.title = repInfo.name;
                     }
+
                     if (rep.address == undefined || rep.address == ''){
 
                     }
@@ -61,6 +59,12 @@ router.get('/:zipCode', (req, res) => {
                     else{
                         officeInfo.email = rep.email;
                     }
+                    if(rep.photoUrl == undefined){
+                        officeInfo.photoUrl = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png";
+                    }
+                    else{
+                        officeInfo.photoUrl = rep.photoUrl;
+                    }
                     officeInfo = FlattenChannels(rep, officeInfo);
                     if(officeInfo !== undefined){
                         congressMembers.push(officeInfo);
@@ -68,8 +72,7 @@ router.get('/:zipCode', (req, res) => {
                 }
             })
         })
-        console.log(congressMembers)
-        res.send(congressMembers)
+        res.send(congressMembers);
     })
     .catch(function(error){
         console.log(error);
@@ -93,5 +96,13 @@ function FlattenChannels(rep, flattenRepInfo){
         return flattenRepInfo;
     }
 };
+
+function CheckUndefined(itemToCheck, repInfo){
+    if (itemToCheck !== undefined || itemToCheck !== ''){        
+    }
+    else{
+        itemToCheck = repInfo;
+    }
+}
 
 module.exports = router;

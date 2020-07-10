@@ -182,9 +182,7 @@
 			ToggleTextArea: function() {
 				this.showTextArea = true;
 			},
-			ToggleSayNames{
-
-			}
+		
 			CreateRepList: function() {
 				this.congressMembers = [];
 

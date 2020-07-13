@@ -2,6 +2,7 @@
 	<div style="padding-top: 260px">
 		<div >
 			 <h4 class="elevatetext"> Changes start by doing. </h4>
+			 <button type="button" class="btn btn-primary" v-on:click="SendEmail">email</button>
 		 </div>
 		<div class="searchbanner" >
 
@@ -99,11 +100,10 @@
 						<br />
 					</div>
 					<div class="m-2 d-inline" v-for="message in messages" :key="message.mid">
-						<button v-on:click="showTextArea = !showTextArea" class="btn-primary btn m-2">{{message}}</button>
+						<button v-on:click="component = message.component" class="btn-primary btn m-2">{{message.name}}</button>
 					</div>
-					<div v-if="showTextArea">
-						<textarea class="form-contorl p-3" rows="15%" cols="90%"></textarea>
-					</div>
+					<component v-bind:is="component"></component>
+					
 				</div>
 			</div>
 		</div>
@@ -119,19 +119,32 @@
 </template>
 
 <script>
+import EndPoliceImmunity from '../components/messages/EndPoliceImmunity.vue';
+import DefundPolice from '../components/messages/DefundPolice.vue';
+import InvestigateTheArmy from '../components/messages/InvestigateTheArmy.vue';
+import EndMoneyBail from '../components/messages/EndMoneyBail.vue';
+import RestoreSixGrandfathers from '../components/messages/RestoreSixGrandfathers.vue';
+
 	export default {
+		components: {
+			'EndPoliceImmunity': EndPoliceImmunity,
+			'DefundPolice': DefundPolice,
+			'InvestigateTheArmy': InvestigateTheArmy,
+			'EndMoneyBail': EndMoneyBail,
+			'RestoreSixGrandfathers': RestoreSixGrandfathers
+		},
 		data() {
 			return {
 				messages: [
-					"End Money Bail + Police Reform",
-					"End Money Bail",
-					"End $ Bail (Created by Color Of Change)",
-					"Address police brutality + defund ",
-					"Protester Health + COVID-19",
-					"Withdraw National Guard and Army Reserve, cease use of M54 inhumane"
+					{name: "End Police Immunity", component: "EndPoliceImmunity"},
+					{name: "Say their names", component: "DefundPolice"},
+					{name: "Investigate the Army", component: "InvestigateTheArmy"},
+					{name: "End Money Bail", component: "EndMoneyBail"},
+					{name: "Restore Six Grandfathers", component: "RestoreSixGrandfathers"}
 				],
 				congressMembers: [],
 				reps: [],
+				component: 'EndPoliceImmunity',
 				selectedMember: {},
 				showmessageUI: false, //switch to True to see elements
 				showTextArea: false, //switch to True to see elements
@@ -163,20 +176,32 @@
 				this.congressMembers = [];
 
 				this.$http
-					// .get("https://murmuring-headland-63935.herokuapp.com/api/elevate/" + this.search)
-					.get("http://localhost:5000/api/elevate/" + this.search)
-					.then(
-						response => {
-							console.log(response.data);
-							this.congressMembers = response.data;
-							this.hasContent = true;
-						},
-						response => {
-							// error callback
-						}
-					);
-				}
+				.get("https://murmuring-headland-63935.herokuapp.com/api/elevate/" + this.search)
+				.then(
+					response => {
+						console.log(response.data);
+						this.congressMembers = response.data;
+						this.hasContent = true;
+					},
+					response => {
+						// error callback
+					}
+				);
 			},
+			SendEmail: function(){
+				this.$http
+				//.get("https://murmuring-headland-63935.herokuapp.com/api/email)
+				.get("http://localhost:5000/api/email")
+				.then(
+					response => {
+						console.log(response.data);
+					},
+					response => {
+						// error callback
+					}
+				);
+			}
+		},
 		computed: {
 		},
 		created() {

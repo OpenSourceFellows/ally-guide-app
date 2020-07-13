@@ -3,8 +3,9 @@ const axios = require("axios");
 const router = express.Router();
 require('dotenv').config()
 
+//Endpoints
 
-// Get Post
+// Get
 router.get('/:zipCode', (req, res) => {
     var congressMembers = [];
     var reps = [];

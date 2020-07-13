@@ -10,11 +10,13 @@ app.use(cors());
 
 const elevate = require('./routes/api/elevate');
 const contribute = require('./routes/api/contribute');
-const library = require('./routes/api/library')
+const library = require('./routes/api/library');
+const email = require('./routes/api/email')
 
 app.use('/api/elevate', elevate);
 app.use('/api/contribute', contribute);
 app.use('/api/library', library);
+app.use('/api/email', email);
 
 //handle production
 if(process.env.NODE_ENV === 'production'){

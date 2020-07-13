@@ -24,7 +24,7 @@ History
 					v-for="result in searchResults"
 					:key="result.name"
 					style="max-width: 24rem; display:inline-block; margin:10px;"
-					:title="member.name"
+					:title="result.name"
 					:sub-title="result.contentLink"
 					:img-src="result.imageUrls"
 					img-alt="Image"

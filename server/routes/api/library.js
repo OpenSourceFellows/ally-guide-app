@@ -3,6 +3,8 @@ const router = express.Router();
 const Airtable = require('airtable');
 require('dotenv').config();
 
+//Endpoints
+
 //get
 router.get('/', (req, res) => {
     //const base = new Airtable({ apiKey: process.env.VUE_APP_AIRTABLE_API_KEY }).base(process.env.VUE_APP_AIRTABLE_BASE);

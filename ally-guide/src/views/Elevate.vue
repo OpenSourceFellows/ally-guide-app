@@ -30,10 +30,10 @@
 		<div id="government-contact-info" v-show="hasContent">
 			<div>
 				<b-card
-					class="mb-2 cards"
+					class="mb-2 cards elevate"
 					v-for="member in congressMembers"
 					:key="member.name"
-					style="max-width: 24rem; display:inline-block; margin:10px;"
+					style="width:24rem; display:inline-block; margin:10px; padding:30px;"
 					:title="member.name"
 					:sub-title="member.title"
 					:img-src="member.photoUrl"

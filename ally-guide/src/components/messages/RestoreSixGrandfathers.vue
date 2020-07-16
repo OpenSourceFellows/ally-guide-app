@@ -1,6 +1,6 @@
 <template>
 <div class = "output">
-      <h1>To whom it may concern,</h1> 
+      <!-- <h1>To whom it may concern,</h1>  -->
       <br>
    <p>I am writing to ask that you use your platform to bring reform to the policies that inherently advance the erasure of American Indian landmarks and treaties signed to return their land.“This place is very, very sacred to our people,” says Nick Tilsen, president and CEO of the NDN Collective. “Stealing our land and then carving the faces of four white men who were colonizers, who committed genocide against Indigenous people, is an egregious act of violence.”
  </p> <br>

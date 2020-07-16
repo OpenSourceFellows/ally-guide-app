@@ -10,7 +10,7 @@
 			<nav>
 				<ul>
 					<li style="border: 3px solid white;">
-						<a style="padding:10px;" href="https://forms.gle/ZYGf77F4dMMiMdpx9"> Subscribe </a>
+						<a style="padding:10px;" href="https://docs.google.com/forms/d/e/1FAIpQLSckj1S0ef1EtuMCYphip0Dn6l6xqm_jdrtEZkUTRZY9qqD69A/viewform"> Subscribe </a>
 					</li>
 					<li>
 						<a href="/Educate">Educate </a>

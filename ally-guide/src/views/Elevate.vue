@@ -2,7 +2,6 @@
 	<div style="padding-top: 260px">
 		<div >
 			 <h4 class="elevatetext"> Changes start by doing. </h4>
-			 <button type="button" class="btn btn-primary" v-on:click="SendEmail">email</button>
 		 </div>
 		<div class="searchbanner" >
 
@@ -103,13 +102,9 @@
 						<button v-on:click="component = message.component" class="btn-primary btn m-2">{{message.name}}</button>
 					</div>
 					<component v-bind:is="component"></component>
-					
+
 				</div>
 			</div>
-		</div>
-		<div>
-			<h4> Say their names </h4>
-			<p> Demand investigation and accountability of these hate crimes and justice for them and their families</p>
 		</div>
 		<div class="defundbanner">
 			<a href= "https://defund12.org/"> #Defund12: Reach out to your county to defund police </a>

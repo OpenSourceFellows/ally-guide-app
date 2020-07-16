@@ -106,7 +106,6 @@
 							class="btn-dark btn m-2"
 						>{{message.name}}</button>
 					</div>
-				
 					<div class="outerdiv">
 							<div id="test" v-show="showmessageUI">
 						<h1 class="p-2" style="display: block;">To {{selectedMember.name}},</h1>
@@ -186,7 +185,6 @@
 			},
 			CreateRepList: function() {
 				this.congressMembers = [];
-
 				this.$http
 					.get(
 						"https://murmuring-headland-63935.herokuapp.com/api/elevate/" +

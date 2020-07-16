@@ -13,11 +13,11 @@
       </div>
     </a>
     </div>
-    <div class ="footer-container resource text-white border-yellow" style="background-image: linear-gradient(90deg, rgb(137, 40, 25), black);" >
+    <div class ="footer-container resource text-white border-yellow" >
       <div>
         Educate
         <button class = "textbtn"> FAQ: Current Events</button>
-        <button class = "textbtn"> Take a learning Path </button>
+        <a class = "textbtn" href="/Educate"> Take a learning Path </a>
         <button class = "textbtn"> Belonging within your team </button>
 
       </div>

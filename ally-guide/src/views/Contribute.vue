@@ -1,20 +1,42 @@
 <template>
 <div>
-
-<div style="padding-top: 300px">
-    <input type="text" v-model="search" placeholder="Search by name or state" v-on:keyup="CheckInputContent" style="width:30%">
+<div class="org-search" style="padding-top: 300px">
+    <input class="org-bar" type="text" v-model="search" placeholder="Search by name or topic" v-on:keyup="CheckInputContent" style="width:30%">
 </div>
-
 <div id="government-contact-info" v-show="hasContent">
-    <div v-for="result in filteredCauses" :key="result.Name" style="width: 30%; display: inline-block;">
-        <div style="border-style: dashed;">
-            <p>Name: {{result.Name}}</p>
-            <p>Description: {{result.Description}}</p>
-            <div ></div>
-            <p>Causes:</p>
-        </div>
-    </div>
-</div>
+			<div>
+				<b-card
+					class="mb-2 cards"
+					v-for="result in searchResults"
+					:key="result.name"
+					style="max-width: 24rem; display:inline-block; margin:10px;"
+					:title="result.name"
+					:sub-title="result.contentLink"
+					:img-src="result.imageUrls"
+					img-alt="Image"
+					img-top
+					tag="article"
+				>
+        <b-link to="/">
+          <p>{{result.contentLink}}</p>
+       </b-link>
+        <b-card-text>
+						<h4>{{result.Name}}</h4>
+
+						<p>
+							<i class="fas fa-map-marker-alt" style="font-size:20px;width:1.5rem;"></i>
+							{{result.City}},{{result.State}}
+						</p>
+						<p>
+							{{result.Description}}
+						</p>
+
+					</b-card-text>
+
+					<b-button type="button" variant="primary" v-on:click="ToggleMessageUI(member)">Contribute to fund</b-button>
+				</b-card>
+      </div>
+  </div>
 
 <div v-show="error" style="color: red; font-weight: bolder;">
   {{ error }}

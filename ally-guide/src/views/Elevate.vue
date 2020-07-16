@@ -106,7 +106,6 @@
 							class="btn-dark btn m-2"
 						>{{message.name}}</button>
 					</div>
-
 					<div class="outerdiv">
 							<div id="test" v-show="showmessageUI">
 						<h1 class="p-2" style="display: block;">To {{selectedMember.name}},</h1>
@@ -133,6 +132,7 @@
 	import InvestigateTheArmy from "../components/messages/InvestigateTheArmy.vue";
 	import EndMoneyBail from "../components/messages/EndMoneyBail.vue";
 	import RestoreSixGrandfathers from "../components/messages/RestoreSixGrandfathers.vue";
+
 	export default {
 		components: {
 			EndPoliceImmunity: EndPoliceImmunity,

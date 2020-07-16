@@ -24,8 +24,8 @@
   <h1>Sorry, no results found.</h1>
 </div>
 
-<div>
-<a id = "rebuild-btn" href = "https://www.rebuildblackbusiness.com/"> Rebuild Black Owned Businesses </a>
+<div class="rebuild-btn">
+<a  href = "https://www.rebuildblackbusiness.com/"> Rebuild Black Owned Businesses </a>
 </div>
 </div>
 
@@ -33,8 +33,21 @@
 </template>
 
 <style>
-#rebuild-btn{
-    
+.rebuild-btn{
+    background-color: #000000;
+    text-decoration: none;
+    padding: 30px;
+}
+
+.rebuild-btn a{
+  padding: 30px;
+  width:100%;
+  color: white;
+}
+.rebuild-btn a:hover{
+  background-color:yellow;
+  text-decoration:none;
+  color:#000000;
 }
 .container {
     display: grid;
@@ -127,12 +140,12 @@ export default {
         return this.searchResults.filter((cause) => {
           return cause.Name.toLowerCase().match(this.search.toLowerCase());
         });
-    },      
+    },
   },
   created() {
     this.$http.get(
         'https://murmuring-headland-63935.herokuapp.com/api/contribute'
-    ).then(response => {   
+    ).then(response => {
       this.searchResults = response.body;
     }, response => {
         // error callback

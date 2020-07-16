@@ -9,8 +9,8 @@
 
 			<nav>
 				<ul>
-					<li>
-						<a href=""> Subscribe </a>
+					<li style="border: 3px solid white;">
+						<a style="padding:10px;" href="https://forms.gle/ZYGf77F4dMMiMdpx9"> Subscribe </a>
 					</li>
 					<li>
 						<a href="/Educate">Educate </a>

@@ -1,7 +1,7 @@
 <template>
       <div class = "output">
-      <h1>To whom it may concern,
-</h1> <br>
+      <!-- <h1>To whom it may concern,
+</h1> <br> -->
    <p> As we’ve seen time and time again, cash bail does not promote safety and unfairly penalizes low-income defendants while those who can afford bail go free. We ask that you join us in the fight to abolish money bail and help bring about long overdue equality within our justice system for black Americans. Prisons are currently overflowing due to poor minorities who were racially profiled and then have access to overworked pro bono officers. Many of these minorities are taken advantage of by moneybail officers, someone’s freedom shouldn’t rest on whether they have the money to buy it.  </p> <br>
  <p>In the current climate as we request the justice system be reevaluated, the least we can do is drop cash bail systems while we protest for our right to organize and demand change.
         </p> <br>

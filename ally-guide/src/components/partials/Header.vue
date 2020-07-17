@@ -6,9 +6,11 @@
 				Our Allyship can be our responsibility.
 				</div>
 			<div class="clear"></div>
-
 			<nav>
 				<ul>
+				<li>
+					<img src="https://i.ibb.co/d7z1Wg5/imageedit-74-9412363831.png">
+				</li>
 					<li style="border: 3px solid white;">
 						<a style="padding:10px;" href="https://forms.gle/ZYGf77F4dMMiMdpx9"> Subscribe </a>
 					</li>
@@ -27,6 +29,7 @@
 				  <li>
 						<a href="/Home">Home</a>
 					</li>
+
 				</ul>
 			</nav>
 		</header>
@@ -73,7 +76,7 @@
 		padding: 0 1rem;
 		position: absolute;
 		bottom: 3.7rem;
-		right:8rem;
+		right:29rem;
 		font-size: 3em;
 		opacity: 70%;
 	}

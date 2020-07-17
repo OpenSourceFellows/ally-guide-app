@@ -1,11 +1,7 @@
 <template>
 <div>
-
 <div class="org-search" style="padding-top: 300px">
     <input class="org-bar" type="text" v-model="search" placeholder="Search by name or topic" v-on:keyup="CheckInputContent" style="width:30%">
-</div>
-<div class="banner">
- <p>While we fight for individual police officers to be held accountable for their actions, we need to make sure we can fund every aspect of that fight.</p>
 </div>
 <div id="government-contact-info" v-show="hasContent">
 			<div>
@@ -134,12 +130,6 @@ a.blm:hover {
   opacity: 1;
 }
 
-.banner{
-  background-color:#537260;
-  width:100%;
-  padding: 50px;
-  color: #ffffff;
-}
 </style>
 
 <script>

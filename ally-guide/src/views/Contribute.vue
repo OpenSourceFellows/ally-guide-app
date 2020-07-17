@@ -38,7 +38,7 @@
 
 					</b-card-text>
 
-					<b-button style="background-color:#436652; border:2px solid #436652" type="button" variant="primary" v-on:click="ToggleMessageUI(member)">Contribute to fund</b-button>
+					<b-button style="background-color:#436652; border:2px solid #436652" type="button" variant="primary" v-on:click="goToSite(member)">Contribute to fund</b-button>
 				</b-card>
       </div>
   </div>
@@ -163,6 +163,9 @@ export default {
     ToggleMessageUI: function (result) {
 
     },
+    goToSite: function(result){
+      window.open(this.Link);
+    }
   },
   computed: {
     filteredCauses: function(){

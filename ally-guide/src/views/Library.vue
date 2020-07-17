@@ -25,18 +25,17 @@ History
 					:key="result.name"
 					style="max-width: 24rem; display:inline-block; margin:10px;"
 					:title="result.name"
-					:sub-title="result.contentLink"
+					:sub-title="result.Type"
 					:img-src="result.imageUrls"
 					img-alt="Image"
 					img-top
 					tag="article"
 				>
         <b-card-text>
-						<!-- <p>Position: {{result.name}}</p> -->
+						<!-- <p>Position: {{result.Name}}</p> -->
 
 						<p>
-							<i class="fas fa-map-marker-alt" style="font-size:20px;width:1.5rem;"></i>
-							{{result.Type}},{{result.Summary}}
+							{{result.Summary}}
 						</p>
 						<p>
 							{{result.time}}
@@ -46,7 +45,7 @@ History
            </b-link>
 					</b-card-text>
 
-					<b-button type="button" variant="primary" v-on:click="ToggleMessageUI(member)">Send a Message</b-button>
+					<b-button type="button" variant="primary" v-on:click="ToggleMessageUI(member)">View</b-button>
 				</b-card>
       </div>
   </div>

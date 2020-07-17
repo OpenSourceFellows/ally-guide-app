@@ -1,16 +1,16 @@
 <template>
 	<div style="padding-top: 260px">
-		<div>
-			<h4 class="elevatetext">Changes start by doing.</h4>
+		<div class="elevatetext" style="background-color:#d2a07e;">
+			<h4 style="color:#996b58">Changes start by doing.</h4>
+				<img src="https://i.ibb.co/4Fb74Kr/Screen-Shot-2020-07-16-at-11-50-58-PM.png">
 			<!-- <button type="button" class="btn btn-primary" v-on:click="SendEmail">email</button> -->
 		</div>
 		<div class="searchbanner">
 			<div>
 				<h4>
-					<br />Search and contact Congress and local representatives to echo demands.
+					<br />Elevate and amplify racial justice issues
 				</h4>
 			</div>
-
 			<div id="search-ui">
 				<div>
 					<b-form-input

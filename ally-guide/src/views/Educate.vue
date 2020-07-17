@@ -50,7 +50,7 @@
 					<b-collapse id="accordion-1" v-model="collapseStates[0]">
 						<div
 							class="acc-body"
-						>People of color (POC) have been victims of systemic oppression since the birth of our nation. People of color and their allies want to overthrow the power that oppresses POC disproportionately, and often exclusively. Our POC brothers and sisters are tired of being denied access, entitlement, and innocence on the basis of skin tone.</div>
+						>In this current moment, we want to highlight the disproportionate violence that challenges whether Black lives matter. On a larger scale, this highlights the bleak and genocidal history of the US which is founded on stolen land and the labor of Indigenous and Black communities. This is why we see injustices that are rooted towards BIPOC (Black, Indigenous, People of Color) and is often the foundation of why we see social injustices as well intersectional of class, gender, ability, and beyond. </div>
 					</b-collapse>
 
 					<b-button block v-b-toggle.accordion-2 class="mt-2">But don't all lives matter?</b-button>
@@ -79,7 +79,7 @@
 					<b-collapse id="accordion-3" v-model="collapseStates[2]">
 						<div
 							class="acc-body"
-						>Violent protests in MLK's era has increased voter turnout to change politics.</div>
+						>Throughout history, the course of our liberties has been decided by our commitment to right for all. From having the weekends off, nuclear disarmament, reducing taxes to marches for Civil Rights, Women's Suffrage movement and the Stonewall Riots. We have the right to organize and we should exercise it. Here are some more <a href="https://www.businessinsider.com/largest-marches-us-history-2017-1#the-anti-nuclear-march-in-new-york-citys-central-park-was-on-june-12-1982-protesters-sought-nuclear-disarmament-by-the-us-government-4">examples</a>. </div>
 					</b-collapse>
 
 					<b-button
@@ -90,7 +90,7 @@
 					<b-collapse id="accordion-4" v-model="collapseStates[3]">
 						<div
 							class="acc-body"
-						>Photos and videos of police brutality towards black lives can be traumatic for anyone, and triggering for many POC. Avoid sharing this content as it increases to the dehumanization of black lives.</div>
+						>Make sure to check out <a href="https://www.highsnobiety.com/p/how-to-protest-safely/">AOC's guidelines</a> for starters. Remember to  wear a mask, scrub the data of any pictures, wear protective gear, and always protect Black folx protesting by being a human shield if necessary.</div>
 					</b-collapse>
 
 					<b-button
@@ -101,7 +101,8 @@
 					<b-collapse id="accordion-4" v-model="collapseStates[3]">
 						<div
 							class="acc-body"
-						>Photos and videos of police brutality towards black lives can be traumatic for anyone, and triggering for many POC. Avoid sharing this content as it increases to the dehumanization of black lives.</div>
+						>DO: Boost and contribute to local and national funds, share infographics around direct actions, and engage in dialogue questioning personal freedoms and biases.
+						<br>DON'T: Photos and videos of police brutality towards black lives can be traumatic for anyone, and triggering for many POC. Avoid sharing this content as it increases to the dehumanization of black lives.</div>
 					</b-collapse>
 
 					<b-button
@@ -112,20 +113,20 @@
 					<b-collapse id="accordion-5" v-model="collapseStates[4]">
 						<div
 							class="acc-body"
-						>We hope to sustain allies' support after the attention of viral police brutality has died down. Ally.Guide hopes to help you unlearn unconscious biases, and build a new foundation of racial justice education.</div>
+						>We hope to sustain allies' support after the attention of viral police brutality has died down. Ally.Guide hopes to help you unlearn unconscious biases, and build a new foundation of racial justice education thats connected to direct action.</div>
 					</b-collapse>
 					<b-button block v-b-toggle.accordion-6 class="mt-2">Why are all cops bad?</b-button>
 					<b-collapse id="accordion-6" v-model="collapseStates[5]">
 						<div
 							class="acc-body"
-						>Police are wrong and continue to be as long as the systems supporting their racist workforce are in place and their squads exist.</div>
+						>This question often overlooks the extend that an infrastructure's culture will impact the individual. Looking at the infographic in the above infographic, we find that cops originally were started as a form of patrol towards folx that were enslaved. This create a systemic tone that reflects the type of training and environment is still set today even with cops of color. As the <a href="https://journalism.stanford.edu/stanford-open-policing-project-analyzed-data-from-nearly-100-million-traffic-stops-in-the-us/">Stanford Open Policing Study</a> showcased, abuse of power is frequent without checks and balances with the Police Immunity Act. <a href ="https://theconversation.com/how-to-understand-police-violence-not-a-case-of-good-cop-vs-bad-cop-140039">Read More </a></div>
 					</b-collapse>
 
 					<b-button block v-b-toggle.accordion-7 class="mt-2">How to support my friends of color?</b-button>
 					<b-collapse id="accordion-7" v-model="collapseStates[6]">
 						<div
 							class="acc-body"
-						>It should not take an act of police brutality to surface your support. By choosing to not do anything, your silence is damaging, and it's not enough to simply not be racist. We hope the education part of our platform continues to be part of your journey as an ally long after the outrage. Continue to support black media, black initiatives and charities after the headlines have died down.</div>
+						>When reaching out to friends, ask yourself if you want to feel better or provide support? If its through support, make it actionable - are you dropping off a care package, offering to do an errand, etc? We hope taking a Learning Path continues to be part of your journey as an ally long after the outrage. Continue to support black media, black initiatives and charities after the headlines have died down.</div>
 					</b-collapse>
 
 				</div>

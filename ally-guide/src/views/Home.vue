@@ -6,12 +6,12 @@
 			class="tiles border-bottom border-white"
 		>
 			<!-- <h1 class="message-title">Black Lives Matter.</h1> -->
-			<div class="text-center"  style="padding-bottom: 200px;">
+			<div class="text-center" >
 				<div class="action-div a text-center">
 					<a class="elevate" href="/elevate">
 						<div class="h-title">Elevate</div>
 
-						<div class="h-img" ></div>
+						<div class="h-img" style="padding-top: 200px;"" ></div>
 					</a>
 				</div>
 				<div class="action-div b">

@@ -2,7 +2,7 @@
 	<div style="padding-top: 260px">
 		<div >
 			 <h4 class="elevatetext"> Changes start by doing. </h4>
-			 <button type="button" class="btn btn-primary" v-on:click="SendEmail">email</button>
+			 <a href="https://murmuring-headland-63935.herokuapp.com/api/auth/google" type="button" class="btn btn-primary">auth</a>
 		 </div>
 		<div class="searchbanner" >
 

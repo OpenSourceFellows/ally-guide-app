@@ -1,7 +1,12 @@
 <template>
 <div>
-<div class="org-search" style="padding-top: 300px">
-    <input class="org-bar" type="text" v-model="search" placeholder="Search by name or topic" v-on:keyup="CheckInputContent" style="width:30%">
+<div style="padding-top: 300px; background-color:#537260; padding-bottom: 50px;">
+
+  <h1> Contribute to local and national funds. Search for orgs or individual organizers. </h1>
+</div>
+<div class="org-search" style="padding-top: 25px; padding-right:200px; padding-left:200px;">
+    <input class="org-bar" type="text" v-model="search" placeholder="Search by name or cause" v-on:keyup="CheckInputContent" style="width:30%">
+    <p style="padding-top:30px;">  While we fight for individual police officers to be held accountable for their actions, we need to make sure we can fund every aspect of that fight. </p>
 </div>
 <div id="government-contact-info" v-show="hasContent">
 			<div>
@@ -9,7 +14,7 @@
 					class="mb-2 cards"
 					v-for="result in searchResults"
 					:key="result.name"
-					style="max-width: 24rem; display:inline-block; margin:10px;"
+					style="max-width: 24rem; display:inline-block; margin:10px; border:2px solid #9fbfac;"
 					:title="result.name"
 					:sub-title="result.contentLink"
 					:img-src="result.imageUrls"
@@ -33,7 +38,7 @@
 
 					</b-card-text>
 
-					<b-button type="button" variant="primary" v-on:click="ToggleMessageUI(member)">Contribute to fund</b-button>
+					<b-button style="background-color:#436652; border:2px solid #436652" type="button" variant="primary" v-on:click="ToggleMessageUI(member)">Contribute to fund</b-button>
 				</b-card>
       </div>
   </div>
@@ -64,12 +69,13 @@
 .rebuild-btn a{
   padding: 30px;
   width:100%;
+  padding-right: 100px;
+  padding-left: 100px;
   color: white;
 }
 .rebuild-btn a:hover{
-  background-color:yellow;
   text-decoration:none;
-  color:#000000;
+  color:#ffffff;
 }
 .container {
     display: grid;
@@ -125,9 +131,10 @@ cursor: pointer;
 
 }
 
-a.blm:hover {
+.rebuild-btn:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   opacity: 1;
+  border: 4px solid #537260;
 }
 
 </style>

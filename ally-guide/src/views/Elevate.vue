@@ -1,11 +1,11 @@
 <template>
 	<div style="padding-top: 260px">
-		<div >
+
+		<div style="background-color:#ffffff;">
 			 <h4 class="elevatetext"> Changes start by doing. </h4>
 			 <a href="https://murmuring-headland-63935.herokuapp.com/api/auth/google" type="button" class="btn btn-primary">auth</a>
 		 </div>
 		<div class="searchbanner" >
-
 			<div>
 				<h4>
 					<br />Search and contact Congress and local representatives to echo demands.
@@ -71,7 +71,7 @@
 			<div id="message-ui" v-show="showmessageUI">
 				<div id="selected-member">
 					<div>
-						<b-card no-body class="overflow-hidden" style="max-width: 100%;">
+						<!-- <b-card no-body class="overflow-hidden" style="max-width: 100%;">
 							<b-row no-gutters>
 								<b-col md="2">
 									<b-card-img
@@ -89,7 +89,7 @@
 									</b-card-body>
 								</b-col>
 							</b-row>
-						</b-card>
+						</b-card>-->
 					</div>
 				</div>
 
@@ -97,54 +97,62 @@
 					<div>
 						<br />
 						<h2>What would you like to do?</h2>
+						<p> Click the buttons below to generate an email template. </p>
 						<br />
 					</div>
+
 					<div class="m-2 d-inline" v-for="message in messages" :key="message.mid">
-						<button v-on:click="component = message.component" class="btn-primary btn m-2">{{message.name}}</button>
+						<button
+							v-on:click="component = message.component"
+							class="btn-dark btn m-2"
+						>{{message.name}}</button>
 					</div>
-					<component v-bind:is="component"></component>
-					
+
+					<div class="outerdiv">
+							<div id="test" v-show="showmessageUI">
+						<h1 class="p-2" style="display: block;">To {{selectedMember.name}},</h1>
+					</div>
+						<component v-bind:is="component"></component>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div>
-			<h4> Say their names </h4>
-			<p> Demand investigation and accountability of these hate crimes and justice for them and their families</p>
-		</div>
-		<div class="defundbanner">
-			<a href= "https://defund12.org/"> #Defund12: Reach out to your county to defund police </a>
-		</div>
 
+		<div class="defundbanner">
+			<a href="https://defund12.org/">#Defund12: Reach out to your county to defund police</a>
+		</div>
 	</div>
 </template>
 
 <script>
-import EndPoliceImmunity from '../components/messages/EndPoliceImmunity.vue';
-import DefundPolice from '../components/messages/DefundPolice.vue';
-import InvestigateTheArmy from '../components/messages/InvestigateTheArmy.vue';
-import EndMoneyBail from '../components/messages/EndMoneyBail.vue';
-import RestoreSixGrandfathers from '../components/messages/RestoreSixGrandfathers.vue';
-
+	import EndPoliceImmunity from "../components/messages/EndPoliceImmunity.vue";
+	import DefundPolice from "../components/messages/DefundPolice.vue";
+	import InvestigateTheArmy from "../components/messages/InvestigateTheArmy.vue";
+	import EndMoneyBail from "../components/messages/EndMoneyBail.vue";
+	import RestoreSixGrandfathers from "../components/messages/RestoreSixGrandfathers.vue";
 	export default {
 		components: {
-			'EndPoliceImmunity': EndPoliceImmunity,
-			'DefundPolice': DefundPolice,
-			'InvestigateTheArmy': InvestigateTheArmy,
-			'EndMoneyBail': EndMoneyBail,
-			'RestoreSixGrandfathers': RestoreSixGrandfathers
+			EndPoliceImmunity: EndPoliceImmunity,
+			DefundPolice: DefundPolice,
+			InvestigateTheArmy: InvestigateTheArmy,
+			EndMoneyBail: EndMoneyBail,
+			RestoreSixGrandfathers: RestoreSixGrandfathers
 		},
 		data() {
 			return {
 				messages: [
-					{name: "End Police Immunity", component: "EndPoliceImmunity"},
-					{name: "Say their names", component: "DefundPolice"},
-					{name: "Investigate the Army", component: "InvestigateTheArmy"},
-					{name: "End Money Bail", component: "EndMoneyBail"},
-					{name: "Restore Six Grandfathers", component: "RestoreSixGrandfathers"}
+					{ name: "End Police Immunity", component: "EndPoliceImmunity" },
+					{ name: "Say their names", component: "DefundPolice" },
+					{ name: "Investigate the Army", component: "InvestigateTheArmy" },
+					{ name: "End Money Bail", component: "EndMoneyBail" },
+					{
+						name: "Restore Six Grandfathers",
+						component: "RestoreSixGrandfathers"
+					}
 				],
 				congressMembers: [],
 				reps: [],
-				component: 'EndPoliceImmunity',
+				component: "EndPoliceImmunity",
 				selectedMember: {},
 				showmessageUI: false, //switch to True to see elements
 				showTextArea: false, //switch to True to see elements
@@ -174,39 +182,37 @@ import RestoreSixGrandfathers from '../components/messages/RestoreSixGrandfather
 			},
 			CreateRepList: function() {
 				this.congressMembers = [];
-
 				this.$http
-				.get("https://murmuring-headland-63935.herokuapp.com/api/elevate/" + this.search)
-				.then(
-					response => {
-						console.log(response.data);
-						this.congressMembers = response.data;
-						this.hasContent = true;
-					},
-					response => {
-						// error callback
-					}
-				);
+					.get(
+						"https://murmuring-headland-63935.herokuapp.com/api/elevate/" +
+							this.search
+					)
+					.then(
+						response => {
+							console.log(response.data);
+							this.congressMembers = response.data;
+							this.hasContent = true;
+						},
+						response => {
+							// error callback
+						}
+					);
 			},
-			SendEmail: function(){
+			SendEmail: function() {
 				this.$http
-				//.get("https://murmuring-headland-63935.herokuapp.com/api/email)
-				.get("http://localhost:5000/api/email")
-				.then(
-					response => {
-						console.log(response.data);
-					},
-					response => {
-						// error callback
-					}
-				);
+					//.get("https://murmuring-headland-63935.herokuapp.com/api/email)
+					.get("http://localhost:5000/api/email")
+					.then(
+						response => {
+							console.log(response.data);
+						},
+						response => {
+							// error callback
+						}
+					);
 			}
 		},
-		computed: {
-		},
-		created() {
-
-
-		}
+		computed: {},
+		created() {}
 	};
 </script>

@@ -1,6 +1,6 @@
 <template>
 	<div style="padding-top: 260px">
-		<div style="background-color:#ffffff;">
+		<div>
 			<h4 class="elevatetext">Changes start by doing.</h4>
 			<!-- <button type="button" class="btn btn-primary" v-on:click="SendEmail">email</button> -->
 		</div>
@@ -106,7 +106,6 @@
 							class="btn-dark btn m-2"
 						>{{message.name}}</button>
 					</div>
-
 					<div class="outerdiv">
 							<div id="test" v-show="showmessageUI">
 						<h1 class="p-2" style="display: block;">To {{selectedMember.name}},</h1>
@@ -117,6 +116,10 @@
 			</div>
 		</div>
 
+		<div class="sayNames">
+			<h4>Say their names</h4>
+			<p>Demand investigation and accountability of these hate crimes and justice for them and their families</p>
+		</div>
 		<div class="defundbanner">
 			<a href="https://defund12.org/">#Defund12: Reach out to your county to defund police</a>
 		</div>
@@ -129,6 +132,7 @@
 	import InvestigateTheArmy from "../components/messages/InvestigateTheArmy.vue";
 	import EndMoneyBail from "../components/messages/EndMoneyBail.vue";
 	import RestoreSixGrandfathers from "../components/messages/RestoreSixGrandfathers.vue";
+
 	export default {
 		components: {
 			EndPoliceImmunity: EndPoliceImmunity,

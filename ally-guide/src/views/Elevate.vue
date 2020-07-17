@@ -115,11 +115,6 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="sayNames">
-			<h4>Say their names</h4>
-			<p>Demand investigation and accountability of these hate crimes and justice for them and their families</p>
-		</div>
 		<div class="defundbanner">
 			<a href="https://defund12.org/">#Defund12: Reach out to your county to defund police</a>
 		</div>

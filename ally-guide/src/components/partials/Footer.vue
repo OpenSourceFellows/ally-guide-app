@@ -16,29 +16,29 @@
     <div class ="footer-container resource text-white border-yellow" >
       <div>
         Educate
-        <button class = "textbtn"> FAQ: Current Events</button>
-        <a class = "textbtn" href="/Educate"> Take a learning Path </a>
-        <button class = "textbtn"> Belonging within your team </button>
+        <button class="textbtn" href="/Educate"> FAQ: Current Events</button>
+        <button class="textbtn" href=""> Take a learning Path </button>
+        <button class="textbtn" href="/Educate"> Belonging within your team </button>
 
       </div>
       <div>
         Contribute
-        <button class = "textbtn"> Say their Names: Families Affected </button>
-        <button class = "textbtn"> Submit a resource </button>
+        <button class="textbtn"> Say their Names: Families Affected </button>
+        <button class="textbtn"> Submit a resource </button>
 
 
       </div>
       <div >
         Elevate
-        <button class = "textbtn"> Say their Names </button>
-        <button class = "textbtn"> Reach local representatives </button>
-        <button class = "textbtn"> Submit a letter </button>
+        <button class="textbtn"> Say their Names </button>
+        <button class="textbtn"> Reach local representatives </button>
+        <button class="textbtn"> Submit a letter </button>
       </div>
       <div>
           Ally.Guide
-          <button class = "textbtn"> About Us </button>
-          <button class = "textbtn"> Offer Services </button>
-          <button class = "textbtn"> Join Alley.Guide's efforts </button>
+          <button class="textbtn"> GitHub </button>
+          <button class="textbtn"> Slack </button>
+          <button class="textbtn"> Join Alley.Guide's efforts </button>
       </div>
     </div>
   </div>

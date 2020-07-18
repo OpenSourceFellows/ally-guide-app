@@ -164,7 +164,7 @@ export default {
 
     },
     goToSite: function(result){
-      window.open(this.Link);
+      window.open(result.Link);
     }
   },
   computed: {

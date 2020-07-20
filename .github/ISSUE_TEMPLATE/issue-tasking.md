@@ -20,7 +20,10 @@ Define urgency and priority aligned with existing tasks.
 What is the desired outcome, is it a fix or an additional feature to remedy an issue?
 
 **People needs**
-Who are the people needs for this issue or feature? Engineers? Programmers? Writers? Designers? Etc?
+Who are the people needs for this issue or feature? Frontend, Backend, Design, Content copy, Content/Data Entry, Infrastructure (for ex: mobile) --> Find the matching labels
+
+**Which page is this**
+Which section was this found? index/home, circulate, communicate, educate, elevate --> Find the matching labels
 
 **Tasklist**
 - [ ] Add a task that's a part of this issue, examples below

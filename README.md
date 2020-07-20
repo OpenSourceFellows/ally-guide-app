@@ -1,31 +1,30 @@
-# [Ally.Guide Overview](https://docs.google.com/document/d/1dZgMP22Hgk6l6hmbzkX4vAjJBUqk_ytio7KJzU2viZk/edit?usp=sharing)
-Ally.guide is a web app hoping to support and strengthen racial justice movements against policy brutality by guiding folx to become better allies by: educating, donating, activating policies, and collaborating with existing orgs through services.
+# Purpose
+How can we translate our skills and resources towards racial justice? Ally.Guide is an open source project contributed by Hubbers that triages a starting place to collaborate with current racial justice efforts and echo Black Lives Matter through the following programs.  
+[Current Website](www.ally.guide), [GitHub](https://github.com/Ally-Guide), Slack: #ally-guide)
 
-## About the Project
-### Educate:
-- How to guides for antiracism (showing up to protests, talking to family members, etc)
-- FAQ’s (what questions do you think would be helpful here?)
-- Toolbox of articles, essays, and online pdfs that outline history of antiblackness and why it matters.
-- Healing tools
-- Current events by state
-
-### Contribute (Biggest priority, please help with data labelling):
-- Racial Justice oriented orgs
-- Task Forces (Bail Funds, Supply funds, etc on the ground)
-- Families affected
-- Helping black owned businesses
-
-### Elevate:
-- Query representatives, Email templates that can be sent directly (referencing petitions)
-- Send Mail
-- Defund12
-
-### Collaborate:
-- Public Demos
-- What are projects we can add to (raheem.ai, antipoliceterrorproject, etc)?
-- Form for volunteers to offer services
-
-As we set up infrastructure, we could really use your help to help populate these fields with current updates. This is a people movement, please let us know what could be made better and where we should expand. If you'd like to contribute to content, request access [here](https://docs.google.com/document/d/1dZgMP22Hgk6l6hmbzkX4vAjJBUqk_ytio7KJzU2viZk/edit?usp=sharing) 
+<table>
+  <tr>
+   <td><strong>      📚  Educate</strong>
+   </td>
+   <td><strong>       💰 Circulate</strong>
+   </td>
+   <td><strong>    📢 Communicate</strong>
+   </td>
+   <td>
+    <strong>🗓  Elevate</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Consolidation of knowledge that cater to different learning personas through sections: FAQ, Library, and Learning Paths. 
+   </td>
+   <td>Ensuring we can complement 501(c)(3) efforts by circulating contributions directly to grassroots organizing and community bail funds.
+   </td>
+   <td>Amplify issues that trouble our justice system directly to educational, county, local, state, and federal institutions.<strong> </strong>
+   </td>
+   <td>Contribute intersectionally and create opportunities by supporting existing efforts through your skillset. 
+   </td>
+  </tr>
+</table>
 
 
 ## Technical Requirements

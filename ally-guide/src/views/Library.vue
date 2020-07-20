@@ -33,18 +33,13 @@ History
 				>
         <b-card-text>
 						<!-- <p>Position: {{result.Name}}</p> -->
-
 						<p>
 							{{result.Summary}}
 						</p>
 						<p>
 							{{result.time}}
 						</p>
-            <b-link to="/">
-              <p>{{result.contentLink}}</p>
-           </b-link>
 					</b-card-text>
-
 					<b-button type="button" variant="primary" v-on:click="RedirectToLink(result)">View</b-button>
 				</b-card>
       </div>

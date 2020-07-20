@@ -45,7 +45,7 @@ History
            </b-link>
 					</b-card-text>
 
-					<b-button type="button" variant="primary" v-on:click="ToggleMessageUI(member)">View</b-button>
+					<b-button type="button" variant="primary" v-on:click="RedirectToLink(result)">View</b-button>
 				</b-card>
       </div>
   </div>
@@ -71,6 +71,9 @@ export default {
       else {
           this.hasContent = false;
       }
+    },
+    RedirectToLink: function (result){
+      window.open(result.contentLink);
     },
   },
   computed: {

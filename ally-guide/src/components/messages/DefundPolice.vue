@@ -3,7 +3,7 @@
 		<!-- <h1>To whom it may concern,
 		</h1>-->
 		<br />
-		<p>Predatory policing, police brutality, and killing of black men, women, girls, and boys is not news. The video capture of George Floyd’s arrest and murder, along with the subsequent outrage and protests highlight the need for change in the criminal justice system.</p>
+		<p>Predatory policing, police brutality, and killing of Black men, women, girls, and boys is not news. The video capture of George Floyd’s arrest and murder, along with the subsequent outrage and protests highlight the need for change in the criminal justice system.</p>
 		<br />
 		<p>Historically, procedural police reforms prove ineffective. The time to reverse decades of expansion of the scope, the intensity of, and the militarization of policing is now. Below are some petitions that support the cause.</p>
 		<br />
@@ -20,7 +20,7 @@
 			>Tell Minneapolis City Council to Defund the Police</a>.
 		</p>
 		<br />
-		<p>Our ask is for acknowledgment and an end be put to the devaluation and dehumanization of black lives at the hand of police. This acknowledgment looks like the arrest and firing of officers who enforce law unethically, defunding of police, and reorientation of tax dollars to prison abolition efforts.</p>
+		<p>Our ask is for acknowledgment and an end be put to the devaluation and dehumanization of Black lives at the hand of police. This acknowledgment looks like the arrest and firing of officers who enforce law unethically, defunding of police, and reorientation of tax dollars to prison abolition efforts.</p>
 		<br />
 		<p>We ask instead, that social workers, health workers, and education have more funding to deescalate situations they are better trained for than police while ensuring children have the resources to avoid school to prison pipeline. We don’t need police in schools or community centers, we need social workers and higher volumes of them which can only be ensured by decreasing policing funds and prioritizing health, education, and community groups. Black lives matter, please continue to reflect this sentiment with real actions towards the end of police brutality instead of verbal consolations.</p>
 		<br />

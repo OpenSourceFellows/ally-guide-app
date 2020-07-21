@@ -1,7 +1,16 @@
 <template>
   <div id="app">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-    <Header />
+     <HeaderMobile />
+         <div class="content" :class="{'open':showNav}">
+           <div class="top-bar">
+             <div id="navigation-icon" v-if="mobileView"
+               @click="showNav = !showNav">
+               <i class="fas fa-bars"></i>
+             </div>
+            </div>
+          </div>
+    <Header  v-if="!mobileView" />
 
     <router-view />
     <Footer />
@@ -11,11 +20,27 @@
 <script>
 import Header from "@/components/partials/Header.vue";
 import Footer from "@/components/partials/Footer.vue";
+import HeaderMobile from "@/components/partials/HeaderMobile.vue";
 
 export default {
+   data: () => {
+      return {
+        mobileView: true,
+        showNav: false
+      };
+    },
+    methods: {
+       handleView() {
+         this.mobileView = window.innerWidth <= 990;
+       }
+     },
   components: {
-    Header, Footer,
-  }
+    Header, HeaderMobile, Footer,
+  },
+  created() {
+   this.handleView();
+   window.addEventListener('resize', this.handleView);
+ }
 };
 </script>
 

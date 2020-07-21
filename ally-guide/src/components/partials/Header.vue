@@ -1,34 +1,27 @@
 <template>
 	<div>
 		<header>
-			<div class="header-banner"></div>
-			  <div class="message-title">
-				Our Allyship can be our responsibility.
-				</div>
-			<div class="clear"></div>
 			<nav>
 				<ul>
-				<li>
-					<img src="https://i.ibb.co/d7z1Wg5/imageedit-74-9412363831.png">
-				</li>
-					<li style="border: 3px solid white;">
-						<a style="padding:10px;" href="https://forms.gle/ZYGf77F4dMMiMdpx9"> Subscribe </a>
-					</li>
 					<li>
+						<a style="border-radius:18px;border:3px solid white; padding-left:3px;" href="https://forms.gle/ZYGf77F4dMMiMdpx9"> Subscribe </a>
+					</li>
+					<li><a href="">Volunteer</a></li>
+					<li class="mainNav">
+					<a href="/Home"><img style="width:30px;"src="https://i.ibb.co/j4t3YL6/imageedit-8-6683678944.png" alt="imageedit-8-6683678944" border="0"></a></li>
+					<li class="mainNav">
 						<a href="/Educate">Educate </a>
 					</li>
-					<li>
-						<a href="/Collaborate">Collaborate</a>
+					<li class="mainNav">
+						<a href="/Collaborate">Elevate</a>
 					</li>
-					<li>
-						<a href="/Contribute">Contribute</a>
+					<li class="mainNav">
+						<a href="/Contribute">Circulate</a>
 					</li>
-					<li>
-						<a href="/Elevate">Elevate</a>
+					<li class="mainNav" style="padding-right:400px;">
+						<a href="/Elevate">Communicate</a>
 					</li>
-				  <li>
-						<a href="/Home">Home</a>
-					</li>
+
 
 				</ul>
 			</nav>
@@ -56,37 +49,11 @@
 
 	.site-title img{float:left;}
 
-	.header-banner {
-		background-color: #333;
-		background-image: url('https://i.ibb.co/b12NHqL/Screen-Shot-2020-07-06-at-1-44-28-AM.png');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 100%;
-		align: bottom;
-		height: 180px;
-		padding: 100px;
-
-	}
-
-	.message-title {
-	  visibility: visible;
-		background-color:#6d2114;
-		color: #fff;
-		padding: 0 1rem;
-		position: absolute;
-		bottom: 3.7rem;
-		right:29rem;
-		font-size: 3em;
-		opacity: 70%;
-	}
-
-
 
 	nav{
 		width: 100%;
 		font-size: 1.1em;
-		height: 60px;
+		height: 80px;
 		background: #000000;
 		z-index: 10;
 		position:relative;
@@ -96,7 +63,7 @@
 	nav div {
 		color: white;
 		font-size: 2rem;
-		line-height: 60px;
+		line-height: 80px;
 		position: absolute;
 		postion: fixed;
 		top: 0;
@@ -117,7 +84,7 @@
 	}
 	nav ul {
 		display: inline-block;
-		line-height: 50px;
+		line-height: 70px;
 	}
 	nav ul li a {
 		text-decoration: none;
@@ -160,6 +127,10 @@
   li a:hover{
 		text-decoration:none;
 		color:white;
+	}
+
+	.mainNav{
+		float:left;
 	}
 
 

@@ -198,8 +198,8 @@
 			},
 			SendEmail: function() {
 				this.$http
-					//.get("https://murmuring-headland-63935.herokuapp.com/api/email)
-					.get("http://localhost:5000/api/email")
+					.get("https://murmuring-headland-63935.herokuapp.com/api/email")
+					//.get("http://localhost:5000/api/email")
 					.then(
 						response => {
 							console.log(response.data);

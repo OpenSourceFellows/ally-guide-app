@@ -55,7 +55,7 @@ router.get('/:zipCode', (req, res) => {
                         officeInfo.state = rep.address[0].state;
                     }
                     if(repInfo.email == undefined) {
-                        officeInfo.email = 'Unavailable';
+                        officeInfo.email = 'Has Not Been Made Public';
                     }
                     else{
                         officeInfo.email = rep.email;

@@ -1,7 +1,7 @@
 <template>
 <div>
-  <div style="padding-top: 300px;background-color: #ffbd59;">
-    <h1>Collaborate to keep up the momentum! </h1>
+  <div style="padding-top: 100px;background-color: #ffbd59;">
+    <h1>Show up to keep up the momentum! </h1>
   </div>
 
   <div style="background-color:#000000;">

@@ -117,7 +117,7 @@
 		}
 
 		.mainNav{
-			float:left;
+			float:right;
 		}
 
 

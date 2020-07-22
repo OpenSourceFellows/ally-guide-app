@@ -1,7 +1,6 @@
 <template>
   <div >
     <div>
-    How can we help?
     <a href="https://forms.gle/xYmhA16RrbwzHCDU8">
       <div class = "button">
         Add Resources here

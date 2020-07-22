@@ -22,17 +22,12 @@ const routes = [
     name: "Elevate",
     component: Elevate
   },
-  {
-    path: "/Library",
-    name: "Library",
-    component: () =>
-      import(/* webpackChunkName: "educate" */ "../views/Library.vue")
-  },
+
   {
     path: "/educate",
     name: "Educate",
     component: () =>
-      import(/* webpackChunkName: "educate" */ "../views/Educate.vue")
+      import(/* webpackChunkName: "educate" */ "../views/Library.vue")
   },
   {
     path: "/contribute",

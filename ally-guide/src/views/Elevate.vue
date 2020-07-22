@@ -1,10 +1,7 @@
 <template>
 	<div>
-		<div style="padding-top:100px;"> Send these tweets today!
-			<a href="https://twitter.com/intent/tweet?text=JusticeForBreona%2C%20we%20still%20need%20actions%20around%20police%20accountability.%20This%20looks%20like%20arresting%20the%20officers%20(Jon%20Mattingly%20and%20Myles%20Cosgrove)%20involved%20%2B%20training%20current%20ones%20and%20extends%20to%20orienting%20tax%20dollars%20towards%20social%20workers%2C%20community%20centers%2C%20health%20and%20education.%20">Demand justice for her </a>
-		</div>
 		<div class="elevatetext" style="background-color:#d2a07e;">
-			<h4 style="color:#996b58">Changes start by doing.</h4>
+			<h4 style="object-fit:contain;color:#996b58">Changes start by doing.</h4>
 				<img src="https://i.ibb.co/4Fb74Kr/Screen-Shot-2020-07-16-at-11-50-58-PM.png">
 			<!-- <button type="button" class="btn btn-primary" v-on:click="SendEmail">email</button> -->
 		</div>

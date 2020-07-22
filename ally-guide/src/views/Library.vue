@@ -1,13 +1,7 @@
 <template>
-<div style="padding-top:300px;">
-  <div>
-    Black lives matter: Say their names
-  </div>
-<div>
-How to show up at a protest
-</div>
-<div>
-History
+<div style="padding-top:100px; padding-left:100px; padding-right:100px;">
+<div style="">
+  <a href = "https://airtable.com/shrYjsZT8NitBzXN5">Add a learning resource </a>
 </div>
 <div>
       <h4>
@@ -17,13 +11,13 @@ History
 <div class="org-search">
     <input class="org-bar" type="text" v-model="search" placeholder="Search by name or topic" v-on:keyup="CheckInputContent" style="width:30%">
 </div>
-<div id="government-contact-info" v-show="hasContent">
+<div id="government-contact-info" v-show="hasContent" >
 			<div>
 				<b-card
-					class="mb-2 cards"
+					class="mb-2 cards library"
 					v-for="result in searchResults"
 					:key="result.name"
-					style="max-width: 24rem; display:inline-block; margin:10px;"
+					style="max-width: 24rem; display:inline-block; border-radius:8px; margin:10px; border:4px solid #966058"
 					:title="result.name"
 					:sub-title="result.Type"
 					:img-src="result.imageUrls"
@@ -40,11 +34,47 @@ History
 							{{result.time}}
 						</p>
 					</b-card-text>
-					<b-button type="button" variant="primary" v-on:click="RedirectToLink(result)">View</b-button>
+					<b-button style="background-color:#c49d79; border:2px solid #c49d79"type="button" variant="primary" v-on:click="RedirectToLink(result)">View</b-button>
 				</b-card>
       </div>
   </div>
+<div class="carousel-outer">
+			<div class="carousel-inn">
+				<b-carousel
+					id="carousel-1"
+					v-model="slide"
+					:interval="6000"
+					controls
+					indicators
+					background="#ababab"
+					img-width="200"
+					img-height="550"
+					style="text-shadow: 1px 1px 2px #333;"
+					@sliding-start="onSlideStart"
+					@sliding-end="onSlideEnd"
+				>
+					<!-- no-animation and interval 0 turns off automatic slide-->
+					<!-- Text slides with image -->
+					<b-carousel-slide
+						caption="Allyship is continual"
+						class="caption"
+						text="We're finding that the rate of police murders on a national level has remained consistent since #BlackLivesMatter first trended in 2013. Creating lasting change requires continual action, we need to continue asking for accountability."
+						img-src="https://image.freepik.com/free-photo/closeup-diverse-people-holding-hands_53876-47126.jpg"
+					></b-carousel-slide>
+					<b-carousel-slide img-src="https://i.imgur.com/wBJjNyu.png"></b-carousel-slide>
+
+					<b-carousel-slide
+						caption="Police accountability"
+						text="Checks and balances for our larger justice system protect the people. The Stanford Open Policing Project examined almost 100 million traffic stops and found officers targeted areas larger in minority populations to fulfill a quota based system."
+						img-src="https://go.tiffinohio.net/wp-content/uploads/2020/06/police-tear-gas-bw-web.jpg"
+					></b-carousel-slide>
+				</b-carousel>
+			</div>
+    </div>
+    <div style="padding:50px;">
+    </div>
 </div>
+
 </template>
 
 <script>
@@ -207,4 +237,15 @@ body{
 .fadeIn-bottom{
   top: 80%;
 }
+
+.library img{
+  padding-top:10px;
+  width: 250px;
+
+}
+
+.carousel-outer + img{
+  object-fit:contain;
+}
+
 </style>

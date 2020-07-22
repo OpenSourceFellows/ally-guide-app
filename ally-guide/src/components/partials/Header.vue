@@ -1,27 +1,28 @@
 <template>
 	<div>
 		<header>
-			<nav>
-				<ul>
+			<nav class="nav-wrapper">
+				<ul class="list list-secondary">
 					<li>
 						<a style="border-radius:18px;border:3px solid white; padding-left:3px;" href="https://forms.gle/ZYGf77F4dMMiMdpx9"> Subscribe </a>
 					</li>
 					<li><a href="">Volunteer</a></li>
-					<li class="mainNav">
+					</ul>
+					<ul class="list list-main"">
+					<li>
 					<a href="/Home"><img style="width:30px;"src="https://i.ibb.co/j4t3YL6/imageedit-8-6683678944.png" alt="imageedit-8-6683678944" border="0"></a></li>
 					<li class="mainNav">
 						<a href="/Educate">Educate </a>
 					</li>
-					<li class="mainNav">
+					<li class="mainNav" >
 						<a href="/Collaborate">Elevate</a>
 					</li>
 					<li class="mainNav">
 						<a href="/Contribute">Circulate</a>
 					</li>
-					<li class="mainNav" style="padding-right:400px;">
+					<li class="mainNav" style="">
 						<a href="/Elevate">Communicate</a>
 					</li>
-
 
 				</ul>
 			</nav>
@@ -98,7 +99,6 @@
 		font-weight: bold;
 		color: red;
 		background-color: #000000;
-		float: right;
 		position: relative;
 		overflow: hidden;
 		margin: ;
@@ -129,9 +129,21 @@
 		color:white;
 	}
 
-	.mainNav{
-		float:left;
+
+
+	.nav-wrapper {
+	  display: grid;
+	  grid-template-columns: 1fr max-content;
 	}
 
+	.nav-wrapper ul.list {
+	  display: flex;
+	  list-style-type: none;
+	  padding: 0;
+	}
+
+	.nav-wrapper ul li:not(:first-child) {
+	  margin-left: 36px;
+	}
 
 </style>

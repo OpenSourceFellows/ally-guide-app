@@ -1,8 +1,9 @@
 <template>
-<div style="padding-top:100px; padding-left:100px; padding-right:100px;">
-<div style="">
-  <a href = "https://airtable.com/shrYjsZT8NitBzXN5">Add a learning resource </a>
+<div>
+<div style="padding-top:100px; background-color:#966058;">
+  <a href = "https://airtable.com/shrYjsZT8NitBzXN5" style="color:#ffffff;">Add a learning resource </a>
 </div>
+<div style="padding-left:100px; padding-right:100px;">
 <div>
       <h4>
         <br /> Show up as a student, in every medium
@@ -71,10 +72,10 @@
 				</b-carousel>
 			</div>
     </div>
-    <div style="padding:50px;">
+    <div style="padding:20px;">
     </div>
 </div>
-
+</div>
 </template>
 
 <script>

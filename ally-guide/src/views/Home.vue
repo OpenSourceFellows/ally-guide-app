@@ -1,12 +1,10 @@
 <template>
 	<div class="Home">
 		<div class="buffer"></div>
-		<div style="padding-top:100px;"> Send these tweets today!
-			<a href="https://twitter.com/intent/tweet?text=JusticeForBreona%2C%20we%20still%20need%20actions%20around%20police%20accountability.%20This%20looks%20like%20arresting%20the%20officers%20(Jon%20Mattingly%20and%20Myles%20Cosgrove)%20involved%20%2B%20training%20current%20ones%20and%20extends%20to%20orienting%20tax%20dollars%20towards%20social%20workers%2C%20community%20centers%2C%20health%20and%20education.%20">Demand justice for her </a>
-		</div>
-		<div style="padding-left:150px; padding-right:150px;padding-bottom:50px;">
+
+		<div style="padding-left:100px; padding-right:100px;padding-bottom:50px;">
 			 <h1> Ally.Guide</h1>
-			 <h4> Wherever you're starting from in your allyship towards racial justice, we help you be consistent. </h4>
+			 <h4> Wherever you're starting from towards allyship, we help you be consistent. </h4>
 		</div>
 		<div
 			style="background-image: linear-gradient(90deg, #892819, black);"
@@ -15,9 +13,17 @@
 			<!-- <h1 class="message-title">Black Lives Matter.</h1> -->
 			<div class="text-center" >
 				<div class="action-div a text-center">
-					<a class="elevate" href="/elevate">
-						<div class="h-title">Communicate</div>
+				<div class="h-title">Communicate</div>
 
+				<div style="background-color:#c49d79; padding-left:50px;">
+					<div>
+						<a href="https://bit.ly/2BjsqBK" style="color:#ffffff;border:4px solid #ffffff;"> Justice for Breonna </a>
+						<a href="https://bit.ly/2CAp3Hi" style="color:#ffffff;padding:50x; border:4px solid #ffffff;"> Remove forces from Portland</a>
+						<a href="https://bit.ly/30tfUYQ" style="color:#ffffff;padding:50x; border:4px solid #ffffff;">Justice for Vanessa</a>
+						<a href="https://bit.ly/2CTqRuM" style="color:#ffffff;padding:50x; border:4px solid #ffffff;">Justice for Saraya</a>
+					</div>
+				</div>
+					<a class="elevate" href="/elevate">
 						<div class="h-img" style="padding-top: 200px;"" ></div>
 					</a>
 				</div>

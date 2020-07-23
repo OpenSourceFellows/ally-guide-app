@@ -1,26 +1,29 @@
 ---
 name: Issue tasking
 about: For creating actionable tasks to address bugs or feature requests
-title: 'Tasklist: short title'
-labels: help wanted
-assignees: ''
+title: 'Desired outcome Tasklist: short title'
+labels: help wanted 
+assignees: '(which teams --> label issue 'Dev' 'Design' etc and tag people here)'
 
 ---
 
-**Short Description** 
-1-2 sentences describing the problem (and how to recreate it) or feature request.
 
 **Related issues / pull requests**
 Does this close an open issue? 
 
 **Urgency and Priority**
 Define urgency and priority aligned with existing tasks.
+Urgency: 
+High: Is this a bottleneck that can be detrimental to UX, something that would disrupt current services infrastructurally?
+Medium: A long term problem we need to get started on now, about resolving tech debt
+Low: Optimizations, a 'nice to have' thats a long way off
 
-**Desired outcome**
-What is the desired outcome, is it a fix or an additional feature to remedy an issue?
+Priority: 
+1 - API/Functionality securitization (Secrets, managing end points, app functionalty)
+2 - Workflow management (CI/CD, Actions, Permissions management)
+3 - User Analytics Functionality 
+4 - UI optimizations 
 
-**People needs**
-Who are the people needs for this issue or feature? Frontend, Backend, Design, Content copy, Content/Data Entry, Infrastructure (for ex: mobile) --> Find the matching labels
 
 **Which page is this**
 Which section was this found? index/home, circulate, communicate, educate, elevate --> Find the matching labels

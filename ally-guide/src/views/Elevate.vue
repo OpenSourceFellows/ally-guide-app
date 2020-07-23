@@ -41,8 +41,6 @@
 					tag="article"
 				>
 					<b-card-text>
-						<!-- <p>Position: {{member.title}}</p> -->
-
 						<p>
 							<i class="fas fa-map-marker-alt" style="font-size:20px;width:1.5rem;"></i>
 							{{member.city}} {{member.state}}
@@ -59,7 +57,6 @@
 							<i class="fab fa-twitter" style="font-size:25px;width:1.5rem;"></i>
 							{{member.twitter}}
 						</p>
-						<!-- <p>Contact Page: {{member.contactPage}}</p> -->
 					</b-card-text>
 
 					<b-button type="button" variant="primary" v-on:click="ToggleMessageUI(member)">Send a Message</b-button>
@@ -68,38 +65,21 @@
 		</div>
 		<div>
 			<div id="message-ui" v-show="showmessageUI">
-				<div id="selected-member">
-					<div>
-						<!-- <b-card no-body class="overflow-hidden" style="max-width: 100%;">
-							<b-row no-gutters>
-								<b-col md="2">
-									<b-card-img
-										src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
-										alt="Image"
-										class="rounded-0"
-									></b-card-img>
-								</b-col>
-								<b-col md="10 d-flex align-items-center">
-									<b-card-body>
-										<b-card-text>
-											<h1 class="p-2" style="display: block;">{{selectedMember.name}}</h1>
-											<h4 class="p-2" style="display: block;">{{selectedMember.title}}</h4>
-										</b-card-text>
-									</b-card-body>
-								</b-col>
-							</b-row>
-						</b-card>-->
-					</div>
-				</div>
-
 				<div>
 					<div>
 						<br />
 						<h2>What would you like to do?</h2>
-						<p> Click the buttons below to generate an email template. </p>
+						<p>Select how you want to communicate using the dropdown</p>
 						<br />
 					</div>
-
+					<!-- Dropdown for Which verison of the message -->
+					<div class="col-4 d-flex mb-5" id="message-type-dropdown">
+						<select class="form-control" v-on:change="SelectMessageType($event)">
+							<option value="Twitter">Twitter</option>
+							<option value="Email">Email</option>
+							<!-- <option value="Facebook">Facebook</option> -->
+						</select>
+					</div>
 					<div class="m-2 d-inline" v-for="message in messages" :key="message.mid">
 						<button
 							v-on:click="component = message.component"
@@ -107,9 +87,12 @@
 						>{{message.name}}</button>
 					</div>
 					<div class="outerdiv">
-							<div id="test" v-show="showmessageUI">
-						<h1 class="p-2" style="display: block;">To {{selectedMember.name}},</h1>
-					</div>
+						<div id="test" v-show="showmessageUI">
+							<h1 class="p-2 d-inline-block" style="display: block;">To {{selectedMember.name}},</h1>
+							<div class="d-inline-block">
+								<button class="btn-dark btn m-2" v-on:click=SendToTwitter(selectedMember)>Open Twitter Page</button>
+							</div>
+						</div>
 						<component v-bind:is="component"></component>
 					</div>
 				</div>
@@ -127,6 +110,11 @@
 	import InvestigateTheArmy from "../components/messages/InvestigateTheArmy.vue";
 	import EndMoneyBail from "../components/messages/EndMoneyBail.vue";
 	import RestoreSixGrandfathers from "../components/messages/RestoreSixGrandfathers.vue";
+	import TwitterEndPoliceImmunity from "../components/messages/TwitterEndPoliceImmunity.vue";
+	import TwitterDefundPolice from "../components/messages/TwitterDefundPolice.vue";
+	import TwitterInvestigateTheArmy from "../components/messages/TwitterInvestigateTheArmy.vue";
+	import TwitterEndMoneyBail from "../components/messages/TwitterEndMoneyBail.vue";
+	import TwitterRestoreSixGrandfathers from "../components/messages/TwitterRestoreSixGrandfathers.vue";
 
 	export default {
 		components: {
@@ -134,23 +122,34 @@
 			DefundPolice: DefundPolice,
 			InvestigateTheArmy: InvestigateTheArmy,
 			EndMoneyBail: EndMoneyBail,
-			RestoreSixGrandfathers: RestoreSixGrandfathers
+			RestoreSixGrandfathers: RestoreSixGrandfathers,
+			TwitterEndPoliceImmunity: TwitterEndPoliceImmunity,
+			TwitterDefundPolice: TwitterDefundPolice,
+			TwitterInvestigateTheArmy: TwitterInvestigateTheArmy,
+			TwitterEndMoneyBail: TwitterEndMoneyBail,
+			TwitterRestoreSixGrandfathers: TwitterRestoreSixGrandfathers,
 		},
 		data() {
 			return {
-				messages: [
-					{ name: "End Police Immunity", component: "EndPoliceImmunity" },
+				messages: [],
+				emailMessages: [
+					{ name: "End Police Immunity", component: "EndPoliceImmunity", elementId: "end-police-immunity" },
 					{ name: "Say their names", component: "DefundPolice" },
 					{ name: "Investigate the Army", component: "InvestigateTheArmy" },
 					{ name: "End Money Bail", component: "EndMoneyBail" },
-					{
-						name: "Restore Six Grandfathers",
-						component: "RestoreSixGrandfathers"
-					}
+					{ name: "Restore Six Grandfathers", component: "RestoreSixGrandfathers"}
 				],
+				twitterMessages: [
+					{ name: "End Police Immunity", component: "TwitterEndPoliceImmunity" },
+					{ name: "Say their names", component: "TwitterDefundPolice" },
+					{ name: "Investigate the Army", component: "TwitterInvestigateTheArmy" },
+					{ name: "End Money Bail", component: "TwitterEndMoneyBail" },
+					{ name: "Restore Six Grandfathers", component: "TwitterRestoreSixGrandfathers"}
+				],
+				//facebookMessages: [],
 				congressMembers: [],
 				reps: [],
-				component: "EndPoliceImmunity",
+				component: "TwitterEndPoliceImmunity",
 				selectedMember: {},
 				showmessageUI: false, //switch to True to see elements
 				showTextArea: false, //switch to True to see elements
@@ -174,9 +173,18 @@
 				this.hasContent = false;
 				this.search = "";
 				this.congressMembers = [];
+				this.messages = this.twitterMessages;
 			},
-			ToggleTextArea: function() {
-				this.showTextArea = true;
+			SelectMessageType: function(event){
+				if(event.target.value == "Email"){
+					this.messages = this.emailMessages;
+				}
+				else if(event.target.value == "Twitter"){
+					this.messages = this.twitterMessages;
+				}
+				else if(event.target.value == "Facebook"){
+					this.messages = this.facebookMessages;
+				}
 			},
 			CreateRepList: function() {
 				this.congressMembers = [];
@@ -199,7 +207,6 @@
 			SendEmail: function() {
 				this.$http
 					.get("https://murmuring-headland-63935.herokuapp.com/api/email")
-					//.get("http://localhost:5000/api/email")
 					.then(
 						response => {
 							console.log(response.data);
@@ -207,7 +214,10 @@
 						response => {
 							// error callback
 						}
-					);
+				);
+			},
+			SendToTwitter: function(member) {
+				window.open("www.twitter.com/"+member.twitterHandle);
 			}
 		},
 		computed: {},

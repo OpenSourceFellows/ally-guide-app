@@ -2,10 +2,12 @@
 	<div class="Home">
 		<div class="buffer"></div>
 
-		<div style="padding-left:100px; padding-right:100px;padding-bottom:50px;">
+		<div style="padding-left:100px; padding-right:100px;padding-bottom:10px;">
 			 <h1> Ally.Guide</h1>
-			 <h4> Wherever you're starting from towards allyship, we help you be consistent. </h4>
+			 <p> Wherever you're starting from towards allyship, we help you be consistent.</p>
+			<a href = "https://forms.gle/ZaozLVmAD5zDA8vQ8"> <h4> Allies: Keep up to date </h4> </a> <a href="https://forms.gle/jKNqLpMcBgRV76m69"> <h4>Accomplices: Volunteer  </h4></a>
 		</div>
+
 		<div
 			style="background-image: linear-gradient(90deg, #892819, black);"
 			class="tiles border-bottom border-white"

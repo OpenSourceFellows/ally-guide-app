@@ -53,11 +53,11 @@
 						</p>
 						<p>
 							<i class="fab fa-facebook-square" style="font-size:25px;width:1.5rem;"></i>
-							{{member.facebook}}
+							FB: @{{member.facebook}}
 						</p>
 						<p>
 						<i	class="fab fa-twitter" style="font-size: 25px;width:1.5rem;"></i>
-						{{member.twitter}}
+						Twitter: @{{member.twitter}}
 						</p>
 						<!-- <p>Contact Page: {{member.contactPage}}</p> -->
 					</b-card-text>

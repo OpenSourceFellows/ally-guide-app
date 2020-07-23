@@ -1,7 +1,7 @@
 <template>
-	<div style="padding-top: 260px">
+	<div>
 		<div class="elevatetext" style="background-color:#d2a07e;">
-			<h4 style="color:#996b58">Changes start by doing.</h4>
+			<h4 style="object-fit:contain;color:#996b58">Changes start by doing.</h4>
 				<img src="https://i.ibb.co/4Fb74Kr/Screen-Shot-2020-07-16-at-11-50-58-PM.png">
 			<!-- <button type="button" class="btn btn-primary" v-on:click="SendEmail">email</button> -->
 		</div>
@@ -51,11 +51,11 @@
 						</p>
 						<p>
 							<i class="fab fa-facebook-square" style="font-size:25px;width:1.5rem;"></i>
-							{{member.facebook}}
+							FB: @{{member.facebook}}
 						</p>
 						<p>
-							<i class="fab fa-twitter" style="font-size:25px;width:1.5rem;"></i>
-							{{member.twitter}}
+						<i	class="fab fa-twitter" style="font-size: 25px;width:1.5rem;"></i>
+						Twitter: @{{member.twitter}}
 						</p>
 					</b-card-text>
 
@@ -219,6 +219,7 @@
 			SendToTwitter: function(member) {
 				window.open("www.twitter.com/"+member.twitterHandle);
 			}
+
 		},
 		computed: {},
 		created() {}

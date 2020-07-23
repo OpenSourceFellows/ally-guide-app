@@ -1,12 +1,14 @@
 <template>
 <div>
-<div style="padding-top: 300px; background-color:#537260; padding-bottom: 50px;">
-
-  <h1> Contribute to local and national funds. Search for orgs or individual organizers. </h1>
+<div style="font-color:#ffffff; padding-top: 100px; background-color:#537260; padding-bottom: 30px;padding-right:100px; padding-left:100px;">
+  <h1> Contribute to local and national momentum. </h1>
+  <a href = "https://airtable.com/shrYjsZT8NitBzXN5" style="color:#ffffff;"><h4>Orgs, add your info!</h4></a>
 </div>
-<div class="org-search" style="padding-top: 25px; padding-right:200px; padding-left:200px;">
+<div class="org-search" style="padding-top: 25px; padding-right:100px; padding-left:100px; padding-bottom:30p">
     <input class="org-bar" type="text" v-model="search" placeholder="Search by name or cause" v-on:keyup="CheckInputContent" style="width:30%">
-    <p style="padding-top:30px;">  While we fight for individual police officers to be held accountable for their actions, we need to make sure we can fund every aspect of that fight. </p>
+
+    <p> Protest teams today help us preserve our first and fourth amendment rights. Sustain ongoing actions towards social justice. </p>
+
 </div>
 <div id="government-contact-info" v-show="hasContent">
 			<div>
@@ -48,7 +50,7 @@
 </div>
 
 <div v-show="searchCompleted && searchResults.length == 0 && !error" style="font-weight: bolder;">
-  <h1>Sorry, no results found.</h1>
+  <h1></h1>
 </div>
 
 <div class="rebuild-btn">

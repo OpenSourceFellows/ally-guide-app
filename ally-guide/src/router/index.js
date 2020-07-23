@@ -13,9 +13,10 @@ const routes = [
     component: Home
   },
   {
-    path: "/Home",
+    path: "/home",
     name: "Home",
-    component: Home
+    component: () =>
+      import(/* webpackChunkName: "contribute" */ "../views/Home.vue")
   },
   {
     path: "/elevate",

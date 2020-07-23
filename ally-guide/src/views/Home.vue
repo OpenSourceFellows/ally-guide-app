@@ -1,10 +1,13 @@
 <template>
 	<div class="Home">
 		<div class="buffer"></div>
-		<div style="padding-left:150px; padding-right:150px;padding-bottom:50px;">
+
+		<div style="padding-left:100px; padding-right:100px;padding-bottom:10px;">
 			 <h1> Ally.Guide</h1>
-			 <h4> Wherever you're starting from in your allyship towards racial justice, we help you be consistent. </h4>
+			 <p> Wherever you're starting from towards allyship, we help you be consistent.</p>
+			<a style="color: #924235;"href = "https://forms.gle/ZaozLVmAD5zDA8vQ8"> <h4> Allies: Keep up to date </h4> </a> <a style="color:#48729d;" href="https://forms.gle/jKNqLpMcBgRV76m69"> <h4>Accomplices: Volunteer  </h4></a>
 		</div>
+
 		<div
 			style="background-image: linear-gradient(90deg, #892819, black);"
 			class="tiles border-bottom border-white"
@@ -12,9 +15,17 @@
 			<!-- <h1 class="message-title">Black Lives Matter.</h1> -->
 			<div class="text-center" >
 				<div class="action-div a text-center">
-					<a class="elevate" href="/elevate">
-						<div class="h-title">Communicate</div>
+				<div class="h-title">Communicate</div>
 
+				<div style="background-color:#c49d79; padding-left:50px;">
+					<div>
+						<a href="https://bit.ly/2BjsqBK" style="color:#ffffff;border:4px solid #ffffff;"> Justice for Breonna </a>
+						<a href="https://bit.ly/2CAp3Hi" style="color:#ffffff;padding:50x; border:4px solid #ffffff;"> Remove forces from Portland</a>
+						<a href="https://bit.ly/30tfUYQ" style="color:#ffffff;padding:50x; border:4px solid #ffffff;">Justice for Vanessa</a>
+						<a href="https://bit.ly/2CTqRuM" style="color:#ffffff;padding:50x; border:4px solid #ffffff;">Justice for Saraya</a>
+					</div>
+				</div>
+					<a class="elevate" href="/elevate">
 						<div class="h-img" style="padding-top: 200px;"" ></div>
 					</a>
 				</div>

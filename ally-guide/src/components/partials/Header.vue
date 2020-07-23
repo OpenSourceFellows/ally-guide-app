@@ -4,7 +4,7 @@
 			<nav class="nav-wrapper">
 				<ul class="list list-secondary">
 					<li>
-						<a style="border-radius:18px;border:3px solid white; padding-left:3px;" href="https://forms.gle/ZYGf77F4dMMiMdpx9"> Subscribe </a>
+						<a style="border-radius:18px;border:3px solid white; padding-left:3px;" href="https://docs.google.com/forms/d/e/1FAIpQLSckj1S0ef1EtuMCYphip0Dn6l6xqm_jdrtEZkUTRZY9qqD69A/viewform"> Subscribe </a>
 					</li>
 					<li><a href="https://forms.gle/jKNqLpMcBgRV76m69">Volunteer</a></li>
 					</ul>

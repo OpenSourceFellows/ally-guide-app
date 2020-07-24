@@ -46,11 +46,12 @@ Does this close an open issue?
 
 **Urgency and Priority**
 Define urgency and priority aligned with existing tasks.
-Urgency: 
+_Urgency_: 
 **High**: Is this a bottleneck that can be detrimental to UX, something that would disrupt current services infrastructurally?
 **Medium**: A long term problem we need to get started on now, about resolving tech debt
 **Low**: Optimizations, a 'nice to have' thats a long way off
 
+_Priority_
 **Priority 1** - API/Functionality securitization (Secrets, managing end points, app functionalty)
 **Priority 2** - Workflow management (CI/CD, Actions, Permissions management)
 **Priority 3** - User Analytics Functionality 

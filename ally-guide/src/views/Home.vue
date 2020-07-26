@@ -5,7 +5,6 @@
 		<div style="padding-left:100px; padding-right:100px;padding-bottom:10px;">
 			 <h1> Ally.Guide</h1>
 			 <p> Wherever you're starting from towards allyship, we help you be consistent.</p>
-			<a style="color: #924235;"href = "https://forms.gle/ZaozLVmAD5zDA8vQ8"> <h4> Allies: Keep up to date </h4> </a> <a style="color:#48729d;" href="https://forms.gle/jKNqLpMcBgRV76m69"> <h4>Accomplices: Volunteer  </h4></a>
 		</div>
 
 		<div

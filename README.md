@@ -39,8 +39,8 @@ www.ally.guide is an open source project contributed that triages a starting pla
 npm run serve
 
 **Running tests**
-npm install --save-dev chai
-npm run test
+- npm install --save-dev chai
+- npm run test
 
 
 ## Contributing

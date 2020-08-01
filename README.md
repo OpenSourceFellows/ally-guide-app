@@ -1,6 +1,7 @@
 # Ally Guide
-Ally.Guide is an open source project contributed that triages a starting place to collaborate with current racial justice efforts and echo Black Lives Matter through the following programs.  
-[Current Website](www.ally.guide) **[Slack](https://join.slack.com/t/ally-guide/shared_invite/zt-fpx4ach3-OlGutY6lsd7lXKphj8KpAA)** for communication, [Roadmap Project Board](https://github.com/Ally-Guide/ally-guide-app/projects/1)
+
+www.ally.guide is an open source project contributed that triages a starting place to collaborate with current racial justice efforts and echo Black Lives Matter through the following programs.   
+**[Slack](https://join.slack.com/t/ally-guide/shared_invite/zt-fpx4ach3-OlGutY6lsd7lXKphj8KpAA)** for communication, [Roadmap Project Board](https://github.com/Ally-Guide/ally-guide-app/projects/1)
 
 <table>
   <tr>

@@ -1,17 +1,14 @@
 # Purpose
 How can we translate our skills and resources towards racial justice? Ally.Guide is an open source project contributed by Hubbers that triages a starting place to collaborate with current racial justice efforts and echo Black Lives Matter through the following programs.  
-[Current Website](www.ally.guide), [GitHub](https://github.com/Ally-Guide), Slack: #ally-guide)
+[Current Website](www.ally.guide), [GitHub](https://github.com/Ally-Guide), **[Slack]()** for communication)
 
 <table>
   <tr>
-   <td><strong>      📚  Educate</strong>
+   <td><strong>      📚  Learn </strong>
    </td>
-   <td><strong>       💰 Circulate</strong>
+   <td><strong>       💰 Give </strong>
    </td>
-   <td><strong>    📢 Communicate</strong>
-   </td>
-   <td>
-    <strong>🗓  Elevate</strong>
+   <td><strong>    📢 Amplify</strong>
    </td>
   </tr>
   <tr>
@@ -20,8 +17,6 @@ How can we translate our skills and resources towards racial justice? Ally.Guide
    <td>Ensuring we can complement 501(c)(3) efforts by circulating contributions directly to grassroots organizing and community bail funds.
    </td>
    <td>Amplify issues that trouble our justice system directly to educational, county, local, state, and federal institutions.<strong> </strong>
-   </td>
-   <td>Contribute intersectionally and create opportunities by supporting existing efforts through your skillset. 
    </td>
   </tr>
 </table>

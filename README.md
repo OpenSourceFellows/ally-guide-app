@@ -30,13 +30,36 @@ www.ally.guide is an open source project contributed that triages a starting pla
 ## One-Click Deploy to Heroku
 
 ## Rrunning App Locally 
+## Project setup
+```
+npm install
+```
 
-**Installation:**
- npm install 
- npm run build
+### Configuration
 
-**Launch App**
+```
+cp .env.local.template .env.local
+```
+
+Edit `.env.local` and assign values to `VUE_APP_AIRTABLE_API_KEY` and `VUE_APP_AIRTABLE_BASE`
+
+### Compiles and hot-reloads for development
+```
 npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
 **Running tests**
 - npm install --save-dev chai

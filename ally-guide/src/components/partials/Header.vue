@@ -1,33 +1,17 @@
 <template>
-	<div>
-		<header>
-			<nav class="nav-wrapper">
-				<ul class="list list-secondary">
-					<li>
-						<a style="border-radius:18px;border:3px solid white; padding-left:3px;" href="https://docs.google.com/forms/d/e/1FAIpQLSckj1S0ef1EtuMCYphip0Dn6l6xqm_jdrtEZkUTRZY9qqD69A/viewform"> Subscribe </a>
-					</li>
-					<li><a href="https://forms.gle/jKNqLpMcBgRV76m69">Volunteer</a></li>
-					</ul>
-					<ul class="list list-main"">
-					<li>
-					<a href="/Home"><img style="width:30px;"src="https://i.ibb.co/j4t3YL6/imageedit-8-6683678944.png" alt="imageedit-8-6683678944" border="0"></a></li>
-					<li class="mainNav">
-						<a href="/Educate">Educate </a>
-					</li>
-					<li class="mainNav" >
-						<a href="/Collaborate">Elevate</a>
-					</li>
-					<li class="mainNav">
-						<a href="/Contribute">Circulate</a>
-					</li>
-					<li class="mainNav" style="">
-						<a href="/Elevate">Communicate</a>
-					</li>
-
-				</ul>
-			</nav>
-		</header>
-	</div>
+<header class="header">
+<div class = "nav-bar">
+  <a href="" class="logo"><img style="width:30px;"src="https://i.ibb.co/j4t3YL6/imageedit-8-6683678944.png" alt="logo" border="0"> </a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a style="text-decoration:none; color:#000000;" href="/Home">Home</a></li>
+    <li><a style="text-decoration:none; color:#000000;" href="/Contribute">Give</a></li>
+    <li><a style="text-decoration:none; color:#000000;" href="/Elevate">Amplify</a></li>
+    <li><a style="text-decoration:none; color:#000000;" href="/Educate">Learn</a></li>
+  </ul>
+  </div>
+</header>
 </template>
 
 <script>
@@ -39,111 +23,138 @@
 </script>
 
 <style>
-	/* main */
-	header {
-		position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-		z-index: 10;
-	}
+.header {
+  background-color: #cac0b8;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
 
-	.site-title img{float:left;}
+.nav-bar{
+    padding-top:10px;
+    background-color: #fff;
+}
 
+.header ul {
+  margin: 0;
+  padding-right: 40px;
+  list-style: none;
+  overflow: hidden;
+  background-color: #cac0b8;
+}
 
-	nav{
-		width: 100%;
-		font-size: 1.1em;
-		height: 80px;
-		background: #000000;
-		z-index: 10;
-		position:relative;
-		top: 0;
-	}
+.menu-li {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
 
-	nav div {
-		color: white;
-		font-size: 2rem;
-		line-height: 80px;
-		position: absolute;
-		postion: fixed;
-		top: 0;
-		left: 2%;
-		visibility: hidden;
-	}
-	.visible-title {
-		visibility: visible;
-	}
+.header li a:hover,
+.header .menu-btn:hover {
+  border: 2px solid #00000;
+}
 
-	nav ul {
-		list-style-type: none;
-		margin: 0 2% auto 0;
-		padding-left: 0;
-		text-align: center;
-		max-width: 100%;
-		float: right;
-	}
-	nav ul {
-		display: inline-block;
-		line-height: 70px;
-	}
-	nav ul li a {
-		text-decoration: none;
-		color: white;
-	}
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
 
-	li {
-		text-decoration: none;
-		margin:0px 10px;
-		font-family: "Poppins", sans-serif;
-		font-weight: bold;
-		color: red;
-		background-color: #000000;
-		position: relative;
-		overflow: hidden;
-		margin: ;
-	}
+}
 
-	li::after {
-		background-color: #b81a00;
-		color: white;
-		content: "";
-		width: 0;
-		height: 3px;
-		left: 0;
-		bottom: 0;
-		transition: width 0.35s ease 0s;
-		position: absolute;
-	}
-	li img{
-		width:160px;
-		postion: fixed;
-		top: 0;
-		left: 2%;
-	}
-	li:hover::after {
-		width: 100%;
-	}
-  li a:hover{
-		text-decoration:none;
-		color:white;
-	}
+/* menu */
 
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
 
+/* menu icon */
 
-	.nav-wrapper {
-	  display: grid;
-	  grid-template-columns: 1fr max-content;
-	}
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 20px 20px;
+  position: relative;
+  user-select: none;
+}
 
-	.nav-wrapper ul.list {
-	  display: flex;
-	  list-style-type: none;
-	  padding: 0;
-	}
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
 
-	.nav-wrapper ul li:not(:first-child) {
-	  margin-left: 36px;
-	}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
 
 </style>

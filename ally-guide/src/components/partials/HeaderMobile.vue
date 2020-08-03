@@ -1,132 +1,160 @@
 <template>
-  <div id="navigation-mobile">
-		<header>
-				<nav>
-					<ul>
-						<li>
-							<a style="border-radius:18px;border:3px solid white; padding-right:3px;padding-left:3px;" href="https://forms.gle/ZYGf77F4dMMiMdpx9"> Subscribe </a>
-						</li>
-						<li><a href="">Volunteer</a></li>
-						<li class="mainNav">
-						<a href="/Home"><img style="width:30px;"src="https://i.ibb.co/j4t3YL6/imageedit-8-6683678944.png" alt="imageedit-8-6683678944" border="0"></a></li>
-
-					</ul>
-				</nav>
-			</header>
-		</div>
-	</template>
-
-	<script>
-		export default {
-			data() {
-				return {};
-			}
-		};
-	</script>
-
-	<style>
-		/* main */
-		header {
-			position: fixed;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-			z-index: 10;
-		}
-
-		.site-title img{float:left;}
-
-
-		nav{
-			width: 100%;
-			font-size: 1.1em;
-			height: 80px;
-			background: #000000;
-			z-index: 10;
-			position:relative;
-			top: 0;
-		}
-
-		nav div {
-			color: white;
-			font-size: 2rem;
-			line-height: 80px;
-			position: absolute;
-			postion: fixed;
-			top: 0;
-			left: 2%;
-			visibility: hidden;
-		}
-		.visible-title {
-			visibility: visible;
-		}
-
-		nav ul {
-			list-style-type: none;
-			margin: 0 2% auto 0;
-			padding-left: 0;
-			text-align: center;
-			max-width: 100%;
-			float: right;
-		}
-		nav ul {
-			display: inline-block;
-			line-height: 70px;
-		}
-		nav ul li a {
-			text-decoration: none;
-			color: white;
-		}
-
-		li {
-			text-decoration: none;
-			margin:0px 10px;
-			font-family: "Poppins", sans-serif;
-			font-weight: bold;
-			color: red;
-			background-color: #000000;
-			float: right;
-			position: relative;
-			overflow: hidden;
-			margin: ;
-		}
-
-		li::after {
-			background-color: #b81a00;
-			color: white;
-			content: "";
-			width: 0;
-			height: 3px;
-			left: 0;
-			bottom: 0;
-			transition: width 0.35s ease 0s;
-			position: absolute;
-		}
-		li img{
-			width:160px;
-			postion: fixed;
-			top: 0;
-			left: 2%;
-		}
-		li:hover::after {
-			width: 100%;
-		}
-	  li a:hover{
-			text-decoration:none;
-			color:white;
-		}
-
-		.mainNav{
-			float:right;
-		}
-
-
-		#navigation-mobile {
-		  padding: 20px 0 0 0;
-}
-
-	</style>
+<header class="header">
+<div class = "nav-bar">
+  <a href="" class="logo"> <img style="width:30px;"src="https://i.ibb.co/j4t3YL6/imageedit-8-6683678944.png" alt="logo" border="0"> </a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="/Home">Home</a></li>
+    <li><a href="/Give">Give</a></li>
+    <li><a href="/Elevate">Amplify</a></li>
+    <li><a href="/Educate">Learn</a></li>
+  </ul>
+  </div>
+</header>
+</template>
 
 <script>
-export default {};
+	export default {
+		data() {
+			return {};
+		}
+	};
 </script>
+
+<style>
+.header {
+  background-color: #cac0b8;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.nav-bar{
+    padding-top:10px;
+    background-color: #fff;
+}
+
+.header ul {
+  margin: 0;
+  padding-right: 40px;
+  list-style: none;
+  overflow: hidden;
+  background-color: #cac0b8;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 20px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+</style>

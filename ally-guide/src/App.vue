@@ -19,14 +19,15 @@
 
 <script>
 import Header from "@/components/partials/Header.vue";
-import Footer from "@/components/partials/Footer.vue";
 import HeaderMobile from "@/components/partials/HeaderMobile.vue";
+import Footer from "@/components/partials/Footer.vue";
 
 export default {
    data: () => {
       return {
         mobileView: true,
-        showNav: false
+        showNav: false,
+        title: 'Ally Guide'
       };
     },
     methods: {
@@ -35,7 +36,7 @@ export default {
        }
      },
   components: {
-    Header, HeaderMobile, Footer,
+    Header,HeaderMobile, Footer,
   },
   created() {
    this.handleView();

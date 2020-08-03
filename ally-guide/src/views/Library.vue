@@ -1,7 +1,7 @@
 <template>
 <div>
 <div style="padding-top:100px; padding-bottom:10px; background-color:#966058;">
-  <a href = "https://airtable.com/shrYjsZT8NitBzXN5" style="color:#ffffff; border:2px solid #ffffff;"> <h4>Add a learning resource </h4></a>
+  <a href = "https://airtable.com/shrYjsZT8NitBzXN5" style="color:#ffffff;"> <h4>Add a learning resource </h4></a>
 </div>
 <div style="padding-left:100px; padding-right:100px;">
 <div>

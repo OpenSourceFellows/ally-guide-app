@@ -1,12 +1,14 @@
 <template>
 	<div class="Home">
 		<div class="buffer"></div>
-
-		<div style="padding-left:100px; padding-right:100px;padding-bottom:10px;">
-			 <h1> Ally.Guide</h1>
-			 <p> Wherever you're starting from towards allyship, we help you be consistent.</p>
+		<div style="padding:30px;color:#fff; background-color:#262633">
+			 <h1> Ally Guide</h1>
+			 <p> Wherever you're starting from , we help you be consistent.</p>
 		</div>
-
+		<div>
+			<div class="action-image">
+			</div>
+		</div>
 		<div
 			style="background-image: linear-gradient(90deg, #892819, black);"
 			class="tiles border-bottom border-white"
@@ -14,7 +16,7 @@
 			<!-- <h1 class="message-title">Black Lives Matter.</h1> -->
 			<div class="text-center" >
 				<div class="action-div a text-center">
-				<div class="h-title">Communicate</div>
+				<div class="h-title">Amplify</div>
 
 				<div style="background-color:#c49d79; padding-left:50px;">
 					<div>
@@ -30,21 +32,14 @@
 				</div>
 				<div class="action-div b">
 					<a class="distribute" href="/contribute">
-						<div class="h-title">Circulate</div>
+						<div class="h-title">Give</div>
 
 						<div class="h-img"></div>
 					</a>
 				</div>
 				<div class="action-div c">
 					<a class="educate" href="/educate">
-						<div class="h-title">Educate</div>
-
-						<div class="h-img"></div>
-					</a>
-				</div>
-				<div class="action-div d">
-					<a class="collaborate" href="/collaborate">
-						<div class="h-title">Elevate</div>
+						<div class="h-title">Learn</div>
 
 						<div class="h-img"></div>
 					</a>

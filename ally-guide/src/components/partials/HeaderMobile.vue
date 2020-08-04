@@ -31,10 +31,6 @@
   z-index: 3;
 }
 
-.nav-bar{
-    padding-top:10px;
-    background-color: #fff;
-}
 
 .header ul {
   margin: 0;
@@ -56,9 +52,6 @@
 }
 
 .header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
   padding: 10px 20px;
   text-decoration: none;
 
@@ -75,12 +68,11 @@
 /* menu icon */
 
 .header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 20px 20px;
-  position: relative;
+  padding: 0px;
+  margin:0px;
+  position: absolute;
   user-select: none;
+  right:20px;
 }
 
 .header .menu-icon .navicon {
@@ -142,10 +134,13 @@
 
 @media (min-width: 48em) {
   .header li {
+
     float: left;
   }
   .header li a {
-    padding: 20px 30px;
+    padding: 25px 30px;
+            color:rgb(0, 0, 0);
+
   }
   .header .menu {
     clear: none;

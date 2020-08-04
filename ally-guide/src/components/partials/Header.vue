@@ -31,10 +31,6 @@
   z-index: 3;
 }
 
-.nav-bar{
-    padding-top:10px;
-    background-color: #fff;
-}
 
 .header ul {
   margin: 0;
@@ -55,14 +51,6 @@
   border: 2px solid #00000;
 }
 
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-
-}
 
 /* menu */
 
@@ -146,6 +134,8 @@
   }
   .header li a {
     padding: 20px 30px;
+        color:rgb(0, 0, 0);
+
   }
   .header .menu {
     clear: none;

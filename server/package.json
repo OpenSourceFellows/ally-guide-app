@@ -4,6 +4,7 @@
   "description": "Services supporting Ally-Guide",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "start": "node server/index.js",
     "dev": "nodemon server/index.js"
   },

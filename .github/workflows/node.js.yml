@@ -24,4 +24,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd ally-guide & pwd & npm install jest -g & npm install & npm test
+    - run: npm install jest -g
+      working-directory: ally-guide
+    - run: npm install 
+      working-directory: ally-guide
+    - run: npm test
+      working-directory: ally-guide

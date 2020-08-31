@@ -1,7 +1,7 @@
 <template>
 <header class="header">
 <div class = "nav-bar">
-  <a href="" class="logo"><img style="width:30px;"src="https://i.ibb.co/j4t3YL6/imageedit-8-6683678944.png" alt="logo" border="0"> </a>
+  <a href="" class="logo"><img style="width:30px;"src="https://i.ibb.co/j4t3YL6/imageedit-8-6683678944.png" alt="logo" border="0"><div class='logotext'>Ally.Guide</div></a>
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
@@ -105,6 +105,7 @@
   display: none;
 }
 
+
 .header .menu-btn:checked ~ .menu {
   max-height: 240px;
 }
@@ -133,7 +134,7 @@
     float: left;
   }
   .header li a {
-    padding: 20px 30px;
+    padding: 25px 30px;
         color:rgb(0, 0, 0);
 
   }

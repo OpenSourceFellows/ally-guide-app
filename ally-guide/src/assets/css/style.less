@@ -3,6 +3,7 @@
 @device-width-medium: 760px;
 @device-width-large: 1024px;
 
+@import "colors";
 
 /* Custom stylesheet */
 
@@ -19,18 +20,38 @@ body {
   margin: 0px;
   padding: 0px;
   width: 100%;
+  color: @white;
+
 }
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
 
 .buffer {
   height: 90px;
 }
 
-.nav-bar{
+.header .logo {
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.header .logotext {
+  color: darken(@light-brown, 40%);
+  padding-left: 10px;
+}
+
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:80px;
+  height: 80px;
 }
+
 .nav-link:hover {
   color: white;
   text-decoration: none;
@@ -101,59 +122,83 @@ body {
 }
 
 /* HOME */
-.action-div {
-  &.a {
-    background-color: #f6b86c;
+.Home {
+  .outer {
+    width: 80%;
+    margin: 0 auto;
+
+    @media all and (max-width:@device-width-small) {
+      width: 100%;
+    }
   }
 
-  &.b {
-    background-color: #52725f;
+  .topBanner {
+    background-color: @ally-black;
+    color: @white;
+    padding: 40px;
   }
 
-  &.c {
-    background-color: #93423e;
-  }
+  .action {
+    &-content{
+      display:flex;
+      align-items:center;
+      .arrow {
+        position: absolute;
+        right:15%;
+        @media all and (max-width:@device-width-small) {
+          right:0%;
+        }
 
-  &.d {
-    background-color: #ffbd58;
-  }
-}
+        img {
+          width: 80px;
+       
+        }
+      }
+    }
 
+    &-text {
+      background-color: @light-gray;
+      padding: 40px;
+      text-align: left;
+      margin: 40px 0px;
+      width:100%;
 
-.h-title {
-  font-size: 30px;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 800;
-  background-color: #0e0e0e38;
-  color: #f7f7f7bd;
-}
+      &.amplify {
+        border-top: 6px solid @amplify-blue;
 
-.distribute {
-  .h-img {
-    background-image: url('https://i.ibb.co/6X07FC0/Screen-Shot-2020-08-01-at-12-33-22-AM.png');
-    .bg-img;
-    height: 26vh;
-  }
+        .twitter-buttons {
+          margin-top:30px;
+          button {
+            border: 2px solid @light-brown;
+            padding:5px 10px;
+            margin-right:15px;
+            margin-top:5px;
+            border-radius:5px;
+            background-color:transparent;
 
-}
+            &:hover{
+              border: 2px solid darken(@light-brown, 30%);
 
-.elevate {
-  .h-img {
-    background-image: url('https://i.ibb.co/MfKVRBj/Screen-Shot-2020-08-02-at-2-05-42-PM.png');
-    .bg-img;
-    height: 26vh;
-    padding-top: 100px;
-  }
+            }
+          }
+        }
+      }
 
-}
+      &.give {
+        border-top: 6px solid @give-green;
+      }
 
-.educate {
-  .h-img {
-    background-image: url('https://i.ibb.co/xz0VmMQ/Screen-Shot-2020-08-01-at-12-33-30-AM.png');
-    .bg-img;
-    height: 26vh;
+      &.learn {
+        border-top: 6px solid @learn-yellow;
+      }
 
+      p {
+        &.info {
+          width: 80%;
+        }
+      }
+
+    }
   }
 }
 
@@ -240,9 +285,10 @@ body {
 }
 
 .accordion-container {
-  .title{
-    color:#c49d79;
+  .title {
+    color: #c49d79;
   }
+
   .btn.mt-2 {
     background-color: white;
     border: 0px;
@@ -253,10 +299,10 @@ body {
     padding: 20px 0px;
     font-size: 20px;
     text-align: left;
-    margin-top:0px !important;
+    margin-top: 0px !important;
 
-    &:focus{
-      box-shadow:unset;
+    &:focus {
+      box-shadow: unset;
     }
 
     &:after {
@@ -272,10 +318,10 @@ body {
     }
   }
 
-    .acc-body{
-      padding: 20px 0px;
+  .acc-body {
+    padding: 20px 0px;
 
-      text-align: left;
+    text-align: left;
 
   }
 
@@ -326,39 +372,42 @@ body {
   vertical-align: top;
 }
 
-.cards.elevate{
-  .card-img-top{
+.cards.elevate {
+  .card-img-top {
     object-fit: contain;
     height: 300px;
   }
 }
 
-.selectMessage{
-  button{
-    border-radius:50%;
-    padding:2px;
-    margin:10px;
-    
+.selectMessage {
+  button {
+    border-radius: 50%;
+    padding: 2px;
+    margin: 10px;
+
   }
-  .iconsize{
-    width:100px;
+
+  .iconsize {
+    width: 100px;
   }
 }
-.outerdiv{
-  padding:50px;
-  width:60%;
-  margin:auto;
-.messageBox{
-  box-shadow:-1px 0px 6px 5px #00000033;
-  
-  margin:20px auto;
-  padding:30px;
-}
+
+.outerdiv {
+  padding: 50px;
+  width: 60%;
+  margin: auto;
+
+  .messageBox {
+    box-shadow: -1px 0px 6px 5px #00000033;
+
+    margin: 20px auto;
+    padding: 30px;
+  }
 
 }
 
-.messageContainer{
-  background-color:#f6b86c8c;
+.messageContainer {
+  background-color: #f6b86c8c;
 }
 
 /* Donate

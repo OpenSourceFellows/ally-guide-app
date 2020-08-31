@@ -51,12 +51,6 @@
   background-color: #f4f4f4;
 }
 
-.header .logo {
-  padding: 10px 20px;
-  text-decoration: none;
-
-}
-
 /* menu */
 
 .header .menu {

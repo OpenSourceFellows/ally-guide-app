@@ -5,7 +5,15 @@ name: Create Issue from Google Form
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      issue_title:
+        description: 'Person to greet'
+        required: true
+        default: 'Sumission from GForm'
+      issue_body:
+        description: 'Form Data'
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -22,8 +30,8 @@ jobs:
       - uses: nashmaniac/create-issue-action@v1.1
         name: Create Issue Action
         with:
-          title: Create Issue
+          title: ${{ github.event.inputs.issue_title }}
           token: ${{secrets.GITHUB_TOKEN}}
           assignees: ${{github.actor}}
           labels: google-form-submission
-          body: Google form submission data.
+          body: Google form submission data. ${{ github.event.inputs.issue_body }}

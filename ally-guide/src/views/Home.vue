@@ -31,7 +31,7 @@
 						<h2>Amplify</h2>
 						<p class="info">
 							Demand action from your representatives for
-							<b>Breonna Taylor, Vanessa Guillen, Lakota-Sioux to reclaim the Six Grandfathers</b> along with countless others who deal with state violence with ready-to-send emails.
+							<b>Breonna Taylor, Vanessa Guillen, Lakota-Sioux to reclaim the Six Grandfathers</b> along with countless others who deal with state violence with ready-to-send letters - we handle post.
 						</p>
 
 						<div class="twitter-buttons">

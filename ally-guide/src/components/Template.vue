@@ -1,5 +1,6 @@
 <template>
     <p>Main Template</p>
+	<li>Inital Page</li>
 </template>
 
 <script>

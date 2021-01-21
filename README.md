@@ -1,6 +1,6 @@
 # Ally Guide
 
-www.ally.guide is an open source project contributed that triages a starting place to collaborate with current racial justice efforts and echo Black Lives Matter through the following programs.  
+An open source project that helps citizens search and automate letter writing to their representatives to accelerate policies that focus on racial justice. (Breathe Act, Farm Workers aid, Land Reclamation, etc) - part of the [ProgramEquity](www.programequity.com) initiative. 
 
 **Stack:**
 - [Express](https://expressjs.com/) - A minimal web framework for Node.js web applications
@@ -8,28 +8,7 @@ www.ally.guide is an open source project contributed that triages a starting pla
 - [Bootstrap 4](https://getbootstrap.com/) - An open source design system for HTML, CSS, and JS.
 - [Vuejs](https://vuejs.org/) - A popular templating language for building layouts.
 
-<table>
-  <tr>
-   <td><strong>      📚  Learn </strong>
-   </td>
-   <td><strong>       💰 Give </strong>
-   </td>
-   <td><strong>    📢 Amplify</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Consolidation of knowledge that cater to different learning personas through sections: FAQ, Library, and Learning Paths. 
-   </td>
-   <td>Ensuring we can complement 501(c)(3) efforts by circulating contributions directly to grassroots organizing and community bail funds.
-   </td>
-   <td>Amplify issues that trouble our justice system directly to educational, county, local, state, and federal institutions.<strong> </strong>
-   </td>
-  </tr>
-</table>
 
-## One-Click Deploy to Heroku
-
-## Rrunning App Locally 
 ## Project setup
 ```
 npm install

@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Elevate from "../views/Elevate.vue";
-import Educate from "../views/Educate.vue";
+import Amplify from "../views/Amplify.vue";
+import Give from "../views/Give.vue"
+import Learn from "../views/Learn.vue";
 
 Vue.use(VueRouter);
 
@@ -19,22 +20,20 @@ const routes = [
       import(/* webpackChunkName: "contribute" */ "../views/Home.vue")
   },
   {
-    path: "/elevate",
-    name: "Elevate",
-    component: Elevate
+    path: "/amplify",
+    name: "Amplify",
+    component: Amplify
   },
 
   {
-    path: "/educate",
-    name: "Educate",
-    component: () =>
-      import(/* webpackChunkName: "educate" */ "../views/Library.vue")
+    path: "/learn",
+    name: "Learn",
+    component: Learn
   },
   {
-    path: "/contribute",
-    name: "Contribute",
-    component: () =>
-      import(/* webpackChunkName: "contribute" */ "../views/Contribute.vue")
+    path: "/give",
+    name: "Give",
+    component: Give
   },
   {
     path: "/collaborate",

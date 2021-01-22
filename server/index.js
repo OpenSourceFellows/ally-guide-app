@@ -8,13 +8,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const elevate = require('./routes/api/elevate');
-const contribute = require('./routes/api/contribute');
+const amplify = require('./routes/api/amplify');
+const give = require('./routes/api/give');
 const library = require('./routes/api/library');
 const email = require('./routes/api/email')
 
-app.use('/api/elevate', elevate);
-app.use('/api/contribute', contribute);
+app.use('/api/amplify', amplify);
+app.use('/api/give', give);
 app.use('/api/library', library);
 app.use('/api/email', email);
 

@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Amplify from "../views/Amplify.vue";
 import Give from "../views/Give.vue"
-import Educate from "../views/Educate.vue";
+import Learn from "../views/Learn.vue";
 
 Vue.use(VueRouter);
 
@@ -26,10 +26,9 @@ const routes = [
   },
 
   {
-    path: "/educate",
-    name: "Educate",
-    component: () =>
-      import(/* webpackChunkName: "educate" */ "../views/Library.vue")
+    path: "/learn",
+    name: "Learn",
+    component: Learn
   },
   {
     path: "/give",

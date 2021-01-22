@@ -8,7 +8,7 @@
     <li><a style="text-decoration:none; color:#000000;" href="/Home">Home</a></li>
     <li><a style="text-decoration:none; color:#000000;" href="/Give">Give</a></li>
     <li><a style="text-decoration:none; color:#000000;" href="/Amplify">Amplify</a></li>
-    <li><a style="text-decoration:none; color:#000000;" href="/Educate">Learn</a></li>
+    <li><a style="text-decoration:none; color:#000000;" href="/Learn">Learn</a></li>
   </ul>
   </div>
 </header>

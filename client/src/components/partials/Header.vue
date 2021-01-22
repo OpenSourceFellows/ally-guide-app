@@ -7,7 +7,7 @@
   <ul class="menu">
     <li><a style="text-decoration:none; color:#000000;" href="/Home">Home</a></li>
     <li><a style="text-decoration:none; color:#000000;" href="/Contribute">Give</a></li>
-    <li><a style="text-decoration:none; color:#000000;" href="/Elevate">Amplify</a></li>
+    <li><a style="text-decoration:none; color:#000000;" href="/Amplify">Amplify</a></li>
     <li><a style="text-decoration:none; color:#000000;" href="/Educate">Learn</a></li>
   </ul>
   </div>

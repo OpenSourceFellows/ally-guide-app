@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Elevate from "../views/Elevate.vue";
+import Amplify from "../views/Amplify.vue";
 import Educate from "../views/Educate.vue";
 
 Vue.use(VueRouter);
@@ -19,9 +19,9 @@ const routes = [
       import(/* webpackChunkName: "contribute" */ "../views/Home.vue")
   },
   {
-    path: "/elevate",
-    name: "Elevate",
-    component: Elevate
+    path: "/amplify",
+    name: "Amplify",
+    component: Amplify
   },
 
   {

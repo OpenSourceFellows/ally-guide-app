@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server/index.js",
     "heroku-prebuild": "cd server && npm install",
-    "build": "cd ally-guide && vue-cli-service build",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

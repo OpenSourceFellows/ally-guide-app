@@ -13,9 +13,9 @@ afterAll(async () => {
 describe("/:zipCode", () => {
   const zipCode = "92107"
   const route = "/" + zipCode;
-  test("returns a 401 if Bearer token isn't provided", async () => {
-    const call = await request(app)
+  test("Returns congress members object ", async () => {
+    const response = await request(app)
       .get(route)
-      .set("Authorization", "Bearer " + "incorrect-token");
-    expect(incorrectCall.status).toBe(401);
+    console.log(response)
   });
+})
